@@ -1,7 +1,11 @@
 README
+
 Ruby: 2.2.0
+
 Rails: 4.2.7.1
 
 Links:
+
 https://gorails.com/setup/ubuntu/14.04
+
 http://guides.rubyonrails.org/getting_started.html
