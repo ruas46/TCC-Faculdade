@@ -1,0 +1,9 @@
+  [1m[35m (173.2ms)[0m  [1m[35mDROP DATABASE IF EXISTS "TCC_development"[0m
+Started GET "/" for 127.0.0.1 at 2017-01-17 12:15:56 -0200
+Processing by Rails::WelcomeController#index as HTML
+  Parameters: {"internal"=>true}
+  Rendering /home/guilherme/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb
+  Rendered /home/guilherme/.rbenv/versions/2.4.0/lib/ruby/gems/2.4.0/gems/railties-5.0.1/lib/rails/templates/rails/welcome/index.html.erb (9.0ms)
+Completed 200 OK in 294ms (Views: 93.8ms | ActiveRecord: 0.0ms)
+
+
