@@ -1,17 +1,19 @@
-<nav class="navbar navbar-default">
-  <div class="container-fluid header-home">
-    <div class="navbar-header">
-      <a class="navbar-brand" href="#">LOGO</a>
-    </div>
-    <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-      <ul class="nav navbar-nav">
-        <li class="active"><a href="#">Home <span class="sr-only">(current)</span></a></li>
-        <li><a href="#">Gráficos</a></li>
-        <li><a href="#">Sobre</a></li>
-      </ul>
-    </div>
+<div class="header-home">
+  <div class="col-lg-3">
+    <%= image_tag("logo.png", :alt => "Imagem de uma Lupa com o simbolo do DSM-5 no centro") %>
   </div>
-</nav>
+  <div class="col-lg-2 header-button">
+    <a href="#" class="header-button-text"><b>Home</b></a>
+  </div>
+
+  <div class="col-lg-2 header-button">
+    <a href="#" class="header-button-text"><b>Gráficos</b></a>
+  </div>
+
+  <div class="col-lg-2 header-button">
+    <a href="#" class="header-button-text"><b>Sobre</b></a>
+  </div>
+</div>
 
 <div class="home-experimenteJa">
 <button class="btn-experimenteJa">Experimente Já!</button>
