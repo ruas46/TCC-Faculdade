@@ -1621,3 +1621,315 @@ Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d
 
 
 Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-01-18 15:48:25 -0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-18 17:51:10 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1110.0ms)
+Completed 200 OK in 1553ms (Views: 1519.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-942d2b54d6eca6a016112e9dbf2d18e99ad2cb07fa8734e23bd04e95d4ee56ad.css?body=1" for 127.0.0.1 at 2017-01-18 17:51:18 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-18 17:51:18 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-18 17:51:18 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-18 17:51:18 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-18 17:51:18 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-18 17:51:19 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-18 17:51:19 -0200
+
+
+Started GET "/assets/usuario-f1c577c0e328556085a6ae0c5e60ef2838f4ab86b9628e89149a9b820f6b7c90.png" for 127.0.0.1 at 2017-01-18 17:51:19 -0200
+
+
+Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d88b86fdaf73.jpg" for 127.0.0.1 at 2017-01-18 17:51:19 -0200
+
+
+Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-01-18 17:51:19 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-18 17:51:20 -0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-18 17:53:14 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (17.9ms)
+Completed 200 OK in 337ms (Views: 336.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-b77adb2c39ad05516b79a4229dd17759f0c2b5d27d9925b825f5abe7d7866f57.css?body=1" for 127.0.0.1 at 2017-01-18 17:53:14 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-18 17:53:14 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-18 17:53:14 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-18 17:53:14 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-18 17:53:14 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-18 17:53:14 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-18 17:53:14 -0200
+
+
+Started GET "/assets/usuario-f1c577c0e328556085a6ae0c5e60ef2838f4ab86b9628e89149a9b820f6b7c90.png" for 127.0.0.1 at 2017-01-18 17:53:15 -0200
+
+
+Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d88b86fdaf73.jpg" for 127.0.0.1 at 2017-01-18 17:53:15 -0200
+
+
+Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-01-18 17:53:15 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-18 17:53:15 -0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-18 17:54:02 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 84ms (Views: 82.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-b77adb2c39ad05516b79a4229dd17759f0c2b5d27d9925b825f5abe7d7866f57.css?body=1" for 127.0.0.1 at 2017-01-18 17:54:02 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-18 17:54:02 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-18 17:54:02 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-18 17:54:02 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-18 17:54:02 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-18 17:54:02 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-18 17:54:02 -0200
+
+
+Started GET "/assets/usuario-f1c577c0e328556085a6ae0c5e60ef2838f4ab86b9628e89149a9b820f6b7c90.png" for 127.0.0.1 at 2017-01-18 17:54:03 -0200
+
+
+Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d88b86fdaf73.jpg" for 127.0.0.1 at 2017-01-18 17:54:03 -0200
+
+
+Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-01-18 17:54:03 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-18 17:54:03 -0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-18 17:57:16 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (13.4ms)
+Completed 200 OK in 61ms (Views: 60.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-b77adb2c39ad05516b79a4229dd17759f0c2b5d27d9925b825f5abe7d7866f57.css?body=1" for 127.0.0.1 at 2017-01-18 17:57:17 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-18 17:57:17 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-18 17:57:17 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-18 17:57:17 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-18 17:57:17 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-18 17:57:17 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-18 17:57:17 -0200
+
+
+Started GET "/assets/usuario-f1c577c0e328556085a6ae0c5e60ef2838f4ab86b9628e89149a9b820f6b7c90.png" for 127.0.0.1 at 2017-01-18 17:57:18 -0200
+
+
+Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d88b86fdaf73.jpg" for 127.0.0.1 at 2017-01-18 17:57:18 -0200
+
+
+Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-01-18 17:57:18 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-18 17:57:18 -0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-18 18:03:52 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (3489.8ms)
+Completed 200 OK in 21367ms (Views: 19117.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-b77adb2c39ad05516b79a4229dd17759f0c2b5d27d9925b825f5abe7d7866f57.css?body=1" for 127.0.0.1 at 2017-01-18 18:04:25 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-18 18:04:30 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-18 18:04:30 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-18 18:04:30 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-18 18:04:30 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-18 18:04:30 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-18 18:04:30 -0200
+
+
+Started GET "/assets/usuario-f1c577c0e328556085a6ae0c5e60ef2838f4ab86b9628e89149a9b820f6b7c90.png" for 127.0.0.1 at 2017-01-18 18:04:30 -0200
+
+
+Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-01-18 18:04:31 -0200
+
+
+Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d88b86fdaf73.jpg" for 127.0.0.1 at 2017-01-18 18:04:31 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-18 18:04:31 -0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-18 18:04:48 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (282.0ms)
+Completed 200 OK in 3105ms (Views: 2728.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-b77adb2c39ad05516b79a4229dd17759f0c2b5d27d9925b825f5abe7d7866f57.css?body=1" for 127.0.0.1 at 2017-01-18 18:04:52 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-18 18:04:52 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-18 18:04:53 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-18 18:04:53 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-18 18:04:53 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-18 18:04:53 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-18 18:04:54 -0200
+
+
+Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-01-18 18:04:54 -0200
+
+
+Started GET "/assets/usuario-f1c577c0e328556085a6ae0c5e60ef2838f4ab86b9628e89149a9b820f6b7c90.png" for 127.0.0.1 at 2017-01-18 18:04:54 -0200
+
+
+Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d88b86fdaf73.jpg" for 127.0.0.1 at 2017-01-18 18:04:54 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-18 18:04:55 -0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-18 18:08:45 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (36.8ms)
+Completed 200 OK in 363ms (Views: 354.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-7ab26fea6082a594771535eae9220a23ca96c3a1985474fe97538ae4674a21ea.css?body=1" for 127.0.0.1 at 2017-01-18 18:08:45 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-18 18:08:45 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-18 18:08:45 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-18 18:08:45 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-18 18:08:46 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-18 18:08:46 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-18 18:08:46 -0200
+
+
+Started GET "/assets/usuario-f1c577c0e328556085a6ae0c5e60ef2838f4ab86b9628e89149a9b820f6b7c90.png" for 127.0.0.1 at 2017-01-18 18:08:47 -0200
+
+
+Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d88b86fdaf73.jpg" for 127.0.0.1 at 2017-01-18 18:08:47 -0200
+
+
+Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-01-18 18:08:47 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-18 18:08:47 -0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-18 18:08:57 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (11.5ms)
+Completed 200 OK in 77ms (Views: 76.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-7ab26fea6082a594771535eae9220a23ca96c3a1985474fe97538ae4674a21ea.css?body=1" for 127.0.0.1 at 2017-01-18 18:08:57 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-18 18:08:57 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-18 18:08:57 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-18 18:08:57 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-18 18:08:57 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-18 18:08:57 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-18 18:08:57 -0200
+
+
+Started GET "/assets/usuario-f1c577c0e328556085a6ae0c5e60ef2838f4ab86b9628e89149a9b820f6b7c90.png" for 127.0.0.1 at 2017-01-18 18:08:59 -0200
+
+
+Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d88b86fdaf73.jpg" for 127.0.0.1 at 2017-01-18 18:08:59 -0200
+
+
+Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-01-18 18:08:59 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-18 18:08:59 -0200
