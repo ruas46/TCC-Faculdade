@@ -4204,3 +4204,400 @@ Processing by WelcomeController#info as HTML
   Rendered welcome/info.html.erb within layouts/application (3.6ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 72ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-25 20:52:25 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (15.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 78ms (Views: 76.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-01-25 20:53:25 -0200
+Processing by WelcomeController#graphics as HTML
+  Rendered welcome/graphics.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 76ms (Views: 75.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 20:53:34 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (4.6ms)
+Completed 200 OK in 79ms (Views: 77.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-01-25 20:53:41 -0200
+Processing by WelcomeController#graphics as HTML
+  Rendered welcome/graphics.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (4.5ms)
+Completed 200 OK in 65ms (Views: 64.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-25 20:53:43 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (15.6ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 72ms (Views: 71.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 20:53:59 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 73ms (Views: 72.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 21:20:21 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (14.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 195ms (Views: 160.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-6b3a4da85b702285dd85d3ea656287d765e6b454e69ec765de516348da164f0f.css?body=1" for 127.0.0.1 at 2017-01-25 21:20:22 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 21:20:22 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 21:20:22 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 21:20:22 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 21:20:22 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 21:20:22 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 21:20:22 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 21:20:24 -0200
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 21:22:48 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (7.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 479ms (Views: 477.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-dbc22a1114979dff0a1c445c11f8abac3564c7d37215562f952fa66cb71937eb.css?body=1" for 127.0.0.1 at 2017-01-25 21:22:48 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 21:22:48 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 21:22:48 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 21:22:48 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 21:22:48 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 21:22:48 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 21:22:48 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 21:22:49 -0200
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 21:23:40 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (0.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 318ms (Views: 317.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-456c6a0588ddb2b2021a50b191d39d5f4486b90c7041cac25924c01a6eb3c53f.css?body=1" for 127.0.0.1 at 2017-01-25 21:23:40 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 21:23:40 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 21:23:40 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 21:23:40 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 21:23:40 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 21:23:40 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 21:23:40 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 21:23:42 -0200
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 21:23:59 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 325ms (Views: 323.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-43b06bf60c85c72f2c797b1e7d849bf8faad6be99c2be28a020d5ff52d0f1851.css?body=1" for 127.0.0.1 at 2017-01-25 21:24:00 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 21:24:00 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 21:24:00 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 21:24:00 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 21:24:00 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 21:24:00 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 21:24:00 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 21:24:01 -0200
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 21:25:08 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 76ms (Views: 75.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-43b06bf60c85c72f2c797b1e7d849bf8faad6be99c2be28a020d5ff52d0f1851.css?body=1" for 127.0.0.1 at 2017-01-25 21:25:08 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 21:25:08 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:08 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:08 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:08 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:08 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:08 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 21:25:09 -0200
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 21:25:37 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (0.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 92ms (Views: 91.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-43b06bf60c85c72f2c797b1e7d849bf8faad6be99c2be28a020d5ff52d0f1851.css?body=1" for 127.0.0.1 at 2017-01-25 21:25:37 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 21:25:37 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:37 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:37 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:37 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:37 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:37 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 21:25:38 -0200
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 21:25:51 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 325ms (Views: 324.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-4f9a90acceaa493b02e07f9bb6eeb89196ab8911ef68d139b07cdda8e987b0dc.css?body=1" for 127.0.0.1 at 2017-01-25 21:25:52 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 21:25:52 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:52 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:52 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:52 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:52 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 21:25:52 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 21:25:53 -0200
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 21:26:39 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 304ms (Views: 303.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-3b49d8fb4d065f3deb517d60a4542cf4d0b434ea737b24dda3d26b39de5aa05e.css?body=1" for 127.0.0.1 at 2017-01-25 21:26:39 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 21:26:39 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 21:26:39 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 21:26:39 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 21:26:39 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 21:26:39 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 21:26:39 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 21:26:41 -0200
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 21:26:53 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_footer.html.erb (5.2ms)
+Completed 200 OK in 319ms (Views: 318.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-dadd32dc5ae15b2a5c9d6525d5045f1e381b8ace6879e8d716cdc0faa19d5b4d.css?body=1" for 127.0.0.1 at 2017-01-25 21:26:53 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 21:26:53 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 21:26:53 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 21:26:53 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 21:26:53 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 21:26:53 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 21:26:53 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 21:26:55 -0200
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-01-25 21:27:08 -0200
+Processing by WelcomeController#graphics as HTML
+  Rendered welcome/graphics.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 126ms (Views: 125.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 21:27:09 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 68.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 21:27:37 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 81ms (Views: 80.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-dadd32dc5ae15b2a5c9d6525d5045f1e381b8ace6879e8d716cdc0faa19d5b4d.css?body=1" for 127.0.0.1 at 2017-01-25 21:27:37 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 21:27:37 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 21:27:37 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 21:27:37 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 21:27:37 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 21:27:37 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 21:27:37 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 21:27:38 -0200
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 21:28:32 -0200
+Processing by WelcomeController#info as HTML
+  Rendered welcome/info.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_footer.html.erb (8.3ms)
+Completed 200 OK in 314ms (Views: 312.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-39ad396df6eff82e21bc731161c9b1697a63693a026a64ce11ef36d09162dd55.css?body=1" for 127.0.0.1 at 2017-01-25 21:28:33 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 21:28:33 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 21:28:33 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 21:28:33 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 21:28:33 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 21:28:33 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 21:28:33 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 21:28:34 -0200
