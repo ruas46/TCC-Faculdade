@@ -3643,3 +3643,300 @@ Processing by WelcomeController#info as HTML
   Rendered welcome/info.html.erb within layouts/application (6.5ms)
   Rendered layouts/_footer.html.erb (0.1ms)
 Completed 200 OK in 82ms (Views: 81.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-25 20:28:16 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (1018.6ms)
+  Rendered layouts/_footer.html.erb (1.0ms)
+Completed 200 OK in 1302ms (Views: 1270.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-66adc39da75ded85385384b41595ac5cce61588d09adaf7773a78b01bc02e063.css?body=1" for 127.0.0.1 at 2017-01-25 20:28:18 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 20:28:18 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 20:28:18 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 20:28:18 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 20:28:18 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 20:28:18 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 20:28:18 -0200
+
+
+Started GET "/assets/usuario-f1c577c0e328556085a6ae0c5e60ef2838f4ab86b9628e89149a9b820f6b7c90.png" for 127.0.0.1 at 2017-01-25 20:28:19 -0200
+
+
+Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d88b86fdaf73.jpg" for 127.0.0.1 at 2017-01-25 20:28:19 -0200
+
+
+Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-01-25 20:28:19 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 20:28:19 -0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-25 20:30:53 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (8.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 663ms (Views: 662.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-28973eab1f1e451207c6928b4c6cba31f7fbe554943097ad5b6228c034b68429.css?body=1" for 127.0.0.1 at 2017-01-25 20:30:54 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 20:30:54 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 20:30:54 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 20:30:54 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 20:30:54 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 20:30:54 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 20:30:54 -0200
+
+
+Started GET "/assets/usuario-f1c577c0e328556085a6ae0c5e60ef2838f4ab86b9628e89149a9b820f6b7c90.png" for 127.0.0.1 at 2017-01-25 20:30:55 -0200
+
+
+Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d88b86fdaf73.jpg" for 127.0.0.1 at 2017-01-25 20:30:55 -0200
+
+
+Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-01-25 20:30:55 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 20:30:55 -0200
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-01-25 20:30:56 -0200
+Processing by WelcomeController#graphics as HTML
+  Rendered layouts/_header.html.erb (0.4ms)
+  Rendered welcome/graphics.html.erb within layouts/application (5.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 107ms (Views: 106.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 20:31:00 -0200
+Processing by WelcomeController#info as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered welcome/info.html.erb within layouts/application (3.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 95ms (Views: 94.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 20:31:21 -0200
+Processing by WelcomeController#info as HTML
+  Rendered layouts/_header.html.erb (0.6ms)
+  Rendered welcome/info.html.erb within layouts/application (5.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 221ms (Views: 220.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-ea05420c71588a38f926f6d5bde7cbb5fee542cb6b927294ea5ac922c8138f88.css?body=1" for 127.0.0.1 at 2017-01-25 20:31:22 -0200
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-01-25 20:31:22 -0200
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-01-25 20:31:22 -0200
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-01-25 20:31:22 -0200
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-01-25 20:31:22 -0200
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-01-25 20:31:22 -0200
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-01-25 20:31:22 -0200
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-01-25 20:31:22 -0200
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-25 20:31:26 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 71ms (Views: 70.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/usuario-f1c577c0e328556085a6ae0c5e60ef2838f4ab86b9628e89149a9b820f6b7c90.png" for 127.0.0.1 at 2017-01-25 20:31:27 -0200
+
+
+Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d88b86fdaf73.jpg" for 127.0.0.1 at 2017-01-25 20:31:27 -0200
+
+
+Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-01-25 20:31:27 -0200
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-01-25 20:31:29 -0200
+Processing by WelcomeController#graphics as HTML
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered welcome/graphics.html.erb within layouts/application (4.2ms)
+  Rendered layouts/_footer.html.erb (1.4ms)
+Completed 200 OK in 87ms (Views: 64.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-25 20:31:31 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (7.6ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 71ms (Views: 70.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-01-25 20:31:32 -0200
+Processing by WelcomeController#graphics as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered welcome/graphics.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 54.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 20:32:52 -0200
+Processing by WelcomeController#info as HTML
+  Rendered layouts/_header.html.erb (0.2ms)
+  Rendered welcome/info.html.erb within layouts/application (2.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 54.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-25 20:32:54 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (8.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 59ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 20:32:55 -0200
+Processing by WelcomeController#info as HTML
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered welcome/info.html.erb within layouts/application (4.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 63ms (Views: 62.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-01-25 20:32:56 -0200
+Processing by WelcomeController#graphics as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered welcome/graphics.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 68ms (Views: 67.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-25 20:32:57 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (9.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 64.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-01-25 20:33:03 -0200
+Processing by WelcomeController#graphics as HTML
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered welcome/graphics.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 53ms (Views: 52.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 20:33:09 -0200
+Processing by WelcomeController#info as HTML
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered welcome/info.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-25 20:33:20 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 41ms (Views: 39.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-01-25 20:33:32 -0200
+Processing by WelcomeController#graphics as HTML
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered welcome/graphics.html.erb within layouts/application (9.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 45.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-01-25 20:33:59 -0200
+Processing by WelcomeController#graphics as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered welcome/graphics.html.erb within layouts/application (0.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 46ms (Views: 45.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-25 20:34:00 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (7.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 59.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-01-25 20:34:08 -0200
+Processing by WelcomeController#graphics as HTML
+  Rendered layouts/_header.html.erb (0.1ms)
+  Rendered welcome/graphics.html.erb within layouts/application (12.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 60ms (Views: 58.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 20:34:08 -0200
+Processing by WelcomeController#info as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered welcome/info.html.erb within layouts/application (0.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-25 20:34:09 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (7.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 49.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-01-25 20:34:37 -0200
+Processing by WelcomeController#graphics as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered welcome/graphics.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 65ms (Views: 64.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/info" for 127.0.0.1 at 2017-01-25 20:34:50 -0200
+Processing by WelcomeController#info as HTML
+  Rendered layouts/_header.html.erb (0.0ms)
+  Rendered welcome/info.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 45ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-01-25 20:34:52 -0200
+Processing by WelcomeController#index as HTML
+  Rendered welcome/index.html.erb within layouts/application (9.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 54.9ms | ActiveRecord: 0.0ms)
