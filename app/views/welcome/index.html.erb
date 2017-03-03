@@ -12,8 +12,32 @@
   </div>
 </div>
 
+<!-- MODAL PESQUISA -->
+
+<div class="modal fade" id="ModalSearch" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+        <h5 class="modal-title" id="ModalSearchTitle">Insira os sintomas</h5>
+      </div>
+      <div class="modal-body">
+        ...
+      </div>
+      <div class="modal-footer">
+        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        <button type="button" class="btn btn-primary">Pesquisar</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- BODY -->
+
 <div class="home-experimenteJa">
-<button class="btn-experimenteJa">Experimente Já!</button>
+<button class="btn-experimenteJa" data-toggle="modal" data-target="#ModalSearch">Experimente Já!</button>
 </div>
 
 <div class="home-explication">
