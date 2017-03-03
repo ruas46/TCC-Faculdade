@@ -11,14 +11,15 @@
 #
 # It's strongly recommended that you check this file into your version control system.
 
-ActiveRecord::Schema.define(version: 20170201181326) do
+ActiveRecord::Schema.define(version: 20170201193045) do
 
   # These are extensions that must be enabled in order to support this database
   enable_extension "plpgsql"
 
   create_table "doencas", force: :cascade do |t|
     t.string   "nome"
-    t.decimal  "min_qtd_sint"
+    t.integer  "min_qtd_sint"
+    t.integer  "pagina"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -32,6 +33,20 @@ ActiveRecord::Schema.define(version: 20170201181326) do
 
   create_table "sintomas_doencas", force: :cascade do |t|
     t.integer  "sintoma_id"
+    t.integer  "doenca_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transtorno_nao_solucionado_sintomas", force: :cascade do |t|
+    t.integer  "transtornos_nao_solucionado_id"
+    t.integer  "sintoma_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transtorno_pesquisado_doencas", force: :cascade do |t|
+    t.integer  "transtornos_pesquisado_id"
     t.integer  "doenca_id"
     t.datetime "created_at"
     t.datetime "updated_at"
