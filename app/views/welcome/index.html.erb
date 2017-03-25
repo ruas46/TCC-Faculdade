@@ -30,14 +30,16 @@
         <h5 class="modal-title" id="ModalSearchTitle">Insira os sintomas</h5>
       </div>
       <div class="modal-body">
+        <form action="/welcome" method="post">
         <% @SintomasCad.each do |sintoma| %>
-          <input type="checkbox" value="<%= sintoma.id %>" /><%= sintoma.nome %><br>
+          <input type="checkbox" value="<%= sintoma.id %>" name="id"/><%= sintoma.nome %><br>
         <% end %>
       </div>
       <div class="modal-footer">
         <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button type="button" class="btn btn-primary">Pesquisar</button>
+        <button class="btn btn-primary" type="submit" value="Submit">Pesquisar</button>
       </div>
+    </form>
     </div>
   </div>
 </div>
