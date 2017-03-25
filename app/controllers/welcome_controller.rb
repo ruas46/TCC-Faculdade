@@ -1,5 +1,6 @@
 class WelcomeController < ApplicationController
   def index
+    @SintomasCad = Sintoma.order :nome
   end
 
   def info
