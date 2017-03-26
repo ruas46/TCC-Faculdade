@@ -32,7 +32,7 @@
       <div class="modal-body">
         <form action="/welcome" method="post">
         <% @SintomasCad.each do |sintoma| %>
-          <input type="checkbox" value="<%= sintoma.id %>" name="id"/><%= sintoma.nome %><br>
+          <input type="checkbox" value="<%= sintoma.id %>" name="id[]"/><%= sintoma.nome %><br>
         <% end %>
       </div>
       <div class="modal-footer">

@@ -10,20 +10,19 @@ class WelcomeController < ApplicationController
   end
 
   def create
+    @@pesquisa = []
     puts "CHEGUEI DENTRO DO CREATE <<<<<<<<<<<<<<<<<<<<<<<<<<<"
     puts params[:id]
-    @@pesquisa = Sintoma.find(params[:id])
-    puts "#{@@pesquisa.nome} <<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+    params[:id].each do |id|
+      @@pesquisa << Sintoma.find(id)
+    end
+    puts "#{@@pesquisa} <<<<<<<<<<<<<<<<<<<<<<<<<<<<"
     #flash[:notice] = "TESTE"
     redirect_to '/search'
   end
 
   def search
     @dados = @@pesquisa
-  end
-
-  def welcome_params
-    params.permit(:id)
   end
 
   def graphics
