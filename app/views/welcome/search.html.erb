@@ -17,8 +17,11 @@
 <div class="row">
   <div class="col-lg-offset-3 col-lg-6 info-style">
     <h3 class="text-center" style="padding-bottom:10px;"><b>Pesquisa</b></h3>
-    <% @dados.each do |dados| %>
-      <%= dados.nome %><br>
+    <% @dadosDoenca.each do |dadosD| %>
+      Nome: <%= dadosD.nome %><br>
+      Pagina: <%= dadosD.pagina %><br>
+      Sintomas:
+      
     <% end %>
   </div>
 </div>

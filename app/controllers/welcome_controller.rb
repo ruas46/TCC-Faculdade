@@ -11,18 +11,20 @@ class WelcomeController < ApplicationController
 
   def create
     @@pesquisa = []
-    puts "CHEGUEI DENTRO DO CREATE <<<<<<<<<<<<<<<<<<<<<<<<<<<"
-    puts params[:id]
+    @doenca = []
     params[:id].each do |id|
-      @@pesquisa << Sintoma.find(id)
+      @doenca << SintomasDoenca.where(sintoma_id: id)
+      @@pesquisa = Doenca.find(@doenca)
     end
+    puts params[:id]
+    puts "CHEGUEI DENTRO DO CREATE <<<<<<<<<<<<<<<<<<<<<<<<<<<"
     puts "#{@@pesquisa} <<<<<<<<<<<<<<<<<<<<<<<<<<<<"
-    #flash[:notice] = "TESTE"
+    puts @@pesquisa
     redirect_to '/search'
   end
 
   def search
-    @dados = @@pesquisa
+    @dadosDoenca = @@pesquisa
   end
 
   def graphics
