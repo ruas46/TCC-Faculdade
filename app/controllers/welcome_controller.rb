@@ -10,15 +10,28 @@ class WelcomeController < ApplicationController
   end
 
   def create
-    @sintomasPesq = []
+    puts "CHEGUEI DENTRO DO CREATE <<<<<<<<<<<<<<<<<<<<<<<<<<<"
+    puts "VALOR PARAMETRO: #{params[:id]}"
+
+    sintomasPesq = []
+    @@pesquisaDoenca = []
     params[:id].each do |id_parm|
-      @sintomasPesq << SintomasDoenca.where(sintoma_id: id_parm)
-      @@pesquisaDoenca = Doenca.find(@sintomasPesq)
+      #to_a para tirar ActiveRecord::Relation
+      sintomasPesq << SintomasDoenca.where(sintoma_id: id_parm).to_a
     end
-    puts params[:id]
-    puts "CHEGUEI DENTRO DO CREATE ESSE È O VALOR DE PESQUISA <<<<<<<<<<<<<<<<<<<<<<<<<<<"
+    sintomasPesq.each do |s|
+      s.each do |foo|
+        @@pesquisaDoenca << Doenca.find(foo.doenca_id)
+      end
+    end
+    puts "@sintomasPesq: #{sintomasPesq}"
     puts "@@pesquisaDoenca: #{@@pesquisaDoenca} <<<<<<<<<<<<<<<<<<<<<<<<<<<<"
-    puts "@sintomasPesq: #{@@pesquisaDoenca}"
+
+    #sintomasPesq.where(:doenca_id => 1).scoping do
+    #  aux = sintomasPesq.first
+    #end
+    #puts "AUX: #{aux}"
+
     redirect_to '/search'
   end
 
