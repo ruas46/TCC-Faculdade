@@ -10,21 +10,20 @@ class WelcomeController < ApplicationController
   end
 
   def create
-    @@pesquisa = []
-    @doenca = []
-    params[:id].each do |id|
-      @doenca << SintomasDoenca.where(sintoma_id: id)
-      @@pesquisa = Doenca.find(@doenca)
+    @sintomasPesq = []
+    params[:id].each do |id_parm|
+      @sintomasPesq << SintomasDoenca.where(sintoma_id: id_parm)
+      @@pesquisaDoenca = Doenca.find(@sintomasPesq)
     end
     puts params[:id]
-    puts "CHEGUEI DENTRO DO CREATE <<<<<<<<<<<<<<<<<<<<<<<<<<<"
-    puts "#{@@pesquisa} <<<<<<<<<<<<<<<<<<<<<<<<<<<<"
-    puts @@pesquisa
+    puts "CHEGUEI DENTRO DO CREATE ESSE È O VALOR DE PESQUISA <<<<<<<<<<<<<<<<<<<<<<<<<<<"
+    puts "@@pesquisaDoenca: #{@@pesquisaDoenca} <<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+    puts "@sintomasPesq: #{@@pesquisaDoenca}"
     redirect_to '/search'
   end
 
   def search
-    @dadosDoenca = @@pesquisa
+    @pesquisaDoenca = @@pesquisaDoenca
   end
 
   def graphics

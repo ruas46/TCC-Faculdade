@@ -30,4 +30,21 @@ s.save
 d = Doenca.new(nome:"Doença 1",min_qtd_sint:1,pagina:"334")
 d.save
 d.sintomas_doenca.create(sintoma: s)
+
+s = Sintoma.new(nome:"Dor no percoço", sintoma_obrigatorio:false)
+s.save
+s2 = Sintoma.new(nome:"Desconforto na garganta", sintoma_obrigatorio:false)
+s2.save
+d = Doenca.new(nome:"Torcicolo",min_qtd_sint:1,pagina:"334")
+d.save
+d.sintomas_doenca.create(sintoma: s)
+d.sintomas_doenca.create(sintoma: s2)
 #Para buscas essa associação d.sintomas_doenca.map
+
+#Associando Sintomas ja cadastrados com doenças novas
+#(TA BUGADO)
+#s = Sintoma.where(id:1)
+#s2 = Sintoma.where(id:2)
+#d = Doenca.new(nome:"Doença 2",min_qtd_sint:2,pagina:"394")
+#d.save
+#d.sintomas_doenca.create(sintoma: s)
