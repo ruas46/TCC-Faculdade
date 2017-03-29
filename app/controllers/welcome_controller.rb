@@ -10,33 +10,55 @@ class WelcomeController < ApplicationController
   end
 
   def create
-    puts "CHEGUEI DENTRO DO CREATE <<<<<<<<<<<<<<<<<<<<<<<<<<<"
-    puts "VALOR PARAMETRO: #{params[:id]}"
-
-    sintomasPesq = []
+    sintomasPesquisados = []
     @@pesquisaDoenca = []
+    @@pesquisaSintoma = []
     params[:id].each do |id_parm|
       #to_a para tirar ActiveRecord::Relation
-      sintomasPesq << SintomasDoenca.where(sintoma_id: id_parm).to_a
+      sintomasPesquisados << SintomasDoenca.where(sintoma_id: id_parm).to_a
     end
-    sintomasPesq.each do |s|
-      s.each do |foo|
-        @@pesquisaDoenca << Doenca.find(foo.doenca_id)
+
+    sintomasPesquisados.each do |s|#varrendo o array para achar a doença pelo id
+      s.each do |f|
+        @@pesquisaDoenca << Doenca.find(f.doenca_id)
       end
     end
-    puts "@sintomasPesq: #{sintomasPesq}"
+
+
+
+    #pesquisa sintomas da doença
+    #separados por um array:
+    #
+    # sintomasDasDoencasEncontradas:
+    # < array:
+    #   <arrayDoença1
+    #     <array1 sintoma1>
+    #     <array2 sintoma2>
+    #   <arrayDoença2
+    #     <array1 sintoma1>
+    #    >
+    # >
+    @@pesquisaDoenca.each do |s|
+        auxArray = []
+        auxArray2 = []
+        auxArray << SintomasDoenca.where(doenca_id: s.id).to_a#procura Doença
+        auxArray.each do |j|
+          j.each do |y|
+            auxArray2 << Sintoma.find(y.sintoma_id)#procura sintomas da Doença
+          end
+        end
+        @@pesquisaSintoma << [s.id, auxArray2]#armazena [ID_DOENÇA[SINTOMAS]]
+    end
+    puts "@@pesquisaSintoma: #{@@pesquisaSintoma}"
+    puts "@sintomasPesquisados: #{sintomasPesquisados}"
     puts "@@pesquisaDoenca: #{@@pesquisaDoenca} <<<<<<<<<<<<<<<<<<<<<<<<<<<<"
-
-    #sintomasPesq.where(:doenca_id => 1).scoping do
-    #  aux = sintomasPesq.first
-    #end
-    #puts "AUX: #{aux}"
-
+    
     redirect_to '/search'
   end
 
   def search
     @pesquisaDoenca = @@pesquisaDoenca
+    @pesquisaSintoma = @@pesquisaSintoma
   end
 
   def graphics
