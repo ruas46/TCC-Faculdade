@@ -75,12 +75,17 @@ class WelcomeController < ApplicationController
     puts "@@pesquisaSintoma: #{@@pesquisaSintoma}"
     puts "@@pesquisaDoenca: #{@@pesquisaDoenca} <<<<<<<<<<<<<<<<<<<<<<<<<<<<"
 
+    #validar no front os sintomas pesquisados para comparar no resultado
+    #Deixar no @@sintomasPesquisados só o id dos sintomas em um array simples
 
     #ordenar resultados pelos que tem a maior quantidade de sintomas em comum
-    #validar no front os sintomas pesquisados para comparar no resultado (talvez)
+
     #validar sintomas obrigatórios (falar com a bruna sobre essa parte)
 
+    #.destroy deleta o objeto do banco
 
+    #validar pesquisa nula
+    #validar se @@sintomasPesquisados tem algo, se n redireciona para home
     #**validar se @@pesquisaDoenca tem algo, se n, salvar a consulta no banco de não resolvidos
     redirect_to '/search'
   end
