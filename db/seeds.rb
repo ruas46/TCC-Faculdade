@@ -31,7 +31,13 @@ d = Doenca.new(nome:"Doença 1",min_qtd_sint:1,pagina:"334")
 d.save
 d.sintomas_doenca.create(sintoma: s)
 
-s = Sintoma.new(nome:"Dor no percoço", sintoma_obrigatorio:false)
+s = Sintoma.new(nome:"Sintoma x", sintoma_obrigatorio:false)
+s.save
+d = Doenca.new(nome:"Doença 88",min_qtd_sint:2,pagina:"764")
+d.save
+d.sintomas_doenca.create(sintoma: s)
+
+s = Sintoma.new(nome:"Dor no percoço", sintoma_obrigatorio:true)
 s.save
 s2 = Sintoma.new(nome:"Desconforto na garganta", sintoma_obrigatorio:false)
 s2.save
