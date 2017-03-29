@@ -88,18 +88,22 @@ class WelcomeController < ApplicationController
 
       #validar sintomas obrigatórios (falar com a bruna sobre essa parte)
 
-      #.destroy deleta o objeto do banco
 
-      #validar se @@pesquisaDoenca,@@pesquisaSintoma e@@sintomasPesquisadosOrganizado tem algo, se n redireciona para home
       #**validar se @@pesquisaDoenca tem algo, se n, salvar a consulta no banco de não resolvidos
       redirect_to '/search'
     end
   end
+  #.destroy deleta o objeto do banco
 
   def search
-    @sintomasPesquisadosOrganizado = @@sintomasPesquisadosOrganizado
-    @pesquisaDoenca = @@pesquisaDoenca
-    @pesquisaSintoma = @@pesquisaSintoma
+    #valida se @@pesquisaDoenca tem algo, se n redireciona para home(caso acessem /search direto)
+    if (defined?(@@pesquisaDoenca)).nil?
+      redirect_to '/'
+    else
+      @sintomasPesquisadosOrganizado = @@sintomasPesquisadosOrganizado
+      @pesquisaDoenca = @@pesquisaDoenca
+      @pesquisaSintoma = @@pesquisaSintoma
+    end
   end
 
   def graphics
