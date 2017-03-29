@@ -19,8 +19,8 @@
           <div class="col-lg-offset-3 col-lg-6 search-style">
             <div class="col-lg-10">
               <br>
-              Transtorno: <%= pD.nome %><br>
-              Sintomas:<br>
+              <b>Transtorno: </b><%= pD.nome %><br>
+              <b>Sintomas:</b><br>
               <% @pesquisaSintoma.each do |chave,valor| %>
                 <% if pD.id == chave%>
                   <% valor.each do |x|%>
