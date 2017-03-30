@@ -25,10 +25,13 @@ class WelcomeController < ApplicationController
         sintomasPesquisados << SintomasDoenca.where(sintoma_id: id_parm).to_a
       end
 
-      #Pesquisa doenças com esses sintomas
-      sintomasPesquisados.each do |s|#varrendo o array para achar a doença pelo id
+      sintomasPesquisados.each do |s|
         s.each do |f|
+          #Pesquisa doenças com esses sintomas
+          #varrendo o array para achar a doença pelo id
           @@pesquisaDoenca << Doenca.find(f.doenca_id)
+          #manipula sintomasPesquisados para deixar só o id dos sintomas em um array simples
+          @@sintomasPesquisadosOrganizado << f.sintoma_id
         end
       end
 
@@ -74,13 +77,6 @@ class WelcomeController < ApplicationController
         end
       end
 
-      #Manipula sintomasPesquisados para deixar só o id dos sintomas em um array simples
-      sintomasPesquisados.each do |s|#varrendo o array para achar a doença pelo id
-        s.each do |f|
-          @@sintomasPesquisadosOrganizado << f.sintoma_id
-        end
-      end
-
 
       #DEBUG
       puts "---------------------------------------------------------------"
@@ -89,6 +85,7 @@ class WelcomeController < ApplicationController
       puts "@@pesquisaSintoma: #{@@pesquisaSintoma}"
       puts "@@pesquisaDoenca: #{@@pesquisaDoenca}"
 
+      #BUG quantidade minima de sintomas HJJ passa com 1 sintoma só
 
       #ordenar resultados pelos que tem a maior quantidade de sintomas em comum
 

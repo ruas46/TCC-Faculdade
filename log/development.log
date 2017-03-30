@@ -26294,3 +26294,1912 @@ Completed 200 OK in 20ms (Views: 19.2ms | ActiveRecord: 0.0ms)
 
 
 Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 02:11:40 -0300
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-30 15:00:24 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (16.4ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mSintoma Load (23.0ms)[0m  SELECT "sintomas".* FROM "sintomas"  ORDER BY "sintomas"."nome" ASC
+  Rendered welcome/index.html.erb within layouts/application (419.9ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 573ms (Views: 509.6ms | ActiveRecord: 41.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:00:26 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:00:29 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["9"]}
+  [1m[36mSintomasDoenca Load (16.9ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 9]]
+  [1m[35mDoenca Load (8.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 128ms (ActiveRecord: 28.9ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:00:29 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 22ms (Views: 21.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:00:29 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:00:35 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["8"]}
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 8]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 6ms (ActiveRecord: 1.3ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:00:35 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 17ms (Views: 16.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:00:35 -0300
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:41:06 -0300
+Processing by WelcomeController#search as HTML
+Redirected to http://localhost:3000/
+Completed 302 Found in 1ms (ActiveRecord: 0.0ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-30 15:41:07 -0300
+Processing by WelcomeController#index as HTML
+  [1m[36mSintoma Load (0.5ms)[0m  [1mSELECT "sintomas".* FROM "sintomas"  ORDER BY "sintomas"."nome" ASC[0m
+  Rendered welcome/index.html.erb within layouts/application (9.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 179ms (Views: 172.1ms | ActiveRecord: 2.0ms)
+
+
+Started GET "/assets/welcome.self-d97fcf10863c062e7b86f4fb1001c64d69245b68844b1bf55b98c7d7f70696b2.css?body=1" for 127.0.0.1 at 2017-03-30 15:41:07 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-03-30 15:41:07 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-03-30 15:41:07 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-03-30 15:41:07 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-03-30 15:41:07 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-03-30 15:41:07 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-03-30 15:41:07 -0300
+
+
+Started GET "/assets/usuario-f1c577c0e328556085a6ae0c5e60ef2838f4ab86b9628e89149a9b820f6b7c90.png" for 127.0.0.1 at 2017-03-30 15:41:08 -0300
+
+
+Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d88b86fdaf73.jpg" for 127.0.0.1 at 2017-03-30 15:41:08 -0300
+
+
+Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-03-30 15:41:08 -0300
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:41:08 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:41:11 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["9"]}
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 9]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.5ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (3.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.5ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 34ms (ActiveRecord: 8.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:41:11 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (86.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 124ms (Views: 122.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/none-search-6732c39e6c754cbf3d24646a637c13117a1a27b6b9b8c509650f8529dcb0e1b5.png" for 127.0.0.1 at 2017-03-30 15:41:12 -0300
+
+
+Started GET "/assets/find-search-67bc2c1feacaf2808772b34c979b2ebf7c21afd0e00468f7d385f909f57e307b.png" for 127.0.0.1 at 2017-03-30 15:41:12 -0300
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:41:12 -0300
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:43:24 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 38ms (Views: 37.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-d97fcf10863c062e7b86f4fb1001c64d69245b68844b1bf55b98c7d7f70696b2.css?body=1" for 127.0.0.1 at 2017-03-30 15:43:25 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-03-30 15:43:25 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:25 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:25 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:25 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:25 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:25 -0300
+
+
+Started GET "/assets/none-search-6732c39e6c754cbf3d24646a637c13117a1a27b6b9b8c509650f8529dcb0e1b5.png" for 127.0.0.1 at 2017-03-30 15:43:25 -0300
+
+
+Started GET "/assets/find-search-67bc2c1feacaf2808772b34c979b2ebf7c21afd0e00468f7d385f909f57e307b.png" for 127.0.0.1 at 2017-03-30 15:43:25 -0300
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:43:25 -0300
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:43:35 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (3.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 26.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-d97fcf10863c062e7b86f4fb1001c64d69245b68844b1bf55b98c7d7f70696b2.css?body=1" for 127.0.0.1 at 2017-03-30 15:43:35 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-03-30 15:43:35 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:35 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:35 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:35 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:35 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:35 -0300
+
+
+Started GET "/assets/none-search-6732c39e6c754cbf3d24646a637c13117a1a27b6b9b8c509650f8529dcb0e1b5.png" for 127.0.0.1 at 2017-03-30 15:43:36 -0300
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:43:36 -0300
+
+
+Started GET "/assets/find-search-67bc2c1feacaf2808772b34c979b2ebf7c21afd0e00468f7d385f909f57e307b.png" for 127.0.0.1 at 2017-03-30 15:43:36 -0300
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:43:47 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (5.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 33ms (Views: 32.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/welcome.self-d97fcf10863c062e7b86f4fb1001c64d69245b68844b1bf55b98c7d7f70696b2.css?body=1" for 127.0.0.1 at 2017-03-30 15:43:47 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-03-30 15:43:47 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:47 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:47 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:47 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:47 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-03-30 15:43:47 -0300
+
+
+Started GET "/assets/none-search-6732c39e6c754cbf3d24646a637c13117a1a27b6b9b8c509650f8529dcb0e1b5.png" for 127.0.0.1 at 2017-03-30 15:43:47 -0300
+
+
+Started GET "/assets/find-search-67bc2c1feacaf2808772b34c979b2ebf7c21afd0e00468f7d385f909f57e307b.png" for 127.0.0.1 at 2017-03-30 15:43:47 -0300
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:43:47 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:45:21 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["9", "6"]}
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 9]]
+  [1m[35mSintomasDoenca Load (2.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 6]]
+  [1m[36mDoenca Load (1.1ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.5ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintomasDoenca Load (4.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 3]]
+  [1m[36mSintoma Load (1.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 25ms (ActiveRecord: 10.1ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:45:21 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 33.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:45:21 -0300
+  [1m[36m (138.3ms)[0m  [1mDROP DATABASE IF EXISTS "TCC_development"[0m
+  [1m[35m (106.2ms)[0m  DROP DATABASE IF EXISTS "TCC_test"
+  [1m[36m (600.3ms)[0m  [1mCREATE DATABASE "TCC_development" ENCODING = 'unicode'[0m
+  [1m[35m (416.1ms)[0m  CREATE DATABASE "TCC_test" ENCODING = 'unicode'
+  [1m[36mSQL (0.2ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (17.3ms)[0m  CREATE TABLE "doencas" ("id" serial primary key, "nome" character varying, "min_qtd_sint" integer, "pagina" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (11.3ms)[0m  [1mCREATE TABLE "sintomas" ("id" serial primary key, "nome" character varying, "sintoma_obrigatorio" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (11.4ms)[0m  CREATE TABLE "sintomas_doencas" ("id" serial primary key, "sintoma_id" integer, "doenca_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (5.0ms)[0m  [1mCREATE TABLE "transtorno_nao_solucionado_sintomas" ("id" serial primary key, "transtornos_nao_solucionado_id" integer, "sintoma_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (5.4ms)[0m  CREATE TABLE "transtorno_pesquisado_doencas" ("id" serial primary key, "transtornos_pesquisado_id" integer, "doenca_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (8.3ms)[0m  [1mCREATE TABLE "transtornos_nao_solucionados" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (5.9ms)[0m  CREATE TABLE "transtornos_pesquisados" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (8.1ms)[0m  [1mCREATE TABLE "usuarios" ("id" serial primary key, "nome" character varying, "usuario" character varying, "senha" character varying, "email" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (7.3ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (4.2ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.3ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170201193045')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131205111')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170201193027')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131204136')
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170131204901')[0m
+  [1m[35m (1.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131205526')
+  [1m[36m (1.1ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170201181326')[0m
+  [1m[35m (1.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131205500')
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (11.7ms)[0m  CREATE TABLE "doencas" ("id" serial primary key, "nome" character varying, "min_qtd_sint" integer, "pagina" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (8.7ms)[0m  [1mCREATE TABLE "sintomas" ("id" serial primary key, "nome" character varying, "sintoma_obrigatorio" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (6.6ms)[0m  CREATE TABLE "sintomas_doencas" ("id" serial primary key, "sintoma_id" integer, "doenca_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (5.5ms)[0m  [1mCREATE TABLE "transtorno_nao_solucionado_sintomas" ("id" serial primary key, "transtornos_nao_solucionado_id" integer, "sintoma_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (5.4ms)[0m  CREATE TABLE "transtorno_pesquisado_doencas" ("id" serial primary key, "transtornos_pesquisado_id" integer, "doenca_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (6.4ms)[0m  [1mCREATE TABLE "transtornos_nao_solucionados" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (7.6ms)[0m  CREATE TABLE "transtornos_pesquisados" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (9.5ms)[0m  [1mCREATE TABLE "usuarios" ("id" serial primary key, "nome" character varying, "usuario" character varying, "senha" character varying, "email" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (6.0ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (4.7ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (1.9ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.7ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170201193045')[0m
+  [1m[35m (1.8ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131205111')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170201193027')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131204136')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170131204901')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131205526')
+  [1m[36m (1.5ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170201181326')[0m
+  [1m[35m (1.1ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131205500')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.5ms)[0m  [1mINSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Sintoma 1"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:47:38.363181"], ["updated_at", "2017-03-30 18:47:38.363181"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.3ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["nome", "Sintoma 2"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:47:38.369902"], ["updated_at", "2017-03-30 18:47:38.369902"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Sintoma 3"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:47:38.373664"], ["updated_at", "2017-03-30 18:47:38.373664"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["nome", "Sintoma 4"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:47:38.376728"], ["updated_at", "2017-03-30 18:47:38.376728"]]
+  [1m[36m (0.9ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Sintoma 5"], ["sintoma_obrigatorio", "t"], ["created_at", "2017-03-30 18:47:38.379340"], ["updated_at", "2017-03-30 18:47:38.379340"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "doencas" ("nome", "min_qtd_sint", "pagina", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["nome", "Gripe"], ["min_qtd_sint", 2], ["pagina", 111], ["created_at", "2017-03-30 18:47:38.392682"], ["updated_at", "2017-03-30 18:47:38.392682"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doencas" ("nome", "min_qtd_sint", "pagina", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Dor de Garganta"], ["min_qtd_sint", 1], ["pagina", 134], ["created_at", "2017-03-30 18:47:38.396255"], ["updated_at", "2017-03-30 18:47:38.396255"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["nome", "Sintoma 6"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:47:38.399073"], ["updated_at", "2017-03-30 18:47:38.399073"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doencas" ("nome", "min_qtd_sint", "pagina", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Doença 1"], ["min_qtd_sint", 1], ["pagina", 334], ["created_at", "2017-03-30 18:47:38.402437"], ["updated_at", "2017-03-30 18:47:38.402437"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["sintoma_id", 6], ["doenca_id", 3], ["created_at", "2017-03-30 18:47:38.444812"], ["updated_at", "2017-03-30 18:47:38.444812"]]
+  [1m[36m (1.5ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Sintoma x"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:47:38.448894"], ["updated_at", "2017-03-30 18:47:38.448894"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "doencas" ("nome", "min_qtd_sint", "pagina", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["nome", "Doença 88"], ["min_qtd_sint", 2], ["pagina", 764], ["created_at", "2017-03-30 18:47:38.452152"], ["updated_at", "2017-03-30 18:47:38.452152"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sintoma_id", 7], ["doenca_id", 4], ["created_at", "2017-03-30 18:47:38.456109"], ["updated_at", "2017-03-30 18:47:38.456109"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["nome", "Sintoma 40"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:47:38.458954"], ["updated_at", "2017-03-30 18:47:38.458954"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Sintoma 41"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:47:38.461823"], ["updated_at", "2017-03-30 18:47:38.461823"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["nome", "Sintoma Texto grande para ver se quebra na listagem dos sintomas bla bla"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:47:38.464860"], ["updated_at", "2017-03-30 18:47:38.464860"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doencas" ("nome", "min_qtd_sint", "pagina", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Doença HHJ"], ["min_qtd_sint", 2], ["pagina", 764], ["created_at", "2017-03-30 18:47:38.468038"], ["updated_at", "2017-03-30 18:47:38.468038"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["sintoma_id", 8], ["doenca_id", 5], ["created_at", "2017-03-30 18:47:38.472088"], ["updated_at", "2017-03-30 18:47:38.472088"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sintoma_id", 9], ["doenca_id", 5], ["created_at", "2017-03-30 18:47:38.475620"], ["updated_at", "2017-03-30 18:47:38.475620"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["sintoma_id", 10], ["doenca_id", 5], ["created_at", "2017-03-30 18:47:38.479004"], ["updated_at", "2017-03-30 18:47:38.479004"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Dor no percoço"], ["sintoma_obrigatorio", "t"], ["created_at", "2017-03-30 18:47:38.482252"], ["updated_at", "2017-03-30 18:47:38.482252"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["nome", "Desconforto na garganta"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:47:38.485322"], ["updated_at", "2017-03-30 18:47:38.485322"]]
+  [1m[36m (1.0ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doencas" ("nome", "min_qtd_sint", "pagina", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Torcicolo"], ["min_qtd_sint", 1], ["pagina", 334], ["created_at", "2017-03-30 18:47:38.488226"], ["updated_at", "2017-03-30 18:47:38.488226"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["sintoma_id", 11], ["doenca_id", 6], ["created_at", "2017-03-30 18:47:38.492159"], ["updated_at", "2017-03-30 18:47:38.492159"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sintoma_id", 12], ["doenca_id", 6], ["created_at", "2017-03-30 18:47:38.495565"], ["updated_at", "2017-03-30 18:47:38.495565"]]
+  [1m[35m (0.9ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-30 15:47:45 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mSintoma Load (1.0ms)[0m  SELECT "sintomas".* FROM "sintomas"  ORDER BY "sintomas"."nome" ASC
+  Rendered welcome/index.html.erb within layouts/application (247.3ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 304ms (Views: 282.4ms | ActiveRecord: 3.2ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:47:46 -0300
+  [1m[36m (213.0ms)[0m  [1mDROP DATABASE IF EXISTS "TCC_development"[0m
+  [1m[35m (107.4ms)[0m  DROP DATABASE IF EXISTS "TCC_test"
+  [1m[36m (420.3ms)[0m  [1mCREATE DATABASE "TCC_development" ENCODING = 'unicode'[0m
+  [1m[35m (406.6ms)[0m  CREATE DATABASE "TCC_test" ENCODING = 'unicode'
+  [1m[36mSQL (5.9ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (15.3ms)[0m  CREATE TABLE "doencas" ("id" serial primary key, "nome" character varying, "min_qtd_sint" integer, "pagina" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (11.6ms)[0m  [1mCREATE TABLE "sintomas" ("id" serial primary key, "nome" character varying, "sintoma_obrigatorio" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (19.2ms)[0m  CREATE TABLE "sintomas_doencas" ("id" serial primary key, "sintoma_id" integer, "doenca_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (12.5ms)[0m  [1mCREATE TABLE "transtorno_nao_solucionado_sintomas" ("id" serial primary key, "transtornos_nao_solucionado_id" integer, "sintoma_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (6.3ms)[0m  CREATE TABLE "transtorno_pesquisado_doencas" ("id" serial primary key, "transtornos_pesquisado_id" integer, "doenca_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (6.8ms)[0m  [1mCREATE TABLE "transtornos_nao_solucionados" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (13.0ms)[0m  CREATE TABLE "transtornos_pesquisados" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (7.6ms)[0m  [1mCREATE TABLE "usuarios" ("id" serial primary key, "nome" character varying, "usuario" character varying, "senha" character varying, "email" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (6.5ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (4.4ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.4ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.0ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170201193045')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131205111')
+  [1m[36m (0.9ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170201193027')[0m
+  [1m[35m (0.9ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131204136')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170131204901')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131205526')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170201181326')[0m
+  [1m[35m (1.3ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131205500')
+  [1m[36mSQL (0.3ms)[0m  [1mCREATE EXTENSION IF NOT EXISTS "plpgsql"[0m
+  [1m[35m (15.2ms)[0m  CREATE TABLE "doencas" ("id" serial primary key, "nome" character varying, "min_qtd_sint" integer, "pagina" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (16.7ms)[0m  [1mCREATE TABLE "sintomas" ("id" serial primary key, "nome" character varying, "sintoma_obrigatorio" boolean, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (10.0ms)[0m  CREATE TABLE "sintomas_doencas" ("id" serial primary key, "sintoma_id" integer, "doenca_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (5.9ms)[0m  [1mCREATE TABLE "transtorno_nao_solucionado_sintomas" ("id" serial primary key, "transtornos_nao_solucionado_id" integer, "sintoma_id" integer, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (7.0ms)[0m  CREATE TABLE "transtorno_pesquisado_doencas" ("id" serial primary key, "transtornos_pesquisado_id" integer, "doenca_id" integer, "created_at" timestamp, "updated_at" timestamp) 
+  [1m[36m (5.3ms)[0m  [1mCREATE TABLE "transtornos_nao_solucionados" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) [0m
+  [1m[35m (6.4ms)[0m  CREATE TABLE "transtornos_pesquisados" ("id" serial primary key, "created_at" timestamp NOT NULL, "updated_at" timestamp NOT NULL) 
+  [1m[36m (8.3ms)[0m  [1mCREATE TABLE "usuarios" ("id" serial primary key, "nome" character varying, "usuario" character varying, "senha" character varying, "email" character varying, "created_at" timestamp, "updated_at" timestamp) [0m
+  [1m[35m (4.4ms)[0m  CREATE TABLE "schema_migrations" ("version" character varying NOT NULL) 
+  [1m[36m (4.5ms)[0m  [1mCREATE UNIQUE INDEX  "unique_schema_migrations" ON "schema_migrations"  ("version")[0m
+  [1m[35m (0.5ms)[0m  SELECT version FROM "schema_migrations"
+  [1m[36m (1.8ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170201193045')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131205111')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170201193027')[0m
+  [1m[35m (1.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131204136')
+  [1m[36m (1.2ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170131204901')[0m
+  [1m[35m (2.0ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131205526')
+  [1m[36m (1.3ms)[0m  [1mINSERT INTO "schema_migrations" (version) VALUES ('20170201181326')[0m
+  [1m[35m (1.2ms)[0m  INSERT INTO "schema_migrations" (version) VALUES ('20170131205500')
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.6ms)[0m  [1mINSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Sintoma 1"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:48:10.449346"], ["updated_at", "2017-03-30 18:48:10.449346"]]
+  [1m[35m (2.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["nome", "Sintoma 2"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:48:10.457422"], ["updated_at", "2017-03-30 18:48:10.457422"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Sintoma 3"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:48:10.461281"], ["updated_at", "2017-03-30 18:48:10.461281"]]
+  [1m[35m (6.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["nome", "Sintoma 4"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:48:10.469424"], ["updated_at", "2017-03-30 18:48:10.469424"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Sintoma 5"], ["sintoma_obrigatorio", "t"], ["created_at", "2017-03-30 18:48:10.472787"], ["updated_at", "2017-03-30 18:48:10.472787"]]
+  [1m[35m (1.1ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.4ms)[0m  INSERT INTO "doencas" ("nome", "min_qtd_sint", "pagina", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["nome", "Gripe"], ["min_qtd_sint", 2], ["pagina", 111], ["created_at", "2017-03-30 18:48:10.486158"], ["updated_at", "2017-03-30 18:48:10.486158"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doencas" ("nome", "min_qtd_sint", "pagina", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Dor de Garganta"], ["min_qtd_sint", 1], ["pagina", 134], ["created_at", "2017-03-30 18:48:10.489934"], ["updated_at", "2017-03-30 18:48:10.489934"]]
+  [1m[35m (1.6ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["nome", "Sintoma 6"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:48:10.494279"], ["updated_at", "2017-03-30 18:48:10.494279"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doencas" ("nome", "min_qtd_sint", "pagina", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Doença 1"], ["min_qtd_sint", 1], ["pagina", 334], ["created_at", "2017-03-30 18:48:10.497635"], ["updated_at", "2017-03-30 18:48:10.497635"]]
+  [1m[35m (1.5ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.5ms)[0m  INSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["sintoma_id", 6], ["doenca_id", 3], ["created_at", "2017-03-30 18:48:10.524638"], ["updated_at", "2017-03-30 18:48:10.524638"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Sintoma x"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:48:10.528955"], ["updated_at", "2017-03-30 18:48:10.528955"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "doencas" ("nome", "min_qtd_sint", "pagina", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"  [["nome", "Doença 88"], ["min_qtd_sint", 2], ["pagina", 764], ["created_at", "2017-03-30 18:48:10.532246"], ["updated_at", "2017-03-30 18:48:10.532246"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sintoma_id", 7], ["doenca_id", 4], ["created_at", "2017-03-30 18:48:10.536230"], ["updated_at", "2017-03-30 18:48:10.536230"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["nome", "Sintoma 40"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:48:10.539088"], ["updated_at", "2017-03-30 18:48:10.539088"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.3ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Sintoma 41"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:48:10.542177"], ["updated_at", "2017-03-30 18:48:10.542177"]]
+  [1m[35m (1.3ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.2ms)[0m  INSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["nome", "Sintoma Texto grande para ver se quebra na listagem dos sintomas bla bla bla blabla blabla blabla blabla blabla blabla blabla bla"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:48:10.545250"], ["updated_at", "2017-03-30 18:48:10.545250"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.1ms)[0m  BEGIN
+  [1m[36mSQL (0.2ms)[0m  [1mINSERT INTO "doencas" ("nome", "min_qtd_sint", "pagina", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Doença HHJ"], ["min_qtd_sint", 2], ["pagina", 764], ["created_at", "2017-03-30 18:48:10.548147"], ["updated_at", "2017-03-30 18:48:10.548147"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.2ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["sintoma_id", 8], ["doenca_id", 5], ["created_at", "2017-03-30 18:48:10.551700"], ["updated_at", "2017-03-30 18:48:10.551700"]]
+  [1m[36m (1.1ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sintoma_id", 9], ["doenca_id", 5], ["created_at", "2017-03-30 18:48:10.555101"], ["updated_at", "2017-03-30 18:48:10.555101"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["sintoma_id", 10], ["doenca_id", 5], ["created_at", "2017-03-30 18:48:10.558815"], ["updated_at", "2017-03-30 18:48:10.558815"]]
+  [1m[36m (1.4ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["nome", "Dor no percoço"], ["sintoma_obrigatorio", "t"], ["created_at", "2017-03-30 18:48:10.562304"], ["updated_at", "2017-03-30 18:48:10.562304"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sintomas" ("nome", "sintoma_obrigatorio", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["nome", "Desconforto na garganta"], ["sintoma_obrigatorio", "f"], ["created_at", "2017-03-30 18:48:10.565208"], ["updated_at", "2017-03-30 18:48:10.565208"]]
+  [1m[36m (1.2ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.3ms)[0m  [1mINSERT INTO "doencas" ("nome", "min_qtd_sint", "pagina", "created_at", "updated_at") VALUES ($1, $2, $3, $4, $5) RETURNING "id"[0m  [["nome", "Torcicolo"], ["min_qtd_sint", 1], ["pagina", 334], ["created_at", "2017-03-30 18:48:10.568455"], ["updated_at", "2017-03-30 18:48:10.568455"]]
+  [1m[35m (1.0ms)[0m  COMMIT
+  [1m[36m (0.1ms)[0m  [1mBEGIN[0m
+  [1m[35mSQL (0.3ms)[0m  INSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"  [["sintoma_id", 11], ["doenca_id", 6], ["created_at", "2017-03-30 18:48:10.572333"], ["updated_at", "2017-03-30 18:48:10.572333"]]
+  [1m[36m (1.3ms)[0m  [1mCOMMIT[0m
+  [1m[35m (0.2ms)[0m  BEGIN
+  [1m[36mSQL (0.4ms)[0m  [1mINSERT INTO "sintomas_doencas" ("sintoma_id", "doenca_id", "created_at", "updated_at") VALUES ($1, $2, $3, $4) RETURNING "id"[0m  [["sintoma_id", 12], ["doenca_id", 6], ["created_at", "2017-03-30 18:48:10.576060"], ["updated_at", "2017-03-30 18:48:10.576060"]]
+  [1m[35m (1.2ms)[0m  COMMIT
+
+
+Started GET "/" for 127.0.0.1 at 2017-03-30 15:48:16 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (0.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mSintoma Load (1.2ms)[0m  SELECT "sintomas".* FROM "sintomas"  ORDER BY "sintomas"."nome" ASC
+  Rendered welcome/index.html.erb within layouts/application (234.0ms)
+  Rendered layouts/_footer.html.erb (0.3ms)
+Completed 200 OK in 293ms (Views: 269.4ms | ActiveRecord: 3.5ms)
+
+
+Started GET "/assets/welcome.self-d97fcf10863c062e7b86f4fb1001c64d69245b68844b1bf55b98c7d7f70696b2.css?body=1" for 127.0.0.1 at 2017-03-30 15:48:17 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-03-30 15:48:17 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-03-30 15:48:17 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-03-30 15:48:17 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-03-30 15:48:17 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-03-30 15:48:17 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-03-30 15:48:17 -0300
+
+
+Started GET "/assets/usuario-f1c577c0e328556085a6ae0c5e60ef2838f4ab86b9628e89149a9b820f6b7c90.png" for 127.0.0.1 at 2017-03-30 15:48:18 -0300
+
+
+Started GET "/assets/livro-e512ed2ef5ecc7f502f0b2b1cfadf516f7560eefe3f138ebf156d88b86fdaf73.jpg" for 127.0.0.1 at 2017-03-30 15:48:18 -0300
+
+
+Started GET "/assets/pesquisa-1d16c5c8ff280bb61d8de821253f35500b42bed5c323d4359a504df6bc6c86fc.jpg" for 127.0.0.1 at 2017-03-30 15:48:18 -0300
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:48:18 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:49:02 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["9", "10"]}
+  [1m[36mSintomasDoenca Load (0.5ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 9]]
+  [1m[35mSintomasDoenca Load (0.7ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 63ms (ActiveRecord: 6.2ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:49:02 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (4.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 49.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:49:03 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:49:13 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["8", "10"]}
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 8]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.5ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 20ms (ActiveRecord: 2.8ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:49:13 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (5.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 69ms (Views: 68.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:49:13 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:49:18 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["5", "10"]}
+  [1m[36mSintomasDoenca Load (0.9ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.1ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 11ms (ActiveRecord: 2.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:49:18 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (6.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:49:19 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:50:38 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["12", "5", "10", "7"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 12]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 5]]
+  [1m[35mSintomasDoenca Load (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mSintomasDoenca Load (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 7]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 6]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 12]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.1ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 4]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 57ms (ActiveRecord: 10.4ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:50:38 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (4.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 30ms (Views: 29.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:50:38 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:51:15 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["6", "10", "7"]}
+  [1m[35mSintomasDoenca Load (0.6ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 6]]
+  [1m[36mSintomasDoenca Load (2.8ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 7]]
+  [1m[36mDoenca Load (1.4ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mDoenca Load (0.8ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 3]]
+  [1m[36mSintoma Load (4.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.1ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 4]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 28ms (ActiveRecord: 11.4ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:51:15 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (6.7ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 41.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:51:15 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:52:20 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["6", "10"]}
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 6]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 3]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.8ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (3.8ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.8ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 17ms (ActiveRecord: 7.2ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:52:20 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (6.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 43ms (Views: 42.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:52:20 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:53:34 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (1.1ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 46ms (ActiveRecord: 6.5ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:53:34 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 20ms (Views: 19.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:53:34 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:55:07 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.6ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (1.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 41ms (ActiveRecord: 6.4ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:55:07 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (2.7ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 25ms (Views: 24.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:55:07 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:55:10 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (2.5ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 8ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:55:10 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 16ms (Views: 15.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:55:11 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:56:36 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.4ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (4.5ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (5.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Completed 500 Internal Server Error in 48ms (ActiveRecord: 15.7ms)
+
+NoMethodError (undefined method `doenca_id' for #<Array:0x007fe700ecc810>):
+  app/controllers/welcome_controller.rb:74:in `block (2 levels) in create'
+  app/controllers/welcome_controller.rb:72:in `each'
+  app/controllers/welcome_controller.rb:72:in `block in create'
+  app/controllers/welcome_controller.rb:71:in `each'
+  app/controllers/welcome_controller.rb:71:in `create'
+
+
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (13.0ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.8ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (44.8ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (70.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (112.6ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:57:25 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.6ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 44ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:57:25 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 22ms (Views: 20.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:57:26 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:57:31 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["8", "10"]}
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 8]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (2.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 9ms (ActiveRecord: 3.6ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:57:31 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:57:32 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:57:36 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["6"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 6]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 6ms (ActiveRecord: 1.0ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:57:36 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 29ms (Views: 28.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:57:37 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:57:40 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["6", "10"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 6]]
+  [1m[36mSintomasDoenca Load (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.1ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 9ms (ActiveRecord: 1.7ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 15:57:40 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (4.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 28ms (Views: 27.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 15:57:40 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 15:58:58 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["6", "10"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 6]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.5ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Completed 500 Internal Server Error in 49ms (ActiveRecord: 7.9ms)
+
+NoMethodError (undefined method `count' for 3:Fixnum):
+  app/controllers/welcome_controller.rb:75:in `block (3 levels) in create'
+  app/controllers/welcome_controller.rb:73:in `each'
+  app/controllers/welcome_controller.rb:73:in `block (2 levels) in create'
+  app/controllers/welcome_controller.rb:72:in `each'
+  app/controllers/welcome_controller.rb:72:in `block in create'
+  app/controllers/welcome_controller.rb:71:in `each'
+  app/controllers/welcome_controller.rb:71:in `create'
+
+
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.1ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (32.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.8ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (36.1ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:00:31 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["6", "10"]}
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 6]]
+  [1m[36mSintomasDoenca Load (0.5ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.1ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Completed 500 Internal Server Error in 41ms (ActiveRecord: 7.6ms)
+
+NoMethodError (undefined method `where' for #<SintomasDoenca:0x007fe7007d0020>):
+  app/controllers/welcome_controller.rb:75:in `block (3 levels) in create'
+  app/controllers/welcome_controller.rb:73:in `each'
+  app/controllers/welcome_controller.rb:73:in `block (2 levels) in create'
+  app/controllers/welcome_controller.rb:72:in `each'
+  app/controllers/welcome_controller.rb:72:in `block in create'
+  app/controllers/welcome_controller.rb:71:in `each'
+  app/controllers/welcome_controller.rb:71:in `create'
+
+
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (42.7ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:00:46 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["6", "10"]}
+  [1m[35mSintomasDoenca Load (0.7ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 6]]
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.8ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mDoenca Load (0.4ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 3]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Completed 500 Internal Server Error in 61ms (ActiveRecord: 9.7ms)
+
+NoMethodError (undefined method `where' for #<Array:0x007fe700cb9528>):
+  app/controllers/welcome_controller.rb:75:in `block (3 levels) in create'
+  app/controllers/welcome_controller.rb:73:in `each'
+  app/controllers/welcome_controller.rb:73:in `block (2 levels) in create'
+  app/controllers/welcome_controller.rb:72:in `each'
+  app/controllers/welcome_controller.rb:72:in `block in create'
+  app/controllers/welcome_controller.rb:71:in `each'
+  app/controllers/welcome_controller.rb:71:in `create'
+
+
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (7.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (3.7ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.1ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (32.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (54.9ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:00:56 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["6", "10"]}
+  [1m[35mSintomasDoenca Load (0.9ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 6]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mSintomasDoenca Load (6.6ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Completed 500 Internal Server Error in 56ms (ActiveRecord: 17.7ms)
+
+NoMethodError (undefined method `where' for #<Doenca:0x007fe705a8e4b0>):
+  app/controllers/welcome_controller.rb:75:in `block (3 levels) in create'
+  app/controllers/welcome_controller.rb:73:in `each'
+  app/controllers/welcome_controller.rb:73:in `block (2 levels) in create'
+  app/controllers/welcome_controller.rb:72:in `each'
+  app/controllers/welcome_controller.rb:72:in `block in create'
+  app/controllers/welcome_controller.rb:71:in `each'
+  app/controllers/welcome_controller.rb:71:in `create'
+
+
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.8ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (27.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.7ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (20.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (38.8ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:02:02 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["6", "10"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 6]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (6.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mSintomasDoenca Load (0.5ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Completed 500 Internal Server Error in 52ms (ActiveRecord: 16.4ms)
+
+NoMethodError (private method `select' called for #<SintomasDoenca:0x007fe700f34528>):
+  app/controllers/welcome_controller.rb:75:in `block (3 levels) in create'
+  app/controllers/welcome_controller.rb:73:in `each'
+  app/controllers/welcome_controller.rb:73:in `block (2 levels) in create'
+  app/controllers/welcome_controller.rb:72:in `each'
+  app/controllers/welcome_controller.rb:72:in `block in create'
+  app/controllers/welcome_controller.rb:71:in `each'
+  app/controllers/welcome_controller.rb:71:in `create'
+
+
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.7ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.0ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.1ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.7ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (15.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.7ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:02:16 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["6", "10"]}
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 6]]
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 47ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:02:16 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 44ms (Views: 43.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:02:16 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:02:23 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["6"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 6]]
+  [1m[36mDoenca Load (0.1ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintomasDoenca Load (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 3]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 4ms (ActiveRecord: 0.5ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:02:23 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 21.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:02:23 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:02:27 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 6ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:02:27 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (0.0ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 18ms (Views: 18.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:02:28 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:02:30 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["8", "10"]}
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 8]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Completed 500 Internal Server Error in 7ms (ActiveRecord: 1.9ms)
+
+TypeError (no implicit conversion from nil to integer):
+  app/controllers/welcome_controller.rb:76:in `delete_at'
+  app/controllers/welcome_controller.rb:76:in `block (3 levels) in create'
+  app/controllers/welcome_controller.rb:73:in `each'
+  app/controllers/welcome_controller.rb:73:in `block (2 levels) in create'
+  app/controllers/welcome_controller.rb:72:in `each'
+  app/controllers/welcome_controller.rb:72:in `block in create'
+  app/controllers/welcome_controller.rb:71:in `each'
+  app/controllers/welcome_controller.rb:71:in `create'
+
+
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.1ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.1ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (28.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.7ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (33.6ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:03:05 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["8", "10"]}
+  [1m[35mSintomasDoenca Load (0.5ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 8]]
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Completed 500 Internal Server Error in 53ms (ActiveRecord: 7.1ms)
+
+TypeError (no implicit conversion from nil to integer):
+  app/controllers/welcome_controller.rb:76:in `delete_at'
+  app/controllers/welcome_controller.rb:76:in `block (3 levels) in create'
+  app/controllers/welcome_controller.rb:73:in `each'
+  app/controllers/welcome_controller.rb:73:in `block (2 levels) in create'
+  app/controllers/welcome_controller.rb:72:in `each'
+  app/controllers/welcome_controller.rb:72:in `block in create'
+  app/controllers/welcome_controller.rb:71:in `each'
+  app/controllers/welcome_controller.rb:71:in `create'
+
+
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (9.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.1ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.7ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (34.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.6ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.2ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:03:35 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Completed 500 Internal Server Error in 59ms (ActiveRecord: 6.6ms)
+
+NameError (undefined local variable or method `x' for #<WelcomeController:0x007fe706403ea0>):
+  app/controllers/welcome_controller.rb:81:in `create'
+
+
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (6.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.1ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.8ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.7ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (34.5ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:03:52 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 40ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:03:52 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 19ms (Views: 18.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:03:52 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:04:22 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (3.4ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 48ms (ActiveRecord: 10.9ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:04:22 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 25.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:04:22 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:05:36 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (6.7ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (1.5ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 48ms (ActiveRecord: 14.9ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:05:36 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 50ms (Views: 49.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:05:37 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:05:41 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["8", "10"]}
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 8]]
+  [1m[36mSintomasDoenca Load (0.5ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.1ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.1ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Completed 500 Internal Server Error in 8ms (ActiveRecord: 1.6ms)
+
+TypeError (no implicit conversion from nil to integer):
+  app/controllers/welcome_controller.rb:77:in `delete_at'
+  app/controllers/welcome_controller.rb:77:in `block (3 levels) in create'
+  app/controllers/welcome_controller.rb:73:in `each'
+  app/controllers/welcome_controller.rb:73:in `block (2 levels) in create'
+  app/controllers/welcome_controller.rb:72:in `each'
+  app/controllers/welcome_controller.rb:72:in `block in create'
+  app/controllers/welcome_controller.rb:71:in `each'
+  app/controllers/welcome_controller.rb:71:in `create'
+
+
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (11.7ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (35.7ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.0ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (37.1ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:06:55 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["8", "10"]}
+  [1m[35mSintomasDoenca Load (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 8]]
+  [1m[36mSintomasDoenca Load (1.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.1ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Completed 500 Internal Server Error in 40ms (ActiveRecord: 7.3ms)
+
+TypeError (no implicit conversion from nil to integer):
+  app/controllers/welcome_controller.rb:78:in `delete_at'
+  app/controllers/welcome_controller.rb:78:in `block (3 levels) in create'
+  app/controllers/welcome_controller.rb:73:in `each'
+  app/controllers/welcome_controller.rb:73:in `block (2 levels) in create'
+  app/controllers/welcome_controller.rb:72:in `each'
+  app/controllers/welcome_controller.rb:72:in `block in create'
+  app/controllers/welcome_controller.rb:71:in `each'
+  app/controllers/welcome_controller.rb:71:in `create'
+
+
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.9ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (5.6ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (36.8ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (19.9ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (43.8ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:06:58 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.1ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 5ms (ActiveRecord: 0.9ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:06:58 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 29ms (Views: 28.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:06:58 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:07:35 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.9ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.1ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 40ms (ActiveRecord: 7.4ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:07:35 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 34ms (Views: 33.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:07:35 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:09:06 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.1ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 43ms (ActiveRecord: 5.2ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:09:06 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 50ms (Views: 49.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:09:06 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:09:10 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["8", "10"]}
+  [1m[35mSintomasDoenca Load (0.5ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 8]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 10ms (ActiveRecord: 2.1ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:09:10 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (2.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 26.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:09:11 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:09:14 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["8", "9", "10"]}
+  [1m[35mSintomasDoenca Load (2.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 8]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 9]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (4.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 16ms (ActiveRecord: 7.5ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:09:14 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 31ms (Views: 30.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:09:14 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:09:19 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["8"]}
+  [1m[35mSintomasDoenca Load (0.9ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 8]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (1.8ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (3.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 12ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:09:19 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (3.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 25.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:09:19 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:09:23 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["7"]}
+  [1m[35mSintomasDoenca Load (3.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 7]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 4]]
+  [1m[36mSintoma Load (3.5ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 18ms (ActiveRecord: 6.9ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:09:23 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (3.9ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 55ms (Views: 54.1ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:09:23 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:09:43 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["7"]}
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 7]]
+  [1m[36mDoenca Load (0.5ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintomasDoenca Load (1.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 4]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 75ms (ActiveRecord: 7.1ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:09:43 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 38ms (Views: 37.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:09:44 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:09:48 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (3.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.5ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 12ms (ActiveRecord: 4.9ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:09:48 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:09:48 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:09:52 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["8", "9"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 8]]
+  [1m[36mSintomasDoenca Load (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 9]]
+  [1m[35mDoenca Load (0.1ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 1.3ms)
+
+TypeError (no implicit conversion from nil to integer):
+  app/controllers/welcome_controller.rb:78:in `delete_at'
+  app/controllers/welcome_controller.rb:78:in `block (3 levels) in create'
+  app/controllers/welcome_controller.rb:73:in `each'
+  app/controllers/welcome_controller.rb:73:in `block (2 levels) in create'
+  app/controllers/welcome_controller.rb:72:in `each'
+  app/controllers/welcome_controller.rb:72:in `block in create'
+  app/controllers/welcome_controller.rb:71:in `each'
+  app/controllers/welcome_controller.rb:71:in `create'
+
+
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (8.6ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.9ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (30.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.6ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (16.1ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (32.2ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:10:07 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["12"]}
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 12]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mSintomasDoenca Load (3.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 6]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 12]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 9ms (ActiveRecord: 4.3ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:10:08 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 27ms (Views: 26.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:10:08 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:10:11 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["12", "11"]}
+  [1m[36mSintomasDoenca Load (3.5ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 12]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 11]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 6]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 12]]
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 4.8ms)
+
+TypeError (no implicit conversion from nil to integer):
+  app/controllers/welcome_controller.rb:78:in `delete_at'
+  app/controllers/welcome_controller.rb:78:in `block (3 levels) in create'
+  app/controllers/welcome_controller.rb:73:in `each'
+  app/controllers/welcome_controller.rb:73:in `block (2 levels) in create'
+  app/controllers/welcome_controller.rb:72:in `each'
+  app/controllers/welcome_controller.rb:72:in `block in create'
+  app/controllers/welcome_controller.rb:71:in `each'
+  app/controllers/welcome_controller.rb:71:in `create'
+
+
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_source.erb (10.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_trace.html.erb (4.0ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/_request_and_response.html.erb (1.2ms)
+  Rendered /var/lib/gems/2.2.0/gems/actionpack-4.2.7.1/lib/action_dispatch/middleware/templates/rescues/diagnostics.html.erb within rescues/layout (31.0ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_markup.html.erb (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_inner_console_markup.html.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/_prompt_box_markup.html.erb within layouts/inlined_string (0.3ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/style.css.erb within layouts/inlined_string (0.4ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/console.js.erb within layouts/javascript (18.5ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/main.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/error_page.js.erb within layouts/javascript (0.6ms)
+  Rendered /var/lib/gems/2.2.0/gems/web-console-2.3.0/lib/web_console/templates/index.html.erb (40.6ms)
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:10:47 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["12", "11"]}
+  [1m[35mSintomasDoenca Load (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 12]]
+  [1m[36mSintomasDoenca Load (1.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 11]]
+  [1m[35mDoenca Load (0.1ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 6]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 12]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 44ms (ActiveRecord: 6.7ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:10:47 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (3.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 35ms (Views: 35.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:10:48 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:10:50 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["12"]}
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 12]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 6]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 11]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 12]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:10:50 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (2.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 17ms (Views: 17.0ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:10:50 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:10:53 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["7"]}
+  [1m[35mSintomasDoenca Load (0.5ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 7]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 4]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 5ms (ActiveRecord: 1.2ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:10:53 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (0.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 27ms (Views: 26.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:10:54 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:10:57 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["6"]}
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 6]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 6]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 5ms (ActiveRecord: 0.8ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:10:57 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (1.9ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 20.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:10:57 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:11:00 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["10"]}
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 10]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.8ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 24ms (ActiveRecord: 1.8ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:11:00 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (2.5ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 25ms (Views: 24.2ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:11:00 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:11:04 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["9", "10"]}
+  [1m[35mSintomasDoenca Load (0.5ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 9]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 10]]
+  [1m[35mDoenca Load (0.4ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 9ms (ActiveRecord: 1.9ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:11:04 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 26ms (Views: 25.7ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:11:05 -0300
+
+
+Started POST "/welcome" for 127.0.0.1 at 2017-03-30 16:11:20 -0300
+Processing by WelcomeController#create as HTML
+  Parameters: {"id"=>["11", "6"]}
+  [1m[35mSintomasDoenca Load (4.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1  [["sintoma_id", 11]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."sintoma_id" = $1[0m  [["sintoma_id", 6]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 6]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 6]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 11]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 12]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 3]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 6]]
+Redirected to http://localhost:3000/search
+Completed 302 Found in 12ms (ActiveRecord: 5.8ms)
+
+
+Started GET "/search" for 127.0.0.1 at 2017-03-30 16:11:20 -0300
+Processing by WelcomeController#search as HTML
+  Rendered welcome/search.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 21ms (Views: 20.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-03-30 16:11:20 -0300

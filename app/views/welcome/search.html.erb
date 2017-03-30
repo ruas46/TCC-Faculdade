@@ -26,9 +26,9 @@
                   <% valor.each do |x|%>
                     <!-- pesquina no array de id's dos sintomas pesquisados se contem o id do sintoma atual e se n é um array vazio -->
                     <% if @sintomasPesquisadosOrganizado.grep(x.id) != [] %>
-                      <%= "[x]" %>
+                      <%= image_tag("find-search.png", :size => "20x20") %>
                     <% else %>
-                      <%= "[ ]" %>
+                      <%= image_tag("none-search.png", :size => "20x20") %>
                     <% end %>
                     <!-- Mostra nome do sintoma -->
                     <%= x.nome%>
