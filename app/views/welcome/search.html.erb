@@ -24,6 +24,13 @@
               <% @pesquisaSintoma.each do |chave,valor| %>
                 <% if pD.id == chave%>
                   <% valor.each do |x|%>
+                    <!-- pesquina no array de id's dos sintomas pesquisados se contem o id do sintoma atual e se n é um array vazio -->
+                    <% if @sintomasPesquisadosOrganizado.grep(x.id) != [] %>
+                      <%= "[x]" %>
+                    <% else %>
+                      <%= "[ ]" %>
+                    <% end %>
+                    <!-- Mostra nome do sintoma -->
                     <%= x.nome%>
                     <br>
                   <% end %>
@@ -41,7 +48,7 @@
       <% end %>
     <% else %>
     <div class="row">
-      <div class="col-lg-offset-4 col-lg-4 search-style-none">
+      <div class="col-lg-offset-5 col-lg-2 search-style-none">
         <b><%= "Nenhuma doença encontrada!"%></b>
       </div>
     </div>

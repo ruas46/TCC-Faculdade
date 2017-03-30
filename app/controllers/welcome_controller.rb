@@ -74,19 +74,25 @@ class WelcomeController < ApplicationController
         end
       end
 
+      #Manipula sintomasPesquisados para deixar só o id dos sintomas em um array simples
+      sintomasPesquisados.each do |s|#varrendo o array para achar a doença pelo id
+        s.each do |f|
+          @@sintomasPesquisadosOrganizado << f.sintoma_id
+        end
+      end
 
 
-
+      #DEBUG
+      puts "---------------------------------------------------------------"
+      puts "@@sintomasPesquisadosOrganizado: #{@@sintomasPesquisadosOrganizado}"
       puts "sintomasPesquisados: #{sintomasPesquisados}"
       puts "@@pesquisaSintoma: #{@@pesquisaSintoma}"
-      puts "@@pesquisaDoenca: #{@@pesquisaDoenca} <<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+      puts "@@pesquisaDoenca: #{@@pesquisaDoenca}"
 
-      #validar no front os sintomas pesquisados para comparar no resultado
-      #Deixar no sintomasPesquisados só o id dos sintomas em um array simples
 
       #ordenar resultados pelos que tem a maior quantidade de sintomas em comum
 
-      #validar sintomas obrigatórios (falar com a bruna sobre essa parte)
+      #validar sintomas obrigatórios
 
       #salvar cada pesquisa feita na tabela de pesquisas
       #**validar se @@pesquisaDoenca tem algo, se n, salvar a consulta no banco de não resolvidos
@@ -97,7 +103,7 @@ class WelcomeController < ApplicationController
 
   def search
     #valida se @@pesquisaDoenca tem algo, se n redireciona para home(caso acessem /search direto)
-    if (defined?(@@pesquisaDoenca)).nil?#tem algo no @@pesquisaDoenca
+    if (defined?(@@pesquisaDoenca)).nil?#tem algo no @@pesquisaDoenca ?
       redirect_to '/'
     else
       @sintomasPesquisadosOrganizado = @@sintomasPesquisadosOrganizado
