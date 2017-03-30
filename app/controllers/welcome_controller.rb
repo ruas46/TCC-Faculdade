@@ -38,8 +38,12 @@ class WelcomeController < ApplicationController
       #Deleta doenças iguais encontradas
       @@pesquisaDoenca.each do |s|
         if @@pesquisaDoenca.select {|e| e.id == s.id}.count > 1
-            #deleta a doença do array se estiver duplicada
-            @@pesquisaDoenca.delete_at(@@pesquisaDoenca.index(s))
+          aux = @@pesquisaDoenca.select {|e| e.id == s.id}#pega todos duplicados
+          aux.delete_at(aux.index(aux.first))#tira 1 do array
+          #deleta o resto
+          aux.each do |x|
+            @@pesquisaDoenca.delete_at(@@pesquisaDoenca.index(x))
+          end
         end
       end
 
