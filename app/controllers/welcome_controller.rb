@@ -88,7 +88,7 @@ class WelcomeController < ApplicationController
 
       #validar sintomas obrigatórios (falar com a bruna sobre essa parte)
 
-
+      #salvar cada pesquisa feita na tabela de pesquisas
       #**validar se @@pesquisaDoenca tem algo, se n, salvar a consulta no banco de não resolvidos
       redirect_to '/search'
     end
@@ -97,7 +97,7 @@ class WelcomeController < ApplicationController
 
   def search
     #valida se @@pesquisaDoenca tem algo, se n redireciona para home(caso acessem /search direto)
-    if (defined?(@@pesquisaDoenca)).nil?
+    if (defined?(@@pesquisaDoenca)).nil?#tem algo no @@pesquisaDoenca
       redirect_to '/'
     else
       @sintomasPesquisadosOrganizado = @@sintomasPesquisadosOrganizado
