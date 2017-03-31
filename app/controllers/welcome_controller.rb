@@ -47,18 +47,6 @@ class WelcomeController < ApplicationController
         end
       end
 
-      #pesquisa sintomas da doença
-      #separados por um array:
-      #
-      # @@pesquisaSintoma:
-      # < array:
-      #   <arrayDoença1
-      #     <array1 sintoma1>
-      #     <array2 sintoma2>
-      #   <arrayDoença2
-      #     <array1 sintoma1>
-      #    >
-      # >
       @@pesquisaDoenca.each do |s|
           auxArray = []
           auxArray2 = []
@@ -89,6 +77,29 @@ class WelcomeController < ApplicationController
         end
       end
 
+      #validar sintomas obrigatórios
+      @@pesquisaDoenca.each do |pD|
+        @@pesquisaSintoma.each do |x, y|
+          puts "pD:#{pD}  x:#{x}  y:#{y}"#
+          #Compara id da doença com o id da doença que tem dentro do array @@pesquisaSintoma
+          if pD.id == x
+            #pega o array de dentro referente a doenca e faz um each nos seus sintomas
+            y.each do |j|
+              puts "j.sintoma_obrigatorio: #{j.sintoma_obrigatorio}"#
+              puts "@@sintomasPesquisadosOrganizado.grep(j.id): #{@@sintomasPesquisadosOrganizado.grep(j.id)}"
+              #se o sintoma foi obrigatorio entra no if
+              if j.sintoma_obrigatorio
+                #se esse sintoma foi pesquisado entra no if, se não deleta a doença do array
+                if @@sintomasPesquisadosOrganizado.grep(j.id) != []
+                else
+                  @@pesquisaDoenca.delete_at(@@pesquisaDoenca.index(pD))
+                end
+              end
+            end
+          end
+        end
+      end
+
 
       #DEBUG
       puts "---------------------------------------------------------------"
@@ -98,13 +109,12 @@ class WelcomeController < ApplicationController
       puts "@@pesquisaDoenca: #{@@pesquisaDoenca}"
 
 
-      #ordenar resultados pelos que tem a maior quantidade de sintomas em comum
 
-      #validar sintomas obrigatórios
 
       #salvar cada pesquisa feita na tabela de pesquisas
       #**validar se @@pesquisaDoenca tem algo, se n, salvar a consulta no banco de não resolvidos
       redirect_to '/search'
+      #ordenar resultados pelos que tem a maior quantidade de sintomas em comum (talvez)
     end
   end
   #.destroy deleta o objeto do banco

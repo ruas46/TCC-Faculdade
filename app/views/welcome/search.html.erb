@@ -20,7 +20,11 @@
             <div class="col-lg-10">
               <br>
               <b>Transtorno: </b><%= pD.nome %><br>
-              <b>Sintomas:</b><!-- DEBUG --> QTD min:<%= pD.min_qtd_sint %>
+              <b>Sintomas:</b>
+
+              <!-- DEBUG -->
+               QTD min:<%= pD.min_qtd_sint %>
+               
               <br>
               <% @pesquisaSintoma.each do |chave,valor| %>
                 <% if pD.id == chave%>
@@ -33,6 +37,12 @@
                     <% end %>
                     <!-- Mostra nome do sintoma -->
                     <%= x.nome%>
+
+                    <!-- DEBUG -->
+                    <% if x.sintoma_obrigatorio %>
+                      <%= "[Sintoma Obrigatório]" %>
+                    <% end %>
+
                     <br>
                   <% end %>
                 <% end %>
