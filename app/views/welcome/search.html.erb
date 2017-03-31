@@ -20,7 +20,8 @@
             <div class="col-lg-10">
               <br>
               <b>Transtorno: </b><%= pD.nome %><br>
-              <b>Sintomas:</b><br>
+              <b>Sintomas:</b><!-- DEBUG --> QTD min:<%= pD.min_qtd_sint %>
+              <br>
               <% @pesquisaSintoma.each do |chave,valor| %>
                 <% if pD.id == chave%>
                   <% valor.each do |x|%>
@@ -49,7 +50,7 @@
     <% else %>
     <div class="row">
       <div class="col-lg-offset-5 col-lg-2 search-style-none">
-        <b><%= "Nenhuma doença encontrada!"%></b>
+        <b><%= "Nenhum transtorno encontrado!"%></b>
       </div>
     </div>
     <% end %>

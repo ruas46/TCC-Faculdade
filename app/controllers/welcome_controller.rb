@@ -15,7 +15,7 @@ class WelcomeController < ApplicationController
     @@pesquisaSintoma = []
     @@sintomasPesquisadosOrganizado = []
 
-    #valida pesquisa nula
+    #valida pesquisa nula e dureciona pra search sem anda para mostrar "nenhum transtorno encontrado"
     if params[:id].nil?
       redirect_to '/search'
     else
@@ -72,12 +72,20 @@ class WelcomeController < ApplicationController
       end
 
       #verifica se sintomas pesquisados atendem o minimo da doença
+      #deleta a doença do array se não tiver qtd minima de sintomas exigida
       @@pesquisaDoenca.each do |pD|
-        @@pesquisaSintoma.each do |chave,valor|
-          #deleta a doença do array se não tiver qtd minima de sintomas exigida
-          if ((pD.id == chave) && (pD.min_qtd_sint > valor.count))
-            @@pesquisaDoenca.delete_at(@@pesquisaDoenca.index(pD))
+        contS = 0
+        #conta quantos sintomas pesquisados aquela doença tem
+        sintomasPesquisados.each do |x|
+          x.each do |y|
+            if (pD.id == y.doenca_id)
+              contS+=1
+            end
           end
+        end
+        #se n atender ao minimo de sintomas, deleta a doença do array
+        if (pD.min_qtd_sint > contS)
+          @@pesquisaDoenca.delete_at(@@pesquisaDoenca.index(pD))
         end
       end
 
@@ -89,7 +97,6 @@ class WelcomeController < ApplicationController
       puts "@@pesquisaSintoma: #{@@pesquisaSintoma}"
       puts "@@pesquisaDoenca: #{@@pesquisaDoenca}"
 
-      #BUG quantidade minima de sintomas HJJ passa com 1 sintoma só
 
       #ordenar resultados pelos que tem a maior quantidade de sintomas em comum
 
@@ -104,7 +111,7 @@ class WelcomeController < ApplicationController
 
   def search
     #valida se @@pesquisaDoenca tem algo, se n redireciona para home(caso acessem /search direto)
-    if (defined?(@@pesquisaDoenca)).nil?#tem algo no @@pesquisaDoenca ?
+    if (defined?(@@pesquisaDoenca)).nil?
       redirect_to '/'
     else
       @sintomasPesquisadosOrganizado = @@sintomasPesquisadosOrganizado

@@ -57,7 +57,7 @@ s3 = Sintoma.new(nome:"Sintoma 93 Texto grande para ver se quebra na listagem do
 s3.save
 s4 = Sintoma.new(nome:"Sintoma 94 Texto grande para ver se quebra na listagem dos sintomas bla bla bla blabla blabla blabla blabla blabla blabla blabla bla", sintoma_obrigatorio:true)
 s4.save
-d = Doenca.new(nome:"Doença HHJ",min_qtd_sint:4,pagina:"764")
+d = Doenca.new(nome:"Doença Hxfg",min_qtd_sint:4,pagina:"444")
 d.save
 d.sintomas_doenca.create(sintoma: s)
 d.sintomas_doenca.create(sintoma: s2)
