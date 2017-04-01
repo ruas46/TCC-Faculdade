@@ -116,49 +116,66 @@ class WelcomeController < ApplicationController
           #TranstornosPesquisado (só dar um new sempre e associar)
           t = TranstornosPesquisado.new
           t.save
-          d = pD
-          d.transtorno_pesquisado_doenca.create(transtornos_pesquisado: t)
+          pD.transtorno_pesquisado_doenca.create(transtornos_pesquisado: t)
           #TranstornoPesquisadoDoenca (tabela de união)
+        end
+        
+      #Se @@pesquisaDoenca n tem algo, salvar a consulta na tabela de não resolvidos
+      else
+        t = TranstornosNaoSolucionado.new
+        t.save
+        sintomasPesquisados.each do |sP|
+          sP.each do |x|
+            s = Sintoma.find(x.id)
+            s.transtorno_nao_solucionado_sintoma.create(transtornos_nao_solucionado: t)
+          end
         end
       end
 
 
-
-      
       #DEBUG
       puts "---------------------------------------------------------------"
       puts "@@sintomasPesquisadosOrganizado: #{@@sintomasPesquisadosOrganizado}"
       puts "sintomasPesquisados: #{sintomasPesquisados}"
       puts "@@pesquisaSintoma: #{@@pesquisaSintoma}"
       puts "@@pesquisaDoenca: #{@@pesquisaDoenca}"
-
       puts "---------------------------------------------------------------"
       aux = SintomasDoenca.all
-      puts "total de sintomas cadastrados com doenças: #{aux.count}"
       puts "Tabela SintomasDoenca"
+      puts "total de sintomas cadastrados com doenças: #{aux.count}"
       aux.each do |x|
         puts "doenca_id: #{x.doenca_id}  -  sintoma_id: #{x.sintoma_id}"
       end
       puts "---------------------------------------------------------------"
-      puts "Tabela TranstornoPesquisadoDoenca"
       aux = TranstornoPesquisadoDoenca.all
+      puts "Tabela TranstornoPesquisadoDoenca"
       aux.each do |x|
         puts "transtornos_pesquisado_id: #{x.transtornos_pesquisado_id} - doenca_id: #{x.doenca_id}"
       end
       puts "---------------------------------------------------------------"
-      puts "Tabela TranstornosPesquisado"
       aux = TranstornosPesquisado.all
+      puts "Tabela TranstornosPesquisado"
       aux.each do |x|
         puts x
       end
+      puts "---------------------------------------------------------------"
+      aux = TranstornosNaoSolucionado.all
+      puts "Tabela TranstornosNaoSolucionado"
+      aux.each do |x|
+        puts x
+      end
+      puts "---------------------------------------------------------------"
+      aux = TranstornoNaoSolucionadoSintoma.all
+      puts "Tabela TranstornoNaoSolucionadoSintoma"
+      aux.each do |x|
+        puts "transtornos_nao_solucionado_id: #{x.transtornos_nao_solucionado_id} - sintoma_id: #{x.sintoma_id}"
+      end
 
-
-      #**validar se @@pesquisaDoenca tem algo, se n, salvar a consulta no banco de não resolvidos
+      #BUG: Sintoma x +1 sintoma ta passando no QTD min
+      #
       redirect_to '/search'
-      #ordenar resultados pelos que tem a maior quantidade de sintomas em comum (talvez)
     end
   end
-  #.destroy deleta o objeto do banco
 
   def search
     #valida se @@pesquisaDoenca tem algo, se n redireciona para home(caso acessem /search direto)
