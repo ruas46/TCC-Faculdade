@@ -11,6 +11,7 @@ class WelcomeController < ApplicationController
 
   def create
     sintomasPesquisados = []
+    doencasParaDeletar = []
     @@pesquisaDoenca = []
     @@pesquisaSintoma = []
     @@sintomasPesquisadosOrganizado = []
@@ -74,26 +75,24 @@ class WelcomeController < ApplicationController
             end
           end
         end
-        #se n atender ao minimo de sintomas, deleta a doença do array
+        #se n atender ao minimo de sintomas, adiciona a doença no array para ser deletado
         if (pD.min_qtd_sint > contS)
-          @@pesquisaDoenca.delete_at(@@pesquisaDoenca.index(pD))
+          doencasParaDeletar << pD
         end
       end
+      #deleta as doenças que não atende a QTD min de sintomas
+      doencasParaDeletar.each do |dPD|
+        @@pesquisaDoenca.delete_at(@@pesquisaDoenca.index(dPD))
+      end
+
 
       #validar sintomas obrigatórios
       @@pesquisaDoenca.each do |pD|
         @@pesquisaSintoma.each do |x, y|
-          #DEBUG
-          puts "pD:#{pD}  x:#{x}  y:#{y}"
-
           #Compara id da doença com o id da doença que tem dentro do array @@pesquisaSintoma
           if pD.id == x
             #pega o array de dentro referente a doenca e faz um each nos seus sintomas
             y.each do |j|
-              #DEBUG
-              puts "j.sintoma_obrigatorio: #{j.sintoma_obrigatorio}"
-              puts "@@sintomasPesquisadosOrganizado.grep(j.id): #{@@sintomasPesquisadosOrganizado.grep(j.id)}"
-
               #se o sintoma foi obrigatorio entra no if
               if j.sintoma_obrigatorio
                 #se esse sintoma foi pesquisado entra no if, se não deleta a doença do array
@@ -119,7 +118,7 @@ class WelcomeController < ApplicationController
           pD.transtorno_pesquisado_doenca.create(transtornos_pesquisado: t)
           #TranstornoPesquisadoDoenca (tabela de união)
         end
-        
+
       #Se @@pesquisaDoenca n tem algo, salvar a consulta na tabela de não resolvidos
       else
         t = TranstornosNaoSolucionado.new
