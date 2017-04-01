@@ -19,6 +19,9 @@ class WelcomeController < ApplicationController
     if params[:id].nil?
       redirect_to '/search'
     else
+      ###########################################################################
+      #Motor de pesquisa do site
+
       #pesquisa relações id_sintomas
       params[:id].each do |id_parm|
         #to_a para tirar ActiveRecord::Relation
@@ -80,13 +83,17 @@ class WelcomeController < ApplicationController
       #validar sintomas obrigatórios
       @@pesquisaDoenca.each do |pD|
         @@pesquisaSintoma.each do |x, y|
-          puts "pD:#{pD}  x:#{x}  y:#{y}"#
+          #DEBUG
+          puts "pD:#{pD}  x:#{x}  y:#{y}"
+
           #Compara id da doença com o id da doença que tem dentro do array @@pesquisaSintoma
           if pD.id == x
             #pega o array de dentro referente a doenca e faz um each nos seus sintomas
             y.each do |j|
-              puts "j.sintoma_obrigatorio: #{j.sintoma_obrigatorio}"#
+              #DEBUG
+              puts "j.sintoma_obrigatorio: #{j.sintoma_obrigatorio}"
               puts "@@sintomasPesquisadosOrganizado.grep(j.id): #{@@sintomasPesquisadosOrganizado.grep(j.id)}"
+
               #se o sintoma foi obrigatorio entra no if
               if j.sintoma_obrigatorio
                 #se esse sintoma foi pesquisado entra no if, se não deleta a doença do array
@@ -100,7 +107,24 @@ class WelcomeController < ApplicationController
         end
       end
 
+      ############################################################################
+      #Registrar no banco informações sobre as pesquisas feitas
 
+      #salvar cada pesquisa feita na tabela de pesquisas
+      if @@pesquisaDoenca != []#verifica se tem pesquisa feita
+        @@pesquisaDoenca.each do |pD|
+          #TranstornosPesquisado (só dar um new sempre e associar)
+          t = TranstornosPesquisado.new
+          t.save
+          d = pD
+          d.transtorno_pesquisado_doenca.create(transtornos_pesquisado: t)
+          #TranstornoPesquisadoDoenca (tabela de união)
+        end
+      end
+
+
+
+      
       #DEBUG
       puts "---------------------------------------------------------------"
       puts "@@sintomasPesquisadosOrganizado: #{@@sintomasPesquisadosOrganizado}"
@@ -108,10 +132,27 @@ class WelcomeController < ApplicationController
       puts "@@pesquisaSintoma: #{@@pesquisaSintoma}"
       puts "@@pesquisaDoenca: #{@@pesquisaDoenca}"
 
+      puts "---------------------------------------------------------------"
+      aux = SintomasDoenca.all
+      puts "total de sintomas cadastrados com doenças: #{aux.count}"
+      puts "Tabela SintomasDoenca"
+      aux.each do |x|
+        puts "doenca_id: #{x.doenca_id}  -  sintoma_id: #{x.sintoma_id}"
+      end
+      puts "---------------------------------------------------------------"
+      puts "Tabela TranstornoPesquisadoDoenca"
+      aux = TranstornoPesquisadoDoenca.all
+      aux.each do |x|
+        puts "transtornos_pesquisado_id: #{x.transtornos_pesquisado_id} - doenca_id: #{x.doenca_id}"
+      end
+      puts "---------------------------------------------------------------"
+      puts "Tabela TranstornosPesquisado"
+      aux = TranstornosPesquisado.all
+      aux.each do |x|
+        puts x
+      end
 
 
-
-      #salvar cada pesquisa feita na tabela de pesquisas
       #**validar se @@pesquisaDoenca tem algo, se n, salvar a consulta no banco de não resolvidos
       redirect_to '/search'
       #ordenar resultados pelos que tem a maior quantidade de sintomas em comum (talvez)
