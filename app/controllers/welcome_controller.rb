@@ -106,6 +106,7 @@ class WelcomeController < ApplicationController
         end
       end
 
+
       ############################################################################
       #Registrar no banco informações sobre as pesquisas feitas
 
@@ -170,7 +171,7 @@ class WelcomeController < ApplicationController
         puts "transtornos_nao_solucionado_id: #{x.transtornos_nao_solucionado_id} - sintoma_id: #{x.sintoma_id}"
       end
 
-      #BUG: Sintoma x +1 sintoma ta passando no QTD min
+
       #
       redirect_to '/search'
     end
@@ -188,6 +189,35 @@ class WelcomeController < ApplicationController
   end
 
   def graphics
+    @transtornosPD = TranstornoPesquisadoDoenca.all
+    transtornos = []
+
+    @transtornosPD.each do |x|
+        transtornos << x.doenca_id#array com os doenças id
+    end
+
+    #USAR AUX PARA ACHAR TOP 5
+
+    transtornosHash = Hash.new(0)
+    transtornos.each do |x|
+      transtornosHash[x] += 1
+    end
+
+    transtornosHash = transtornosHash.sort_by{|k, v| v}.reverse
+
+
+
+    #DEBUG
+    transtornosHash.each do |x, y|
+      puts "#{x} aparece #{y} vezes"
+    end
+    puts "transtornosHash Ordenado: #{transtornosHash}"
+    puts "Primieros 5 valores: #{transtornosHash.first(5)}"
+    puts "Ultimos 5 valores: #{transtornosHash.last(5).reverse}"
+    puts "<><><><><><><><><><><><><<>><><<><><>><<>><><><<>><><<><><><>><"
+    puts "transtornos: #{transtornos}"
+    puts "Valor com maior QTD do array transtornos: #{transtornosHash.first(1)}"
+
   end
 
   def admin

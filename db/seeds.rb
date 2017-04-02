@@ -6,23 +6,34 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
-#Populando sintomas
-s = Sintoma.new(nome:"Sintoma 1", sintoma_obrigatorio:false)
-s.save
-s = Sintoma.new(nome:"Sintoma 2", sintoma_obrigatorio:false)
-s.save
-s = Sintoma.new(nome:"Sintoma 3", sintoma_obrigatorio:false)
-s.save
-s = Sintoma.new(nome:"Sintoma 4", sintoma_obrigatorio:false)
-s.save
-s = Sintoma.new(nome:"Sintoma 5", sintoma_obrigatorio:true)
-s.save
 
-#Populando Doenças
-d = Doenca.new(nome:"Gripe",min_qtd_sint:"2",pagina:"111")
-d.save
-d = Doenca.new(nome:"Dor de Garganta",min_qtd_sint:"1",pagina:"134")
-d.save
+s1 = Sintoma.new(nome:"Sintoma 1", sintoma_obrigatorio:false)
+s1.save
+s2 = Sintoma.new(nome:"Sintoma 2", sintoma_obrigatorio:false)
+s2.save
+s3 = Sintoma.new(nome:"Sintoma 3", sintoma_obrigatorio:false)
+s3.save
+s4 = Sintoma.new(nome:"Sintoma 4", sintoma_obrigatorio:false)
+s4.save
+s5 = Sintoma.new(nome:"Sintoma 5", sintoma_obrigatorio:true)
+s5.save
+
+
+d1 = Doenca.new(nome:"Gripe",min_qtd_sint:"2",pagina:"111")
+d1.save
+d1.sintomas_doenca.create(sintoma: s1)
+d1.sintomas_doenca.create(sintoma: s2)
+d1.sintomas_doenca.create(sintoma: s3)
+d1.sintomas_doenca.create(sintoma: s4)
+d1.sintomas_doenca.create(sintoma: s5)
+
+d2 = Doenca.new(nome:"Dor de Garganta",min_qtd_sint:"1",pagina:"134")
+d2.save
+d2.sintomas_doenca.create(sintoma: s1)
+d2.sintomas_doenca.create(sintoma: s2)
+d2.sintomas_doenca.create(sintoma: s3)
+d2.sintomas_doenca.create(sintoma: s4)
+
 
 #Populando a associação sintomas_doenca
 s = Sintoma.new(nome:"Sintoma 6", sintoma_obrigatorio:false)

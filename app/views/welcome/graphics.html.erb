@@ -13,4 +13,9 @@
     </div>
   </div>
 </header>
-<h1>PAGINA DE GRAFICOS</h1>
+<div>
+  <% @transtornosPD.each do |t| %>
+    <%= "transtornos_pesquisado_id: #{t.transtornos_pesquisado_id} - doenca_id: #{t.doenca_id}" %>
+    <br>
+  <% end %>
+</div>
