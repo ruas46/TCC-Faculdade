@@ -189,35 +189,43 @@ class WelcomeController < ApplicationController
   end
 
   def graphics
-    @transtornosPD = TranstornoPesquisadoDoenca.all
+    transtornosPD = TranstornoPesquisadoDoenca.all
     transtornos = []
+    transtornosHash = Hash.new(0)
+    @transtornosHashNome = Hash.new(0)
 
-    @transtornosPD.each do |x|
-        transtornos << x.doenca_id#array com os doenças id
+    #cria um array com os doenças id
+    transtornosPD.each do |x|
+        transtornos << x.doenca_id
     end
 
-    #USAR AUX PARA ACHAR TOP 5
-
-    transtornosHash = Hash.new(0)
+    #cria um hash com [doenca_id,qtd_repetida]
     transtornos.each do |x|
       transtornosHash[x] += 1
     end
-
+    #ordena o hash pelo doenca_id que mais aparece
     transtornosHash = transtornosHash.sort_by{|k, v| v}.reverse
-
+    #Cria um novo hash com [nomeDaDoença,qtd_repetida]
+    transtornosHash.each do |x, y|
+      @transtornosHashNome[Doenca.find(x).nome] = y
+    end
 
 
     #DEBUG
-    transtornosHash.each do |x, y|
+    puts "<><><><><><><><><><><><><<>><><<><><>><<>><><><<>><><<><><><>><"
+    @transtornosHashNome.each do |x, y|
       puts "#{x} aparece #{y} vezes"
     end
-    puts "transtornosHash Ordenado: #{transtornosHash}"
-    puts "Primieros 5 valores: #{transtornosHash.first(5)}"
-    puts "Ultimos 5 valores: #{transtornosHash.last(5).reverse}"
-    puts "<><><><><><><><><><><><><<>><><<><><>><<>><><><<>><><<><><><>><"
+    puts "transtornosHash Ordenado: #{@transtornosHashNome}"
+    puts "Primieros 5 valores: #{@transtornosHashNome.first(5)}"
+    puts "Ultimos 5 valores: #{@transtornosHashNome.to_a.last(5).reverse}"
     puts "transtornos: #{transtornos}"
-    puts "Valor com maior QTD do array transtornos: #{transtornosHash.first(1)}"
+    puts "Valor com maior QTD do array transtornos: #{@transtornosHashNome.first(1)}"
+    puts "<><><><><><><><><><><><><<>><><<><><>><<>><><><<>><><<><><><>><"
 
+    puts "<><><><><><><><><><><><><<>><><<><><>><<>><><><<>><><<><><><>><"
+
+#CACHE Q TA FUDENO
   end
 
   def admin
