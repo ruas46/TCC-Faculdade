@@ -234,7 +234,7 @@ class WelcomeController < ApplicationController
     end
 
 
-
+    #BUG Sintomas estão sendo contabilizados pelas doenças pesquisadas e n o sintoma em si
     #DEBUG
     puts ">>>>>>>>>>>>>>>>>>>SINTOMAS<<<<<<<<<<<<<<<<<<<<<<<<<<"
     puts "Sintomas: #{sintomas}"
@@ -255,7 +255,7 @@ class WelcomeController < ApplicationController
     puts "Primeiros 5 valores: #{@transtornosHashNome.first(5)}"
     puts "Ultimos 5 valores: #{@transtornosHashNome.to_a.last(5).reverse}"
     puts "<><><><><><><><><><><><><<>><><<><><>><<>><><><<>><><<><><><>><"
-#CACHE Q TA BUGANDO O REDIRECIONAMENTO
+
   end
 
   def admin
