@@ -191,14 +191,18 @@ class WelcomeController < ApplicationController
   def graphics
     transtornosPD = TranstornoPesquisadoDoenca.all
     transtornos = []
+    sintomas = []
+    sintomasHash = Hash.new(0)
+    @sintomasHashNome = Hash.new(0)
     transtornosHash = Hash.new(0)
     @transtornosHashNome = Hash.new(0)
 
+    ############################################################################
+    #TRANSTORNOS
     #cria um array com os doenças id
     transtornosPD.each do |x|
         transtornos << x.doenca_id
     end
-
     #cria um hash com [doenca_id,qtd_repetida]
     transtornos.each do |x|
       transtornosHash[x] += 1
@@ -210,22 +214,48 @@ class WelcomeController < ApplicationController
       @transtornosHashNome[Doenca.find(x).nome] = y
     end
 
+    ############################################################################
+    #SINTOMAS
+    #pesquisa na tabela que relaciona Sintomas com Doenças os sintoma_id
+    transtornos.each do |t|
+      SintomasDoenca.where(doenca_id: t).to_a.each do |s|
+        sintomas << s.sintoma_id
+      end
+    end
+    #cria um hash com [sintoma_id,qtd_repetida]
+    sintomas.each do |x|
+      sintomasHash[x] += 1
+    end
+    #ordena o hash pelo sintoma_id que mais aparece
+    sintomasHash = sintomasHash.sort_by{|k, v| v}.reverse
+    #Cria um novo hash com [nomeDoSintoma,qtd_repetida]
+    sintomasHash.each do |x, y|
+      @sintomasHashNome[Sintoma.find(x).nome] = y
+    end
+
+
 
     #DEBUG
+    puts ">>>>>>>>>>>>>>>>>>>SINTOMAS<<<<<<<<<<<<<<<<<<<<<<<<<<"
+    puts "Sintomas: #{sintomas}"
+    @sintomasHashNome.each do |x, y|
+      puts "#{y}x aparece: #{x}"
+    end
+    puts "sintomasHash Ordenado: #{@sintomasHashNome}"
+    puts "Primeiros 5 valores: #{@sintomasHashNome.first(5)}"
+    puts "Ultimos 5 valores: #{@sintomasHashNome.to_a.last(5).reverse}"
+
     puts "<><><><><><><><><><><><><<>><><<><><>><<>><><><<>><><<><><><>><"
+    puts ">>>>>>>>>>>>>>>>>>TRANSTORNOS<<<<<<<<<<<<<<<<<<<<<<<<"
+    puts "transtornos: #{transtornos}"
     @transtornosHashNome.each do |x, y|
-      puts "#{x} aparece #{y} vezes"
+      puts "#{y}x aparece: #{x}"
     end
     puts "transtornosHash Ordenado: #{@transtornosHashNome}"
-    puts "Primieros 5 valores: #{@transtornosHashNome.first(5)}"
+    puts "Primeiros 5 valores: #{@transtornosHashNome.first(5)}"
     puts "Ultimos 5 valores: #{@transtornosHashNome.to_a.last(5).reverse}"
-    puts "transtornos: #{transtornos}"
-    puts "Valor com maior QTD do array transtornos: #{@transtornosHashNome.first(1)}"
     puts "<><><><><><><><><><><><><<>><><<><><>><<>><><><<>><><<><><><>><"
-
-    puts "<><><><><><><><><><><><><<>><><<><><>><<>><><><<>><><<><><><>><"
-
-#CACHE Q TA FUDENO
+#CACHE Q TA BUGANDO O REDIRECIONAMENTO
   end
 
   def admin

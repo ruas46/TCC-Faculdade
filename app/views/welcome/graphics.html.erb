@@ -19,9 +19,21 @@
     <%= "#{x} - apareceu: #{y}" %>
     <br>
   <% end %>
-
+  <br>
   <h2>Top 5 Transtornos menos pesquisados</h2>
   <% @transtornosHashNome.to_a.last(5).reverse.each do |x,y| %>
+    <%= "#{x} - apareceu: #{y}" %>
+    <br>
+  <% end %>
+  <br>
+  <h2>Top 5 Sintomas mais pesquisados</h2>
+  <% @sintomasHashNome.first(5).each do |x,y| %>
+    <%= "#{x} - apareceu: #{y}" %>
+    <br>
+  <% end %>
+  <br>
+  <h2>Top 5 Sintomas menos pesquisados</h2>
+  <% @sintomasHashNome.to_a.last(5).reverse.each do |x,y| %>
     <%= "#{x} - apareceu: #{y}" %>
     <br>
   <% end %>
