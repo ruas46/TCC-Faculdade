@@ -42064,3 +42064,15 @@ Processing by WelcomeController#index as HTML
   Rendered welcome/index.html.erb within layouts/application (6.8ms)
   Rendered layouts/_footer.html.erb (0.0ms)
 Completed 200 OK in 29ms (Views: 25.0ms | ActiveRecord: 2.8ms)
+
+
+Started GET "/" for 127.0.0.1 at 2017-04-23 22:52:03 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (52.8ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#index as HTML
+  [1m[35mSintoma Load (2.8ms)[0m  SELECT "sintomas".* FROM "sintomas"  ORDER BY "sintomas"."nome" ASC
+  Rendered welcome/index.html.erb within layouts/application (561.2ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 719ms (Views: 587.9ms | ActiveRecord: 97.4ms)
+
+
+Started GET "/assets/banner.jpg" for 127.0.0.1 at 2017-04-23 22:52:05 -0300
