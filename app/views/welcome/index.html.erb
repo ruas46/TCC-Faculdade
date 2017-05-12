@@ -38,8 +38,10 @@
         <% @SintomasCad.each do |sintoma| %>
           <input type="checkbox" value="<%= sintoma.id %>" name="id[]"/><%= sintoma.nome %><br>
         <% end %>
-        <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
-        <button class="btn btn-primary" type="submit" value="Submit">Pesquisar</button>
+        <div class="col-lg-offset-8">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+          <button class="btn btn-primary" type="submit" value="Submit">Pesquisar</button>
+        </div>
       </div>
     </form>
     </div>
