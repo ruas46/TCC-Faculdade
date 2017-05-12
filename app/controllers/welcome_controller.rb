@@ -126,7 +126,7 @@ class WelcomeController < ApplicationController
         t.save
         sintomasPesquisados.each do |sP|
           sP.each do |x|
-            s = Sintoma.find(x.id)
+            s = Sintoma.find(x.sintoma_id)
             s.transtorno_nao_solucionado_sintoma.create(transtornos_nao_solucionado: t)
           end
         end
