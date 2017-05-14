@@ -16,7 +16,7 @@
   </div>
 
   <div class="row">
-    <div class="col-lg-offset-3 col-lg-6 header-text">
+    <div class="col-lg-offset-3 col-lg-6 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-lg-offset-2 col-xs-8 header-text">
       <p>Acelere seus diagnósticos!</p>
     </div>
   </div>
@@ -38,7 +38,7 @@
         <% @SintomasCad.each do |sintoma| %>
           <input type="checkbox" value="<%= sintoma.id %>" name="id[]"/><%= sintoma.nome %><br>
         <% end %>
-        <div class="col-lg-offset-8">
+        <div class="col-lg-offset-8 col-md-offset-8 col-sm-offset-8 col-xs-offset-4">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
           <button class="btn btn-primary" type="submit" value="Submit">Pesquisar</button>
         </div>
@@ -50,15 +50,15 @@
 
 <!-- BODY -->
 
-<div class="home-experimenteJa">
-<button class="btn-experimenteJa" data-toggle="modal" data-target="#ModalSearch">Experimente Já!</button>
+<div class="row home-experimenteJa">
+  <button class="btn-experimenteJa" data-toggle="modal" data-target="#ModalSearch">Experimente Já!</button>
 </div>
 
-<div class="home-explication">
+<div class="row home-explication">
 <h1>Como funciona?</h1>
 
   <div class="row">
-    <div class="col-lg-4">
+    <div class="col-lg-offset-0 col-lg-4 col-md-offset-2 col-md-8 col-sm-offset-3 col-sm-6 col-xs-offset-2 col-xs-8">
       <%= image_tag("usuario.png", :alt => "Imagem de um usuário no site", :class => "explication-usuario") %>
       <br />
       <div class="explication-text">
@@ -66,7 +66,7 @@
       </div>
     </div>
 
-    <div class="col-lg-4">
+    <div class="col-lg-offset-0 col-lg-4 col-md-offset-2 col-md-8 col-sm-offset-3 col-sm-6 col-xs-offset-2 col-xs-8">
       <%= image_tag("livro.jpg", :alt => "Imagem de um livro", :class => "explication-livro") %>
       <br />
       <div class="explication-text">
@@ -74,7 +74,7 @@
       </div>
     </div>
 
-    <div class="col-lg-4">
+    <div class="col-lg-offset-0 col-lg-4 col-md-offset-2 col-md-8 col-sm-offset-3 col-sm-6 col-xs-offset-2 col-xs-8" style="margin-bottom:10px;">
       <%= image_tag("pesquisa.jpg", :alt => "Imagem do site pesquisando", :class => "explication-pesquisa") %>
       <br />
       <div class="explication-text">
