@@ -239,7 +239,7 @@ class WelcomeController < ApplicationController
     puts ">>>>>>>>>>>>>>>>>>>SINTOMAS<<<<<<<<<<<<<<<<<<<<<<<<<<"
     puts "QTD de sintomas #{sintomas.count}"
     puts "Sintomas: #{sintomas}"
-    @sintomasHashNome.each do |x, y|
+    sintomasHash.each do |x, y|
       puts "#{y}x aparece: #{x}"
     end
     puts "sintomasHash Ordenado: #{@sintomasHashNome}"
@@ -250,7 +250,7 @@ class WelcomeController < ApplicationController
     puts ">>>>>>>>>>>>>>>>>>TRANSTORNOS<<<<<<<<<<<<<<<<<<<<<<<<"
     puts "QTD de transtornos: #{transtornosPD.count}"
     puts "transtornos: #{transtornos}"
-    @transtornosHashNome.each do |x, y|
+    transtornosHash.each do |x, y|
       puts "#{y}x aparece: #{x}"
     end
     puts "transtornosHash Ordenado: #{@transtornosHashNome}"
