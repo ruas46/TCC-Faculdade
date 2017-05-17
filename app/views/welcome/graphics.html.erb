@@ -21,12 +21,35 @@
 </div>
 
 
+
+
+
+
 <div class="text-center">
   <h2>Top 5 Transtornos mais pesquisados</h2>
+  <div class="col-lg-offset-3 col-lg-6">
+  <% contador=0 %>
   <% @transtornosHashNome.first(5).each do |x,y| %>
-    <%= "#{x} - apareceu: #{y}" %>
-    <br>
+    <% contador+=1 %>
+      <div class="graphics-generate graphics-generate-color-<%= contador %>" style="height:<%= y %>px;">
+      </div>
   <% end %>
+
+  <% contador=0 %>
+  <% @transtornosHashNome.first(5).each do |x,y| %>
+    <% contador+=1 %>
+    <div class="col-lg-12 text-left">
+      <div class="graphics-generate-icon graphics-generate-color-<%= contador %>">
+      </div>
+      <span class="graphics-generate-text"><%= x %><span>
+    </div>
+  <% end %>
+  </div>
+
+
+
+
+
   <br>
   <h2>Top 5 Transtornos menos pesquisados</h2>
   <% @transtornosHashNome.to_a.last(5).reverse.each do |x,y| %>
