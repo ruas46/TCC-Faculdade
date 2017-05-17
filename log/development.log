@@ -52793,3 +52793,1712 @@ Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bd
 
 
 Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 12:57:01 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:36:17 -0300
+  [1m[36mActiveRecord::SchemaMigration Load (1.3ms)[0m  [1mSELECT "schema_migrations".* FROM "schema_migrations"[0m
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (6.8ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (1.9ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (1.7ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.4ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.5ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (3.5ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.9ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (0.8ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (12.6ms)
+  Rendered layouts/_footer.html.erb (0.5ms)
+Completed 200 OK in 803ms (Views: 528.2ms | ActiveRecord: 50.6ms)
+
+
+Started GET "/assets/welcome.self-5f8b6445390213d551090dd93ede2ac11defb31e94d42a501431e2966187122f.css?body=1" for 127.0.0.1 at 2017-05-17 13:36:19 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:36:19 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:36:19 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:36:19 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:36:19 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:36:19 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:36:19 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:36:39 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (0.5ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (0.4ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.4ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (4.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.5ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 110ms (Views: 51.0ms | ActiveRecord: 10.0ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:36:39 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:36:39 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:36:39 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:36:39 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:36:39 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:36:39 -0300
+
+
+Started GET "/assets/welcome.self-5f8b6445390213d551090dd93ede2ac11defb31e94d42a501431e2966187122f.css?body=1" for 127.0.0.1 at 2017-05-17 13:36:39 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:37:15 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (0.5ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.5ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.5ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.7ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (3.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 124ms (Views: 71.0ms | ActiveRecord: 6.1ms)
+
+
+Started GET "/assets/welcome.self-5f8b6445390213d551090dd93ede2ac11defb31e94d42a501431e2966187122f.css?body=1" for 127.0.0.1 at 2017-05-17 13:37:15 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:37:15 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:15 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:15 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:15 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:15 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:15 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:37:26 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (0.5ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (0.6ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (1.8ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (0.5ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (0.6ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.9ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.7ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (0.5ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (3.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 87ms (Views: 39.4ms | ActiveRecord: 9.3ms)
+
+
+Started GET "/assets/welcome.self-5f8b6445390213d551090dd93ede2ac11defb31e94d42a501431e2966187122f.css?body=1" for 127.0.0.1 at 2017-05-17 13:37:27 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:37:27 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:27 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:27 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:27 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:27 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:27 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:37:49 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (0.6ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.5ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (4.8ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (2.9ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 32.0ms | ActiveRecord: 12.1ms)
+
+
+Started GET "/assets/welcome.self-5f8b6445390213d551090dd93ede2ac11defb31e94d42a501431e2966187122f.css?body=1" for 127.0.0.1 at 2017-05-17 13:37:49 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:37:49 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:49 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:49 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:49 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:49 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:37:49 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:38:19 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (0.5ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.5ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (3.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (0.9ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (2.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 125ms (Views: 52.6ms | ActiveRecord: 9.5ms)
+
+
+Started GET "/assets/welcome.self-5f8b6445390213d551090dd93ede2ac11defb31e94d42a501431e2966187122f.css?body=1" for 127.0.0.1 at 2017-05-17 13:38:19 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:38:19 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:38:19 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:38:19 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:38:19 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:38:19 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:38:19 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:39:03 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (0.5ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (5.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.7ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (2.4ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 84ms (Views: 37.3ms | ActiveRecord: 10.8ms)
+
+
+Started GET "/assets/welcome.self-5f8b6445390213d551090dd93ede2ac11defb31e94d42a501431e2966187122f.css?body=1" for 127.0.0.1 at 2017-05-17 13:39:03 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:39:04 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:39:04 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:39:04 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:39:04 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:39:04 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:39:04 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:39:19 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (0.6ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (2.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 58ms (Views: 33.9ms | ActiveRecord: 4.7ms)
+
+
+Started GET "/assets/welcome.self-5f8b6445390213d551090dd93ede2ac11defb31e94d42a501431e2966187122f.css?body=1" for 127.0.0.1 at 2017-05-17 13:39:19 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:39:19 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:39:19 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:39:19 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:39:19 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:39:19 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:39:19 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:40:01 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (0.5ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.1ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.5ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (10.1ms)
+  Rendered layouts/_footer.html.erb (0.2ms)
+Completed 200 OK in 78ms (Views: 43.1ms | ActiveRecord: 4.3ms)
+
+
+Started GET "/assets/welcome.self-5f8b6445390213d551090dd93ede2ac11defb31e94d42a501431e2966187122f.css?body=1" for 127.0.0.1 at 2017-05-17 13:40:01 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:40:01 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:01 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:01 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:01 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:01 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:01 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:40:25 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (0.5ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (0.5ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (1.0ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 70ms (Views: 28.6ms | ActiveRecord: 5.9ms)
+
+
+Started GET "/assets/welcome.self-5f8b6445390213d551090dd93ede2ac11defb31e94d42a501431e2966187122f.css?body=1" for 127.0.0.1 at 2017-05-17 13:40:25 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:40:25 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:25 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:25 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:25 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:25 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:25 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:40:48 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (0.5ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (0.4ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.5ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (1.9ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (0.7ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.6ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (6.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.5ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (1.3ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 71ms (Views: 23.8ms | ActiveRecord: 14.0ms)
+
+
+Started GET "/assets/welcome.self-5f8b6445390213d551090dd93ede2ac11defb31e94d42a501431e2966187122f.css?body=1" for 127.0.0.1 at 2017-05-17 13:40:48 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:40:48 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:48 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:48 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:48 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:48 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:40:48 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:42:07 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (0.5ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.2ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (2.8ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (1.0ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (1.8ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 326ms (Views: 290.1ms | ActiveRecord: 8.9ms)
+
+
+Started GET "/assets/welcome.self-ad94272e3758687b01cf5ad08012febcef5f82851e220c989b57445df51d4131.css?body=1" for 127.0.0.1 at 2017-05-17 13:42:07 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:42:07 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:42:07 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:42:07 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:42:07 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:42:08 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:42:08 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:42:31 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (0.5ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (5.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (2.1ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (1.0ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (3.0ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.8ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 253ms (Views: 211.3ms | ActiveRecord: 15.6ms)
+
+
+Started GET "/assets/welcome.self-332a26c72dffa2f20d41f5b3b566bce639b3e681b178e2d696c03880566140fb.css?body=1" for 127.0.0.1 at 2017-05-17 13:42:31 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:42:31 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:42:31 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:42:31 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:42:31 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:42:31 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:42:31 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:43:04 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (0.5ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.1ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.6ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (0.1ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.5ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (1.5ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 241ms (Views: 208.6ms | ActiveRecord: 5.3ms)
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:43:04 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:43:04 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:43:04 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:43:04 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:43:04 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:43:04 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:43:04 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:43:34 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (0.6ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (2.9ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (1.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (0.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 205ms (Views: 173.0ms | ActiveRecord: 8.3ms)
+
+
+Started GET "/assets/welcome.self-fe167a6b9cecfa680381e3a9a82eae70d7528d6d112590b52d90b52ca352885f.css?body=1" for 127.0.0.1 at 2017-05-17 13:43:35 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:43:35 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:43:35 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:43:35 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:43:35 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:43:35 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:43:35 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:46:37 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (19.4ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (19.8ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (0.5ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (1.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (0.8ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (0.7ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (70.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 547ms (Views: 319.8ms | ActiveRecord: 45.7ms)
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:46:38 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:46:38 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:46:38 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:46:38 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:46:38 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:46:38 -0300
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:46:38 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:47:03 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (0.5ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (0.4ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (3.4ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (0.6ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 27.4ms | ActiveRecord: 8.5ms)
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:47:03 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:47:03 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:47:03 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:47:03 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:47:03 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:47:04 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:47:04 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:48:03 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (0.6ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (0.7ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (0.5ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.7ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (1.8ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.6ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (1.0ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (1.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 87ms (Views: 30.3ms | ActiveRecord: 9.1ms)
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:48:03 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:48:03 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:48:03 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:48:03 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:48:03 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:48:03 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:48:03 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:49:27 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (0.7ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (0.4ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.1ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (0.1ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (0.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 288ms (Views: 239.3ms | ActiveRecord: 4.8ms)
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:49:27 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:49:27 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:49:27 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:49:27 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:49:27 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:49:27 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:49:27 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:50:19 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (0.7ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (1.5ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.5ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (4.8ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (1.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.2ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (1.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (2.6ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (9.5ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.6ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (1.7ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (23.2ms)
+  Rendered layouts/_footer.html.erb (0.0ms)
+Completed 200 OK in 98ms (Views: 50.2ms | ActiveRecord: 26.7ms)
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:50:19 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:50:19 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:50:19 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:50:19 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:50:19 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:50:19 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:50:19 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:50:24 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (0.6ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (1.5ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (1.9ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (1.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (3.8ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (0.3ms)
+  Rendered layouts/_footer.html.erb (0.4ms)
+Completed 200 OK in 98ms (Views: 50.8ms | ActiveRecord: 12.9ms)
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:50:24 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:50:24 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:50:24 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:50:24 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:50:24 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:50:24 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:50:24 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:51:35 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (0.7ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.8ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.5ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (1.1ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 74ms (Views: 32.3ms | ActiveRecord: 6.7ms)
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:51:35 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:51:35 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:51:35 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:51:35 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:51:35 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:51:35 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:51:35 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:52:10 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (0.5ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (0.9ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (0.6ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (3.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 27.3ms | ActiveRecord: 6.0ms)
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:52:10 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:52:10 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:52:10 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:52:10 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:52:10 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:52:10 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:52:10 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:52:35 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (0.6ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (0.4ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.4ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.5ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (0.6ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.9ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.1ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (3.9ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (0.8ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (1.4ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 96ms (Views: 38.6ms | ActiveRecord: 11.6ms)
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:52:35 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:52:35 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:52:35 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:52:35 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:52:35 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:52:35 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:52:35 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:53:35 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (0.6ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.4ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (0.7ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.6ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (1.5ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (0.5ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (27.0ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 246ms (Views: 152.4ms | ActiveRecord: 8.1ms)
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:53:36 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:53:36 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:53:36 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:53:36 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:53:36 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:53:36 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:53:36 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:55:41 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (0.6ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (0.4ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.4ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (1.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (1.0ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (1.0ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (5.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.6ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (0.4ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (1.1ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (1.6ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 92ms (Views: 32.8ms | ActiveRecord: 14.7ms)
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:55:41 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:55:41 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:55:41 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:55:41 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:55:41 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:55:41 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:55:41 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:56:32 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[35mTranstornoPesquisadoDoenca Load (0.5ms)[0m  SELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"
+  [1m[36mDoenca Load (0.4ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 7]]
+  [1m[35mDoenca Load (0.3ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 5]]
+  [1m[36mDoenca Load (0.2ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintomasDoenca Load (0.3ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 5]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintomasDoenca Load (9.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.1ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 16]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 15]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 10]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 9]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 8]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 4]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 3]]
+  [1m[36mSintoma Load (0.2ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 2]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (1.2ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 67ms (Views: 22.9ms | ActiveRecord: 13.1ms)
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:56:32 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:56:32 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:56:32 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:56:32 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:56:32 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:56:32 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:56:32 -0300
+
+
+Started GET "/graphics" for 127.0.0.1 at 2017-05-17 13:57:03 -0300
+Processing by WelcomeController#graphics as HTML
+  [1m[36mTranstornoPesquisadoDoenca Load (0.5ms)[0m  [1mSELECT "transtorno_pesquisado_doencas".* FROM "transtorno_pesquisado_doencas"[0m
+  [1m[35mDoenca Load (0.4ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 7]]
+  [1m[36mDoenca Load (0.3ms)[0m  [1mSELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1[0m  [["id", 5]]
+  [1m[35mDoenca Load (0.2ms)[0m  SELECT  "doencas".* FROM "doencas" WHERE "doencas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintomasDoenca Load (0.3ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.5ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 5]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mSintomasDoenca Load (0.4ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 2]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 7]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mCACHE (0.0ms)[0m  [1mSELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1[0m  [["doenca_id", 2]]
+  [1m[35mCACHE (0.0ms)[0m  SELECT "sintomas_doencas".* FROM "sintomas_doencas" WHERE "sintomas_doencas"."doenca_id" = $1  [["doenca_id", 7]]
+  [1m[36mSintoma Load (0.4ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 16]]
+  [1m[35mSintoma Load (1.8ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 15]]
+  [1m[36mSintoma Load (0.9ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 10]]
+  [1m[35mSintoma Load (1.6ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 9]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 8]]
+  [1m[35mSintoma Load (0.3ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 4]]
+  [1m[36mSintoma Load (0.3ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 3]]
+  [1m[35mSintoma Load (0.2ms)[0m  SELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1  [["id", 2]]
+  [1m[36mSintoma Load (3.5ms)[0m  [1mSELECT  "sintomas".* FROM "sintomas" WHERE "sintomas"."id" = $1 LIMIT 1[0m  [["id", 1]]
+  Rendered welcome/graphics.html.erb within layouts/application (14.1ms)
+  Rendered layouts/_footer.html.erb (0.1ms)
+Completed 200 OK in 142ms (Views: 93.5ms | ActiveRecord: 12.2ms)
+
+
+Started GET "/assets/welcome.self-78394de7260a6f2275806eb5aae58b535f5cb7a080021646eea9eca058297bc7.css?body=1" for 127.0.0.1 at 2017-05-17 13:57:03 -0300
+
+
+Started GET "/assets/jquery.self-bd7ddd393353a8d2480a622e80342adf488fb6006d667e8b42e4c0073393abee.js?body=1" for 127.0.0.1 at 2017-05-17 13:57:04 -0300
+
+
+Started GET "/assets/application.self-e80e8f2318043e8af94dddc2adad5a4f09739a8ebb323b3ab31cd71d45fd9113.css?body=1" for 127.0.0.1 at 2017-05-17 13:57:04 -0300
+
+
+Started GET "/assets/jquery_ujs.self-784a997f6726036b1993eb2217c9cb558e1cbb801c6da88105588c56f13b466a.js?body=1" for 127.0.0.1 at 2017-05-17 13:57:04 -0300
+
+
+Started GET "/assets/application.self-3b8dabdc891efe46b9a144b400ad69e37d7e5876bdc39dee783419a69d7ca819.js?body=1" for 127.0.0.1 at 2017-05-17 13:57:04 -0300
+
+
+Started GET "/assets/welcome.self-877aef30ae1b040ab8a3aba4e3e309a11d7f2612f44dde450b5c157aa5f95c05.js?body=1" for 127.0.0.1 at 2017-05-17 13:57:04 -0300
+
+
+Started GET "/assets/turbolinks.self-c5acd7a204f5f25ce7a1d8a0e4d92e28d34c9e2df2c7371cd7af88e147e4ad82.js?body=1" for 127.0.0.1 at 2017-05-17 13:57:04 -0300
