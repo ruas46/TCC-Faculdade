@@ -211,7 +211,7 @@ class WelcomeController < ApplicationController
     transtornosHash = transtornosHash.sort_by{|k, v| v}.reverse
     #Cria um novo hash com [nomeDaDoença,qtd_repetida]
     transtornosHash.each do |x, y|
-      @transtornosHashNome[Doenca.find(x).nome] = y
+      @transtornosHashNome[Doenca.find(x).nome] = y*100/transtornosPD.count#calculo da %
     end
 
     ############################################################################
@@ -230,13 +230,14 @@ class WelcomeController < ApplicationController
     sintomasHash = sintomasHash.sort_by{|k, v| v}.reverse
     #Cria um novo hash com [nomeDoSintoma,qtd_repetida]
     sintomasHash.each do |x, y|
-      @sintomasHashNome[Sintoma.find(x).nome] = y
+      @sintomasHashNome[Sintoma.find(x).nome] = y*100/sintomas.count#calculo da %
     end
 
 
     #BUG Sintomas estão sendo contabilizados pelas doenças pesquisadas e n o sintoma em si
     #DEBUG
     puts ">>>>>>>>>>>>>>>>>>>SINTOMAS<<<<<<<<<<<<<<<<<<<<<<<<<<"
+    puts "QTD de sintomas #{sintomas.count}"
     puts "Sintomas: #{sintomas}"
     @sintomasHashNome.each do |x, y|
       puts "#{y}x aparece: #{x}"
@@ -247,6 +248,7 @@ class WelcomeController < ApplicationController
 
     puts "<><><><><><><><><><><><><<>><><<><><>><<>><><><<>><><<><><><>><"
     puts ">>>>>>>>>>>>>>>>>>TRANSTORNOS<<<<<<<<<<<<<<<<<<<<<<<<"
+    puts "QTD de transtornos: #{transtornosPD.count}"
     puts "transtornos: #{transtornos}"
     @transtornosHashNome.each do |x, y|
       puts "#{y}x aparece: #{x}"
