@@ -81,23 +81,23 @@ class WelcomeController < ApplicationController
       pesquisaDoencaAUX = @@pesquisaDoenca
       @@pesquisaSintoma.each do |x, y|
         pesquisaDoencaAUX.each do |pD|
-          #pega o array de dentro referente a doenca e faz um each nos seus sintomas
-          y.each do |j|
-            if pesquisaDoencaAUX.index(pD) != nil
-              #se o sintoma foi obrigatorio entra no if
-              if j.sintoma_obrigatorio
-                #se esse sintoma foi pesquisado entra no if, se não deleta a doença do array
-                if @@sintomasPesquisadosOrganizado.grep(j.id) != []
-                else
-                  puts "pD DELETADO: #{pD.nome}"
-                  @@pesquisaDoenca.delete_at(pesquisaDoencaAUX.index(pD))
+          if pD.id == x
+            #pega o array de dentro referente a doenca e faz um each nos seus sintomas
+            y.each do |j|
+              if pesquisaDoencaAUX.index(pD) != nil
+                #se o sintoma foi obrigatorio entra no if
+                if j.sintoma_obrigatorio
+                  #se esse sintoma foi pesquisado entra no if, se não deleta a doença do array
+                  if @@sintomasPesquisadosOrganizado.grep(j.id) != []
+                  else
+                    @@pesquisaDoenca.delete_at(pesquisaDoencaAUX.index(pD))
+                  end
                 end
               end
             end
           end
         end
       end
-      puts "@@pesquisaDoenca: #{@@pesquisaDoenca}"
 
       ############################################################################
       #Registrar no banco informações sobre as pesquisas feitas
