@@ -40,16 +40,7 @@ class WelcomeController < ApplicationController
       end
 
       #Deleta doenças iguais encontradas
-      @@pesquisaDoenca.each do |s|
-        if @@pesquisaDoenca.select {|e| e.id == s.id}.count > 1
-          aux = @@pesquisaDoenca.select {|e| e.id == s.id}#pega todos duplicados
-          aux.delete_at(aux.index(aux.first))#tira 1 do array
-          #deleta o resto
-          aux.each do |x|
-            @@pesquisaDoenca.delete_at(@@pesquisaDoenca.index(x))
-          end
-        end
-      end
+      @@pesquisaDoenca.uniq!
 
       @@pesquisaDoenca.each do |s|
           auxArray = []
@@ -93,9 +84,6 @@ class WelcomeController < ApplicationController
           #pega o array de dentro referente a doenca e faz um each nos seus sintomas
           y.each do |j|
             if pesquisaDoencaAUX.index(pD) != nil
-              puts pD.nome
-              puts "Nome: #{j.nome} OBG:#{j.sintoma_obrigatorio}"
-              puts "=============="
               #se o sintoma foi obrigatorio entra no if
               if j.sintoma_obrigatorio
                 #se esse sintoma foi pesquisado entra no if, se não deleta a doença do array

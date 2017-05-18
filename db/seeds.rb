@@ -105,6 +105,21 @@ d.sintomas_doenca.create(sintoma: s22)
 d.sintomas_doenca.create(sintoma: s23)
 #
 
+d = Doenca.new(nome:"doença só opc",min_qtd_sint:2,pagina:"555")
+d.save
+s1 = Sintoma.new(nome:"opc1", sintoma_obrigatorio:false)
+s2 = Sintoma.new(nome:"opc2", sintoma_obrigatorio:false)
+s3 = Sintoma.new(nome:"opc3", sintoma_obrigatorio:false)
+d.sintomas_doenca.create(sintoma: s1)
+d.sintomas_doenca.create(sintoma: s2)
+d.sintomas_doenca.create(sintoma: s3)
+
+d = Doenca.new(nome:"doença só obg",min_qtd_sint:2,pagina:"666")
+d.save
+s5 = Sintoma.new(nome:"obg1", sintoma_obrigatorio:true)
+s6 = Sintoma.new(nome:"obg2", sintoma_obrigatorio:true)
+d.sintomas_doenca.create(sintoma: s5)
+d.sintomas_doenca.create(sintoma: s6)
 #
 #Para buscas essa associação d.sintomas_doenca.map
 
