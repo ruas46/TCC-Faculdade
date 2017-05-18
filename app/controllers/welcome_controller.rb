@@ -85,27 +85,31 @@ class WelcomeController < ApplicationController
         @@pesquisaDoenca.delete_at(@@pesquisaDoenca.index(dPD))
       end
 
-
       #validar sintomas obrigatórios
-      @@pesquisaDoenca.each do |pD|
-        @@pesquisaSintoma.each do |x, y|
-          #Compara id da doença com o id da doença que tem dentro do array @@pesquisaSintoma
-          if pD.id == x
-            #pega o array de dentro referente a doenca e faz um each nos seus sintomas
-            y.each do |j|
+      #passa o array para um auxiliar para poder fazer o each corretamente
+      pesquisaDoencaAUX = @@pesquisaDoenca
+      @@pesquisaSintoma.each do |x, y|
+        pesquisaDoencaAUX.each do |pD|
+          #pega o array de dentro referente a doenca e faz um each nos seus sintomas
+          y.each do |j|
+            if pesquisaDoencaAUX.index(pD) != nil
+              puts pD.nome
+              puts "Nome: #{j.nome} OBG:#{j.sintoma_obrigatorio}"
+              puts "=============="
               #se o sintoma foi obrigatorio entra no if
               if j.sintoma_obrigatorio
                 #se esse sintoma foi pesquisado entra no if, se não deleta a doença do array
                 if @@sintomasPesquisadosOrganizado.grep(j.id) != []
                 else
-                  @@pesquisaDoenca.delete_at(@@pesquisaDoenca.index(pD))
+                  puts "pD DELETADO: #{pD.nome}"
+                  @@pesquisaDoenca.delete_at(pesquisaDoencaAUX.index(pD))
                 end
               end
             end
           end
         end
       end
-
+      puts "@@pesquisaDoenca: #{@@pesquisaDoenca}"
 
       ############################################################################
       #Registrar no banco informações sobre as pesquisas feitas
@@ -134,42 +138,42 @@ class WelcomeController < ApplicationController
 
 
       #DEBUG
-      puts "---------------------------------------------------------------"
-      puts "@@sintomasPesquisadosOrganizado: #{@@sintomasPesquisadosOrganizado}"
-      puts "sintomasPesquisados: #{sintomasPesquisados}"
-      puts "@@pesquisaSintoma: #{@@pesquisaSintoma}"
-      puts "@@pesquisaDoenca: #{@@pesquisaDoenca}"
-      puts "---------------------------------------------------------------"
-      aux = SintomasDoenca.all
-      puts "Tabela SintomasDoenca"
-      puts "total de sintomas cadastrados com doenças: #{aux.count}"
-      aux.each do |x|
-        puts "doenca_id: #{x.doenca_id}  -  sintoma_id: #{x.sintoma_id}"
-      end
-      puts "---------------------------------------------------------------"
-      aux = TranstornoPesquisadoDoenca.all
-      puts "Tabela TranstornoPesquisadoDoenca"
-      aux.each do |x|
-        puts "transtornos_pesquisado_id: #{x.transtornos_pesquisado_id} - doenca_id: #{x.doenca_id}"
-      end
-      puts "---------------------------------------------------------------"
-      aux = TranstornosPesquisado.all
-      puts "Tabela TranstornosPesquisado"
-      aux.each do |x|
-        puts x
-      end
-      puts "---------------------------------------------------------------"
-      aux = TranstornosNaoSolucionado.all
-      puts "Tabela TranstornosNaoSolucionado"
-      aux.each do |x|
-        puts x
-      end
-      puts "---------------------------------------------------------------"
-      aux = TranstornoNaoSolucionadoSintoma.all
-      puts "Tabela TranstornoNaoSolucionadoSintoma"
-      aux.each do |x|
-        puts "transtornos_nao_solucionado_id: #{x.transtornos_nao_solucionado_id} - sintoma_id: #{x.sintoma_id}"
-      end
+    #  puts "---------------------------------------------------------------"
+    #  puts "@@sintomasPesquisadosOrganizado: #{@@sintomasPesquisadosOrganizado}"
+    #  puts "sintomasPesquisados: #{sintomasPesquisados}"
+    #  puts "@@pesquisaSintoma: #{@@pesquisaSintoma}"
+    #  puts "@@pesquisaDoenca: #{@@pesquisaDoenca}"
+    #  puts "---------------------------------------------------------------"
+    #  aux = SintomasDoenca.all
+    #  puts "Tabela SintomasDoenca"
+    #  puts "total de sintomas cadastrados com doenças: #{aux.count}"
+    #  aux.each do |x|
+    #    puts "doenca_id: #{x.doenca_id}  -  sintoma_id: #{x.sintoma_id}"
+    #  end
+    #  puts "---------------------------------------------------------------"
+    #  aux = TranstornoPesquisadoDoenca.all
+    #  puts "Tabela TranstornoPesquisadoDoenca"
+    #  aux.each do |x|
+    #    puts "transtornos_pesquisado_id: #{x.transtornos_pesquisado_id} - doenca_id: #{x.doenca_id}"
+    #  end
+    #  puts "---------------------------------------------------------------"
+    #  aux = TranstornosPesquisado.all
+    #  puts "Tabela TranstornosPesquisado"
+    #  aux.each do |x|
+    #    puts x
+    #  end
+    #  puts "---------------------------------------------------------------"
+    #  aux = TranstornosNaoSolucionado.all
+    #  puts "Tabela TranstornosNaoSolucionado"
+    #  aux.each do |x|
+    #    puts x
+    #  end
+    #  puts "---------------------------------------------------------------"
+    #  aux = TranstornoNaoSolucionadoSintoma.all
+    #  puts "Tabela TranstornoNaoSolucionadoSintoma"
+    #  aux.each do |x|
+    #    puts "transtornos_nao_solucionado_id: #{x.transtornos_nao_solucionado_id} - sintoma_id: #{x.sintoma_id}"
+    #  end
 
 
       #
