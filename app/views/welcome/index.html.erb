@@ -36,9 +36,11 @@
       </div>
       <div class="modal-body">
         <form action="/welcome" method="post">
-        <% @SintomasCad.each do |sintoma| %>
-          <input type="checkbox" value="<%= sintoma.id %>" name="id[]"/><%= sintoma.nome %><br>
-        <% end %>
+          <div class="modal-scroll">
+            <% @SintomasCad.each do |sintoma| %>
+              <input type="checkbox" value="<%= sintoma.id %>" name="id[]"/><%= sintoma.nome %><br>
+            <% end %>
+          </div>
         <div class="col-lg-offset-8 col-md-offset-8 col-sm-offset-8 col-xs-offset-4">
           <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
           <button class="btn btn-primary" type="submit" value="Submit">Pesquisar</button>

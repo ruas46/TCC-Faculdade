@@ -9,6 +9,10 @@ html, body {
     height: 100%;
     margin: 0;
 }
+.modal-scroll {
+  height:500px;
+  overflow:auto;
+}
 #resp {
     min-height: -webkit-calc(100% - 80px);
     min-height: -moz-calc(100% - 80px);
