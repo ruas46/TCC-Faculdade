@@ -896,6 +896,19 @@ d.sintomas_doenca.create(sintoma: s263)
 
 #
 #
+#SEED PARA CADA TRANSTORNO TER 1 PESQUISA INICIALMENTE
+doencas = Doenca.all
+doencas.each do |doenca|
+  #TranstornosPesquisado (só dar um new sempre e associar)
+  t = TranstornosPesquisado.new
+  t.save
+  doenca.transtorno_pesquisado_doenca.create(transtornos_pesquisado: t)
+  #TranstornoPesquisadoDoenca (tabela de união)
+end
+
+
+
+
 #Para buscas essa associação d.sintomas_doenca.map
 
 #Associando Sintomas ja cadastrados com doenças novas
