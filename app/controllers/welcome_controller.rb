@@ -20,6 +20,8 @@ class WelcomeController < ApplicationController
     if params[:id].nil?
       redirect_to '/search'
     else
+      #para caso envie dois ids iguais
+      params[:id].uniq!
       ###########################################################################
       #Motor de pesquisa do site
 
