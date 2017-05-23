@@ -27,12 +27,9 @@
             <div class="col-lg-10">
               <br>
               <b>Transtorno: </b><%= pD.nome %><br>
-              <b>Sintomas:</b>
-
-              <!-- DEBUG -->
-               QTD min:<%= pD.min_qtd_sint %>
-
-              <br>
+              <b>Categoria: </b><%= pD.categorium_id %><br>
+              <b>Quantidade mínima de sintomas: </b><%= pD.min_qtd_sint %><br>
+              <b>Sintomas:</b><br>
               <% @pesquisaSintoma.each do |chave,valor| %>
                 <% if pD.id == chave%>
                   <% valor.each do |x|%>
@@ -42,14 +39,12 @@
                     <% else %>
                       <%= image_tag("none-search.png", :size => "20x20") %>
                     <% end %>
-                    <!-- Mostra nome do sintoma -->
-                    <%= x.nome%>
-
                     <!-- DEBUG -->
                     <% if x.sintoma_obrigatorio %>
-                      <%= "[Sintoma Obrigatório]" %>
+                    <%= "[Sintoma Obrigatório]" %>
                     <% end %>
-
+                    <!-- Mostra nome do sintoma -->
+                    <%= x.nome%>
                     <br>
                   <% end %>
                 <% end %>

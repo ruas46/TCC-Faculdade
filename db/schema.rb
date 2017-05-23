@@ -26,6 +26,7 @@ ActiveRecord::Schema.define(version: 20170523013443) do
     t.string   "nome"
     t.integer  "min_qtd_sint"
     t.integer  "pagina"
+    t.integer  "categorium_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

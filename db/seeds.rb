@@ -28,7 +28,7 @@ c8.save
 ################################################################################
 #SEED DE TRANSTORNOS E SINTOMAS
 #Transtorno Bipolar Tipo 1
-d = Doenca.new(nome:"Transtorno Bipolar Tipo 1",min_qtd_sint:8,pagina:"123")
+d = Doenca.new(nome:"Transtorno Bipolar Tipo 1",categorium_id: c1.id,min_qtd_sint:8,pagina:"123")
 d.save
 s1 = Sintoma.new(nome:"Período distinto de humor anormal e persistentemente elevado, expansivo ou irritável", sintoma_obrigatorio:true)
 s2 = Sintoma.new(nome:"Aumento anormal e persistente da atividade dirigida a objetos ou da energia", sintoma_obrigatorio:true)
@@ -74,7 +74,7 @@ d.sintomas_doenca.create(sintoma: s20)
 #
 
 #Transtorno Bipolar Tipo 2
-d = Doenca.new(nome:"Transtorno Bipolar Tipo 2",min_qtd_sint:8,pagina:"132")
+d = Doenca.new(nome:"Transtorno Bipolar Tipo 2",categorium_id: c1.id,min_qtd_sint:8,pagina:"132")
 d.save
 
 s21 = Sintoma.new(nome:"O episódio hipomaníaco não é suficientemente grave a ponto de causar prejuízo acentuado no funcionamento social ou profissional ou para necessitar de hospitalização.", sintoma_obrigatorio:true)
@@ -104,7 +104,7 @@ d.sintomas_doenca.create(sintoma: s23)
 #
 
 #Transtorno Ciclotímico
-d = Doenca.new(nome:"Transtorno Ciclotímico",min_qtd_sint:2,pagina:"139")
+d = Doenca.new(nome:"Transtorno Ciclotímico",categorium_id: c1.id,min_qtd_sint:2,pagina:"139")
 d.save
 
 s24 = Sintoma.new(nome:"Presença de vários períodos com sintomas hipomaníacos que não satisfazem critério para episódio hipomaníaco e vários períodos com sintomas depressivos que não satisfazem os critérios para episódio depressivo maior", sintoma_obrigatorio:true)
@@ -115,7 +115,7 @@ d.sintomas_doenca.create(sintoma: s25)
 #
 
 #Transtorno disruptivo da Desregulação do Humor
-d = Doenca.new(nome:"Transtorno disruptivo da Desregulação do Humor",min_qtd_sint:3,pagina:"156")
+d = Doenca.new(nome:"Transtorno disruptivo da Desregulação do Humor",categorium_id: c2.id,min_qtd_sint:3,pagina:"156")
 d.save
 
 s26 = Sintoma.new(nome:"Explosões de raiva recorrentes e graves manifestadas pela linguagem que são consideravelmente desproporcionais em intensidade ou duração à situação ou provocação", sintoma_obrigatorio:true)
@@ -128,7 +128,7 @@ d.sintomas_doenca.create(sintoma: s28)
 #
 
 #Transtorno Depressivo Maior
-d = Doenca.new(nome:"Transtorno Depressivo Maior",min_qtd_sint:5,pagina:"160")
+d = Doenca.new(nome:"Transtorno Depressivo Maior",categorium_id: c2.id,min_qtd_sint:5,pagina:"160")
 d.save
 
 d.sintomas_doenca.create(sintoma: s10)#Objeto reutilizado do transtorno anterior
@@ -143,7 +143,7 @@ d.sintomas_doenca.create(sintoma: s18)#Objeto reutilizado do transtorno anterior
 #
 
 #Distimia
-d = Doenca.new(nome:"Distimia",min_qtd_sint:2,pagina:"168")
+d = Doenca.new(nome:"Distimia",categorium_id: c2.id,min_qtd_sint:2,pagina:"168")
 d.save
 
 s29 = Sintoma.new(nome:"Humor deprimido", sintoma_obrigatorio:true)
@@ -165,7 +165,7 @@ d.sintomas_doenca.create(sintoma: s35)
 #
 
 #Transtorno Disfórico Pré-menstrual
-d = Doenca.new(nome:"Transtorno Disfórico Pré-menstrual",min_qtd_sint:5,pagina:"171")
+d = Doenca.new(nome:"Transtorno Disfórico Pré-menstrual",categorium_id: c2.id,min_qtd_sint:5,pagina:"171")
 d.save
 
 s36 = Sintoma.new(nome:"Labilidade afetiva acentuada", sintoma_obrigatorio:false)
@@ -193,7 +193,7 @@ d.sintomas_doenca.create(sintoma: s45)
 #
 
 #Transtorno de Ansiedade de Separação
-d = Doenca.new(nome:"Transtorno de Ansiedade de Separação",min_qtd_sint:3,pagina:"190")
+d = Doenca.new(nome:"Transtorno de Ansiedade de Separação",categorium_id: c3.id,min_qtd_sint:3,pagina:"190")
 d.save
 
 s46 = Sintoma.new(nome:"Medo ou ansiedade impróprios e excessivos em relação ao estágio do desenvolvimento, envolvendo a separação daqueles com quem o indivíduo tem apego", sintoma_obrigatorio:true)
@@ -218,7 +218,7 @@ d.sintomas_doenca.create(sintoma: s54)
 #
 
 #Mutismo Seletivo
-d = Doenca.new(nome:"Mutismo Seletivo",min_qtd_sint:4,pagina:"195")
+d = Doenca.new(nome:"Mutismo Seletivo",categorium_id: c3.id,min_qtd_sint:4,pagina:"195")
 d.save
 
 s55 = Sintoma.new(nome:"Fracasso persistente em falar em situações sociais específicas nas quais existe a expectativa para tal, apesar de falar em outras situações", sintoma_obrigatorio:true)
@@ -233,7 +233,7 @@ d.sintomas_doenca.create(sintoma: s58)
 #
 
 #Fobia Específica
-d = Doenca.new(nome:"Fobia Específica",min_qtd_sint:5,pagina:"197")
+d = Doenca.new(nome:"Fobia Específica",categorium_id: c3.id,min_qtd_sint:5,pagina:"197")
 d.save
 
 s59 = Sintoma.new(nome:"Medo ou ansiedade acentuados acerca de um objeto ou situação", sintoma_obrigatorio:true)
@@ -250,7 +250,7 @@ d.sintomas_doenca.create(sintoma: s63)
 #
 
 #Transtorno de Ansiedade Social (Fobia Social)
-d = Doenca.new(nome:"Transtorno de Ansiedade Social (Fobia Social)",min_qtd_sint:5,pagina:"202")
+d = Doenca.new(nome:"Transtorno de Ansiedade Social (Fobia Social)",categorium_id: c3.id,min_qtd_sint:5,pagina:"202")
 d.save
 
 s64 = Sintoma.new(nome:"Medo ou ansiedade acentuados acerca de uma ou mais situações sociais em que o indivíduo é exposto a possível avaliação por outras pessoas.", sintoma_obrigatorio:true)
@@ -266,7 +266,7 @@ d.sintomas_doenca.create(sintoma: s67)
 #
 
 #Transtorno de Pânico
-d = Doenca.new(nome:"Transtorno de Pânico",min_qtd_sint:4,pagina:"208")
+d = Doenca.new(nome:"Transtorno de Pânico",categorium_id: c3.id,min_qtd_sint:4,pagina:"208")
 d.save
 
 s68 = Sintoma.new(nome:"Palpitações, coração acelerado, taquicardia", sintoma_obrigatorio:false)
@@ -303,7 +303,7 @@ d.sintomas_doenca.create(sintoma: s82)
 #
 
 #Agorafobia
-d = Doenca.new(nome:"Agorafobia",min_qtd_sint:5,pagina:"218")
+d = Doenca.new(nome:"Agorafobia",categorium_id: c3.id,min_qtd_sint:5,pagina:"218")
 d.save
 
 s83 = Sintoma.new(nome:"Medo ou ansiedade no uso de transporte público", sintoma_obrigatorio:false)
@@ -329,7 +329,7 @@ d.sintomas_doenca.create(sintoma: s91)
 #
 
 #Transtorno de Ansiedade Generalizada
-d = Doenca.new(nome:"Transtorno de Ansiedade Generalizada",min_qtd_sint:3,pagina:"222")
+d = Doenca.new(nome:"Transtorno de Ansiedade Generalizada",categorium_id: c3.id,min_qtd_sint:3,pagina:"222")
 d.save
 
 s92 = Sintoma.new(nome:"Ansiedade e preocupação excessivas", sintoma_obrigatorio:true)
@@ -352,7 +352,7 @@ d.sintomas_doenca.create(sintoma: s99)
 #
 
 #Transtorno Obsessivo-compulsivo
-d = Doenca.new(nome:"Transtorno Obsessivo-compulsivo",min_qtd_sint:7,pagina:"237")
+d = Doenca.new(nome:"Transtorno Obsessivo-compulsivo",categorium_id: c4.id,min_qtd_sint:7,pagina:"237")
 d.save
 
 s100 = Sintoma.new(nome:"Presenças de obsessões, compulsões ou ambas", sintoma_obrigatorio:true)
@@ -373,7 +373,7 @@ d.sintomas_doenca.create(sintoma: s106)
 #
 
 #Transtorno Dismórfico Corporal
-d = Doenca.new(nome:"Transtorno Dismórfico Corporal",min_qtd_sint:2,pagina:"242")
+d = Doenca.new(nome:"Transtorno Dismórfico Corporal",categorium_id: c4.id,min_qtd_sint:2,pagina:"242")
 d.save
 
 s107 = Sintoma.new(nome:"Preocupação com um ou mais defeitos ou falhas percebidas na aparência física que não são observáveis ou que parecem leves para os outros", sintoma_obrigatorio:true)
@@ -384,7 +384,7 @@ d.sintomas_doenca.create(sintoma: s108)
 #
 
 #Transtorno de Acumulação
-d = Doenca.new(nome:"Transtorno de Acumulação",min_qtd_sint:4,pagina:"247")
+d = Doenca.new(nome:"Transtorno de Acumulação",categorium_id: c4.id,min_qtd_sint:4,pagina:"247")
 d.save
 
 s109 = Sintoma.new(nome:"Dificuldade persistente de descartar ou de se desfazer de pertences, independentemente de seu valor real", sintoma_obrigatorio:true)
@@ -399,7 +399,7 @@ d.sintomas_doenca.create(sintoma: s112)
 #
 
 #Tricotilomania
-d = Doenca.new(nome:"Tricotilomania",min_qtd_sint:2,pagina:"251")
+d = Doenca.new(nome:"Tricotilomania",categorium_id: c4.id,min_qtd_sint:2,pagina:"251")
 d.save
 
 s113 = Sintoma.new(nome:"Arrancar o próprio cabelo de forma recorrente, resultando em perda de cabelo", sintoma_obrigatorio:true)
@@ -410,7 +410,7 @@ d.sintomas_doenca.create(sintoma: s114)
 #
 
 #Transtorno de Escoriação
-d = Doenca.new(nome:"Transtorno de Escoriação",min_qtd_sint:2,pagina:"254")
+d = Doenca.new(nome:"Transtorno de Escoriação",categorium_id: c4.id,min_qtd_sint:2,pagina:"254")
 d.save
 
 s115 = Sintoma.new(nome:"Beliscar a pele de forma recorrente, resultando em lesões", sintoma_obrigatorio:true)
@@ -421,7 +421,7 @@ d.sintomas_doenca.create(sintoma: s116)
 #
 
 #Transtorno do Apego Reativo
-d = Doenca.new(nome:"Transtorno do Apego Reativo",min_qtd_sint:2,pagina:"265")
+d = Doenca.new(nome:"Transtorno do Apego Reativo",categorium_id: c5.id,min_qtd_sint:3,pagina:"265")
 d.save
 
 s117 = Sintoma.new(nome:"A criança rara ou minimamente busca conforto quando aflita", sintoma_obrigatorio:true)
@@ -440,7 +440,7 @@ d.sintomas_doenca.create(sintoma: s122)
 #
 
 #Transtorno de Interação Social Desinibida
-d = Doenca.new(nome:"Transtorno de Interação Social Desinibida",min_qtd_sint:2,pagina:"268")
+d = Doenca.new(nome:"Transtorno de Interação Social Desinibida",categorium_id: c5.id,min_qtd_sint:2,pagina:"268")
 d.save
 
 s123 = Sintoma.new(nome:"Discrição reduzida ou ausente em abordar e interagir com adultos desconhecidos", sintoma_obrigatorio:false)
@@ -456,7 +456,7 @@ d.sintomas_doenca.create(sintoma: s126)
 #
 
 #Transtorno de Estresse Pós-traumático
-d = Doenca.new(nome:"Transtorno de Estresse Pós-traumático",min_qtd_sint:6,pagina:"271")
+d = Doenca.new(nome:"Transtorno de Estresse Pós-traumático",categorium_id: c5.id,min_qtd_sint:6,pagina:"271")
 d.save
 
 s127 = Sintoma.new(nome:"Exposição a episódio concreto ou ameaça de morte, lesão grave ou violência sexual", sintoma_obrigatorio:true)
@@ -504,7 +504,7 @@ d.sintomas_doenca.create(sintoma: s146)
 #
 
 #Transtorno de Estresse Agudo
-d = Doenca.new(nome:"Transtorno de Estresse Agudo",min_qtd_sint:9,pagina:"280")
+d = Doenca.new(nome:"Transtorno de Estresse Agudo",categorium_id: c5.id,min_qtd_sint:9,pagina:"280")
 d.save
 
 s147 = Sintoma.new(nome:"Senso de realidade alterado acerca de si mesmo ou do ambiente ao redor", sintoma_obrigatorio:false)
@@ -529,7 +529,7 @@ d.sintomas_doenca.create(sintoma: s149)
 #
 
 #Transtornos de Adaptação
-d = Doenca.new(nome:"Transtornos de Adaptação",min_qtd_sint:1,pagina:"287")
+d = Doenca.new(nome:"Transtornos de Adaptação",categorium_id: c5.id,min_qtd_sint:1,pagina:"287")
 d.save
 
 s150 = Sintoma.new(nome:"Desenvolvimento de sintomas emocionais ou comportamentos em resposta a um estressor ou estressores", sintoma_obrigatorio:true)
@@ -542,7 +542,7 @@ d.sintomas_doenca.create(sintoma: s152)
 #
 
 #Pica
-d = Doenca.new(nome:"Pica",min_qtd_sint:3,pagina:"329")
+d = Doenca.new(nome:"Pica",categorium_id: c6.id,min_qtd_sint:3,pagina:"329")
 d.save
 
 s153 = Sintoma.new(nome:"Ingestão persistente de substâncias não nutritivas, não alimentares", sintoma_obrigatorio:true)
@@ -555,7 +555,7 @@ d.sintomas_doenca.create(sintoma: s155)
 #
 
 #Transtorno de Ruminação
-d = Doenca.new(nome:"Transtorno de Ruminação",min_qtd_sint:1,pagina:"332")
+d = Doenca.new(nome:"Transtorno de Ruminação",categorium_id: c6.id,min_qtd_sint:1,pagina:"332")
 d.save
 
 s156 = Sintoma.new(nome:"Regurgitação repetida de alimento. O alimento regurgitado pode ser remastigado, novamente deglutido ou cuspido", sintoma_obrigatorio:true)
@@ -564,7 +564,7 @@ d.sintomas_doenca.create(sintoma: s156)
 #
 
 #Transtorno Alimentar Restritivo/Evitativo
-d = Doenca.new(nome:"Transtorno Alimentar Restritivo/Evitativo",min_qtd_sint:1,pagina:"334")
+d = Doenca.new(nome:"Transtorno Alimentar Restritivo/Evitativo",categorium_id: c6.id,min_qtd_sint:1,pagina:"334")
 d.save
 
 s157 = Sintoma.new(nome:"Perturbação alimentar manifestada por fracasso persistente em satisfazer as necessidades nutricionais e/ou energéticas apropriadas", sintoma_obrigatorio:true)
@@ -581,7 +581,7 @@ d.sintomas_doenca.create(sintoma: s161)
 #
 
 #Anorexia Nervosa
-d = Doenca.new(nome:"Anorexia Nervosa",min_qtd_sint:3,pagina:"338")
+d = Doenca.new(nome:"Anorexia Nervosa",categorium_id: c6.id,min_qtd_sint:3,pagina:"338")
 d.save
 
 s162 = Sintoma.new(nome:"Restrição da ingestão calórica em relação às necessidades, levando a um peso corporal significativamente baixo", sintoma_obrigatorio:true)
@@ -594,7 +594,7 @@ d.sintomas_doenca.create(sintoma: s164)
 #
 
 #Bulimia Nervosa
-d = Doenca.new(nome:"Bulimia Nervosa",min_qtd_sint:5,pagina:"345")
+d = Doenca.new(nome:"Bulimia Nervosa",categorium_id: c6.id,min_qtd_sint:5,pagina:"345")
 d.save
 
 s165 = Sintoma.new(nome:"Episódios recorrentes de compulsão alimentar", sintoma_obrigatorio:true)
@@ -611,7 +611,7 @@ d.sintomas_doenca.create(sintoma: s169)
 #
 
 #Transtorno de Compulsão Alimentar
-d = Doenca.new(nome:"Transtorno de Compulsão Alimentar",min_qtd_sint:4,pagina:"350")
+d = Doenca.new(nome:"Transtorno de Compulsão Alimentar",categorium_id: c6.id,min_qtd_sint:4,pagina:"350")
 d.save
 
 s170 = Sintoma.new(nome:"Comer mais rapidamente do que o normal", sintoma_obrigatorio:false)
@@ -633,7 +633,7 @@ d.sintomas_doenca.create(sintoma: s175)
 #
 
 #Transtorno da Personalidade Paranoide
-d = Doenca.new(nome:"Transtorno da Personalidade Paranoide",min_qtd_sint:4,pagina:"649")
+d = Doenca.new(nome:"Transtorno da Personalidade Paranoide",categorium_id: c7.id,min_qtd_sint:4,pagina:"649")
 d.save
 
 s176 = Sintoma.new(nome:"Suspeita, sem embasamento suficiente, de estar sendo explorado, maltratado ou enganado por outros", sintoma_obrigatorio:false)
@@ -654,7 +654,7 @@ d.sintomas_doenca.create(sintoma: s182)
 #
 
 #Transtorno da Personalidade Esquizóide
-d = Doenca.new(nome:"Transtorno da Personalidade Esquizóide",min_qtd_sint:4,pagina:"652")
+d = Doenca.new(nome:"Transtorno da Personalidade Esquizóide",categorium_id: c7.id,min_qtd_sint:4,pagina:"652")
 d.save
 
 s183 = Sintoma.new(nome:"Não deseja nem desfruta de relações íntimas, inclusive ser parte de uma família", sintoma_obrigatorio:false)
@@ -675,7 +675,7 @@ d.sintomas_doenca.create(sintoma: s189)
 #
 
 #Transtorno de Personalidade Esquizotípica
-d = Doenca.new(nome:"Transtorno de Personalidade Esquizotípica",min_qtd_sint:5,pagina:"655")
+d = Doenca.new(nome:"Transtorno de Personalidade Esquizotípica",categorium_id: c7.id,min_qtd_sint:5,pagina:"655")
 d.save
 
 s190 = Sintoma.new(nome:"Ideias de referência", sintoma_obrigatorio:false)
@@ -700,7 +700,7 @@ d.sintomas_doenca.create(sintoma: s198)
 #
 
 #Transtorno da Personalidade Antissocial
-d = Doenca.new(nome:"Transtorno da Personalidade Antissocial",min_qtd_sint:3,pagina:"659")
+d = Doenca.new(nome:"Transtorno da Personalidade Antissocial",categorium_id: c7.id,min_qtd_sint:3,pagina:"659")
 d.save
 
 s199 = Sintoma.new(nome:"Fracasso em ajustar-se às normas sociais relativas a comportamentos legais, conforme indicado pela repetição de atos que constituem motivos de detenção", sintoma_obrigatorio:false)
@@ -721,7 +721,7 @@ d.sintomas_doenca.create(sintoma: s205)
 #
 
 #Transtorno da Personalidade Borderline
-d = Doenca.new(nome:"Transtorno da Personalidade Borderline",min_qtd_sint:5,pagina:"663")
+d = Doenca.new(nome:"Transtorno da Personalidade Borderline",categorium_id: c7.id,min_qtd_sint:5,pagina:"663")
 d.save
 
 s206 = Sintoma.new(nome:"Esforços desesperados para evitar abandono real ou imaginado", sintoma_obrigatorio:false)
@@ -746,7 +746,7 @@ d.sintomas_doenca.create(sintoma: s214)
 #
 
 #Transtorno da Personalidade Histriônica
-d = Doenca.new(nome:"Transtorno da Personalidade Histriônica",min_qtd_sint:5,pagina:"667")
+d = Doenca.new(nome:"Transtorno da Personalidade Histriônica",categorium_id: c7.id,min_qtd_sint:5,pagina:"667")
 d.save
 
 s215 = Sintoma.new(nome:"Desconforto em situações em que não é o centro das atenções", sintoma_obrigatorio:false)
@@ -769,7 +769,7 @@ d.sintomas_doenca.create(sintoma: s222)
 #
 
 #Transtorno da Personalidade Narcisista
-d = Doenca.new(nome:"Transtorno da Personalidade Narcisista",min_qtd_sint:5,pagina:"669")
+d = Doenca.new(nome:"Transtorno da Personalidade Narcisista",categorium_id: c7.id,min_qtd_sint:5,pagina:"669")
 d.save
 
 s223 = Sintoma.new(nome:"Tem uma sensação grandiosa da própria importância", sintoma_obrigatorio:false)
@@ -794,7 +794,7 @@ d.sintomas_doenca.create(sintoma: s231)
 #
 
 #Transtorno da Personalidade Evitativa
-d = Doenca.new(nome:"Transtorno da Personalidade Evitativa",min_qtd_sint:4,pagina:"672")
+d = Doenca.new(nome:"Transtorno da Personalidade Evitativa",categorium_id: c7.id,min_qtd_sint:4,pagina:"672")
 d.save
 
 s232 = Sintoma.new(nome:"Evita atividades profissionais que envolvam contato interpessoal significativo por medo de crítica, desaprovação ou rejeição", sintoma_obrigatorio:false)
@@ -815,7 +815,7 @@ d.sintomas_doenca.create(sintoma: s238)
 #
 
 #Transtorno da Personalidade Dependente
-d = Doenca.new(nome:"Transtorno da Personalidade Dependente",min_qtd_sint:5,pagina:"675")
+d = Doenca.new(nome:"Transtorno da Personalidade Dependente",categorium_id: c7.id,min_qtd_sint:5,pagina:"675")
 d.save
 
 s239 = Sintoma.new(nome:"Tem dificuldades em tomar decisões cotidianas sem uma quantidade excessiva de conselhos e reasseguramento de outros", sintoma_obrigatorio:false)
@@ -838,7 +838,7 @@ d.sintomas_doenca.create(sintoma: s246)
 #
 
 #Transtorno da Personalidade Obsessivo-compulsivo
-d = Doenca.new(nome:"Transtorno da Personalidade Obsessivo-compulsivo",min_qtd_sint:4,pagina:"678")
+d = Doenca.new(nome:"Transtorno da Personalidade Obsessivo-compulsivo",categorium_id: c7.id,min_qtd_sint:4,pagina:"678")
 d.save
 
 s247 = Sintoma.new(nome:"É tão preocupado com detalhes, regras, listas, ordem, organização ou horários a ponto de o objetivo principal da atividade ser perdido", sintoma_obrigatorio:false)
@@ -861,7 +861,7 @@ d.sintomas_doenca.create(sintoma: s254)
 #
 
 #Transtorno Delirante
-d = Doenca.new(nome:"Transtorno Delirante",min_qtd_sint:2,pagina:"90")
+d = Doenca.new(nome:"Transtorno Delirante",categorium_id: c8.id,min_qtd_sint:2,pagina:"90")
 d.save
 
 s255 = Sintoma.new(nome:"Presença de um delírio (ou mais)", sintoma_obrigatorio:true)
@@ -872,7 +872,7 @@ d.sintomas_doenca.create(sintoma: s256)
 #
 
 #Transtorno Esquizofreniforme
-d = Doenca.new(nome:"Transtorno Esquizofreniforme",min_qtd_sint:2,pagina:"96")
+d = Doenca.new(nome:"Transtorno Esquizofreniforme",categorium_id: c8.id,min_qtd_sint:2,pagina:"96")
 d.save
 
 s257 = Sintoma.new(nome:"Delírios", sintoma_obrigatorio:false)
@@ -889,7 +889,7 @@ d.sintomas_doenca.create(sintoma: s261)
 #
 
 #Esquizofrenia
-d = Doenca.new(nome:"Esquizofrenia",min_qtd_sint:2,pagina:"99")
+d = Doenca.new(nome:"Esquizofrenia",categorium_id: c8.id,min_qtd_sint:2,pagina:"99")
 d.save
 
 s262 = Sintoma.new(nome:"O nível de funcionamento em uma ou mais áreas importantes do funcionamento, como trabalho, relações interpressoais ou autocuidado, está acentuadamente abaixo do nível alcançado antes da perturbação", sintoma_obrigatorio:true)
@@ -903,7 +903,7 @@ d.sintomas_doenca.create(sintoma: s262)
 #
 
 #Transtorno Esquizoafetivo
-d = Doenca.new(nome:"Transtorno Esquizoafetivo",min_qtd_sint:2,pagina:"105")
+d = Doenca.new(nome:"Transtorno Esquizoafetivo",categorium_id: c8.id,min_qtd_sint:2,pagina:"105")
 d.save
 
 s263 = Sintoma.new(nome:"Período ininterrupto da doença onde há um episódio depressivo maior ou maníaco concomitante", sintoma_obrigatorio:true)
