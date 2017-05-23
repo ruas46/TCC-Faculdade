@@ -6,6 +6,27 @@
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
 
+################################################################################
+#SEED DE CATEGORIAS DE TRANSTORNOS
+c1 = Categorium.new(nome:"Bipolar e relacionados")
+c1.save
+c2 = Categorium.new(nome:"Depressivos")
+c2.save
+c3 = Categorium.new(nome:"Ansiedade")
+c3.save
+c4 = Categorium.new(nome:"Obsessivos-compulsivos")
+c4.save
+c5 = Categorium.new(nome:"Traumas")
+c5.save
+c6 = Categorium.new(nome:"Alimentação")
+c6.save
+c7 = Categorium.new(nome:"Personalidade")
+c7.save
+c8 = Categorium.new(nome:"Psicótico")
+c8.save
+
+################################################################################
+#SEED DE TRANSTORNOS E SINTOMAS
 #Transtorno Bipolar Tipo 1
 d = Doenca.new(nome:"Transtorno Bipolar Tipo 1",min_qtd_sint:8,pagina:"123")
 d.save
