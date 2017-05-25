@@ -30,6 +30,7 @@
               <b>Categoria: </b><%= Categorium.find(pD.categorium_id).nome %><br>
               <b>Quantidade mínima de sintomas: </b><%= pD.min_qtd_sint %><br>
               <b>Sintomas:</b><br>
+
               <% @pesquisaSintoma.each do |chave,valor| %>
                 <% if pD.id == chave%>
                   <% valor.each do |x|%>
@@ -40,7 +41,7 @@
                       <%= image_tag("none-search.png", :size => "20x20") %>
                     <% end %>
                     <% if x.sintoma_obrigatorio %>
-                    <%= "[Sintoma Obrigatório]" %>
+                    <b><%= "[Sintoma Obrigatório]" %></b>
                     <% end %>
                     <!-- Mostra nome do sintoma -->
                     <%= x.nome%>
