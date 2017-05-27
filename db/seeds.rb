@@ -143,10 +143,10 @@ d.sintomas_doenca.create(sintoma: s18)#Objeto reutilizado do transtorno anterior
 #
 
 #Distimia
-d = Doenca.new(nome:"Distimia",categorium_id: c2.id,min_qtd_sint:2,pagina:"168")
+d = Doenca.new(nome:"Distimia",categorium_id: c2.id,min_qtd_sint:3,pagina:"168")
 d.save
 
-s29 = Sintoma.new(nome:"Humor deprimido", sintoma_obrigatorio:true)
+
 s30 = Sintoma.new(nome:"Apetite diminuído ou alimentação em excesso", sintoma_obrigatorio:false)
 s31 = Sintoma.new(nome:"Baixa energia ou fadiga", sintoma_obrigatorio:false)
 s32 = Sintoma.new(nome:"Baixa autoestima", sintoma_obrigatorio:false)
@@ -154,8 +154,8 @@ s33 = Sintoma.new(nome:"Concentração pobre ou dificuldade em tomar decisões",
 s34 = Sintoma.new(nome:"Sentimentos de desesperança", sintoma_obrigatorio:false)
 s35 = Sintoma.new(nome:"Jamais houve um episódio maníaco ou episódio hipomaníaco e jamais foram satisfeitos os critérios para transtorno ciclotímico", sintoma_obrigatorio:true)
 
+d.sintomas_doenca.create(sintoma: s10)#Objeto reutilizado do transtorno anterior
 d.sintomas_doenca.create(sintoma: s13)#Objeto reutilizado do transtorno anterior
-d.sintomas_doenca.create(sintoma: s29)
 d.sintomas_doenca.create(sintoma: s30)
 d.sintomas_doenca.create(sintoma: s31)
 d.sintomas_doenca.create(sintoma: s32)
