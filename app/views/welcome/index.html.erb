@@ -58,14 +58,11 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h5 class="modal-title" id="ModalSearchTitle">Insira os sintomas</h5>
-      </div>
-      <div class="modal-body">
-
         <input placeholder="Filtrar sintomas" id="inputValueJs" type="text" />
         <input type="submit" id="buttonSearchJs" class="btn btn-primary" value="Filtrar" />
         <input type="submit" id="buttonCleanJs" class="btn btn-secondary" value="Limpar filtro" />
-
+      </div>
+      <div class="modal-body">
         <form action="/welcome" method="post">
           <div class="modal-scroll">
             <% @SintomasCad.each do |sintoma| %>
