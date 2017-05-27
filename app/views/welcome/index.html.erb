@@ -1,3 +1,29 @@
+<script>
+  $(document).ready(function() {
+    $('#buttonSearchJs').click(function() {
+      var inputVar = $('#inputValueJs').val();
+        for (i = 0; i <= <%= @SintomasCad.count %>; i++) {
+          $('#sintomaJs-'+i).show();
+        }
+        for (i = 0; i <= <%= @SintomasCad.count %>; i++) {
+          var sintomaVar = $('#sintomaJs-'+i).text();
+
+          if (sintomaVar.includes(inputVar)){
+          }else{
+            if(!$('#checkbox-'+i).is(":checked")){
+              $('#sintomaJs-'+i).hide();
+            }
+          }
+        }
+    });
+    $('#buttonCleanJs').click(function() {
+      for (i = 0; i <= <%= @SintomasCad.count %>; i++) {
+        $('#sintomaJs-'+i).show();
+      }
+    });
+
+  })
+</script>
 <nav role="navigation" class="navbar navbar-default">
   <div class="navbar-header">
     <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
@@ -35,10 +61,17 @@
         <h5 class="modal-title" id="ModalSearchTitle">Insira os sintomas</h5>
       </div>
       <div class="modal-body">
+
+        <input placeholder="Filtrar sintomas" id="inputValueJs" type="text" />
+        <input type="submit" id="buttonSearchJs" value="Filtrar" />
+        <input type="submit" id="buttonCleanJs" value="Limpar" />
+
         <form action="/welcome" method="post">
           <div class="modal-scroll">
             <% @SintomasCad.each do |sintoma| %>
-              <input type="checkbox" value="<%= sintoma.id %>" name="id[]"/><%= sintoma.nome %><br>
+              <div id="sintomaJs-<%= sintoma.id %>">
+                <input type="checkbox" id="checkbox-<%= sintoma.id %>" value="<%= sintoma.id %>" name="id[]"/><%= sintoma.nome %><br>
+              </div>
             <% end %>
           </div>
         <div class="col-lg-offset-8 col-md-offset-8 col-sm-offset-8 col-xs-offset-4">
