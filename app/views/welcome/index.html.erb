@@ -8,7 +8,7 @@
         for (i = 0; i <= <%= @SintomasCad.count %>; i++) {
           var sintomaVar = $('#sintomaJs-'+i).text();
 
-          if (sintomaVar.includes(inputVar.toLowerCase())){
+          if (sintomaVar.toLowerCase().includes(inputVar.toLowerCase())){
           }else{
             if(!$('#checkbox-'+i).is(":checked")){
               $('#sintomaJs-'+i).hide();
