@@ -16,16 +16,14 @@ class WelcomeController < ApplicationController
     @@pesquisaDoenca = []
     @@pesquisaSintoma = []
     @@sintomasPesquisadosOrganizado = []
-
     #valida pesquisa nula e dureciona pra search sem anda para mostrar "nenhum transtorno encontrado"
     if params[:id].nil?
-      redirect_to '/search'
+      redirect_to '/pesquisa'
     else
       #para caso envie dois ids iguais
       params[:id].uniq!
       ###########################################################################
       #Motor de pesquisa do site
-
       #pesquisa relações id_sintomas
       params[:id].each do |id_parm|
         #to_a para tirar ActiveRecord::Relation
@@ -104,7 +102,6 @@ class WelcomeController < ApplicationController
 
       ############################################################################
       #Registrar no banco informações sobre as pesquisas feitas
-
       #salvar cada pesquisa feita na tabela de pesquisas
       if @@pesquisaDoenca != []#verifica se tem pesquisa feita
         @@pesquisaDoenca.each do |pD|
@@ -126,47 +123,6 @@ class WelcomeController < ApplicationController
           end
         end
       end
-
-
-      #DEBUG
-    #  puts "---------------------------------------------------------------"
-    #  puts "@@sintomasPesquisadosOrganizado: #{@@sintomasPesquisadosOrganizado}"
-    #  puts "sintomasPesquisados: #{sintomasPesquisados}"
-    #  puts "@@pesquisaSintoma: #{@@pesquisaSintoma}"
-    #  puts "@@pesquisaDoenca: #{@@pesquisaDoenca}"
-    #  puts "---------------------------------------------------------------"
-    #  aux = SintomasDoenca.all
-    #  puts "Tabela SintomasDoenca"
-    #  puts "total de sintomas cadastrados com doenças: #{aux.count}"
-    #  aux.each do |x|
-    #    puts "doenca_id: #{x.doenca_id}  -  sintoma_id: #{x.sintoma_id}"
-    #  end
-    #  puts "---------------------------------------------------------------"
-    #  aux = TranstornoPesquisadoDoenca.all
-    #  puts "Tabela TranstornoPesquisadoDoenca"
-    #  aux.each do |x|
-    #    puts "transtornos_pesquisado_id: #{x.transtornos_pesquisado_id} - doenca_id: #{x.doenca_id}"
-    #  end
-    #  puts "---------------------------------------------------------------"
-    #  aux = TranstornosPesquisado.all
-    #  puts "Tabela TranstornosPesquisado"
-    #  aux.each do |x|
-    #    puts x
-    #  end
-    #  puts "---------------------------------------------------------------"
-    #  aux = TranstornosNaoSolucionado.all
-    #  puts "Tabela TranstornosNaoSolucionado"
-    #  aux.each do |x|
-    #    puts x
-    #  end
-    #  puts "---------------------------------------------------------------"
-    #  aux = TranstornoNaoSolucionadoSintoma.all
-    #  puts "Tabela TranstornoNaoSolucionadoSintoma"
-    #  aux.each do |x|
-    #    puts "transtornos_nao_solucionado_id: #{x.transtornos_nao_solucionado_id} - sintoma_id: #{x.sintoma_id}"
-    #  end
-
-
       #
       redirect_to '/pesquisa'
     end
@@ -227,32 +183,6 @@ class WelcomeController < ApplicationController
     sintomasHash.each do |x, y|
       @sintomasHashNome[Sintoma.find(x).nome] = y*100/sintomas.count#calculo da %
     end
-
-
-    #BUG Sintomas estão sendo contabilizados pelas doenças pesquisadas e n o sintoma em si
-    #DEBUG
-    puts ">>>>>>>>>>>>>>>>>>>SINTOMAS<<<<<<<<<<<<<<<<<<<<<<<<<<"
-    puts "QTD de sintomas #{sintomas.count}"
-    puts "Sintomas: #{sintomas}"
-    sintomasHash.each do |x, y|
-      puts "#{y}x aparece: #{x}"
-    end
-    puts "sintomasHash Ordenado: #{@sintomasHashNome}"
-    puts "Primeiros 5 valores: #{@sintomasHashNome.first(5)}"
-    puts "Ultimos 5 valores: #{@sintomasHashNome.to_a.last(5).reverse}"
-
-    puts "<><><><><><><><><><><><><<>><><<><><>><<>><><><<>><><<><><><>><"
-    puts ">>>>>>>>>>>>>>>>>>TRANSTORNOS<<<<<<<<<<<<<<<<<<<<<<<<"
-    puts "QTD de transtornos: #{transtornosPD.count}"
-    puts "transtornos: #{transtornos}"
-    transtornosHash.each do |x, y|
-      puts "#{y}x aparece: #{x}"
-    end
-    puts "transtornosHash Ordenado: #{@transtornosHashNome}"
-    puts "Primeiros 5 valores: #{@transtornosHashNome.first(5)}"
-    puts "Ultimos 5 valores: #{@transtornosHashNome.to_a.last(5).reverse}"
-    puts "<><><><><><><><><><><><><<>><><<><><>><<>><><><<>><><<><><><>><"
-
   end
 
   def admin
