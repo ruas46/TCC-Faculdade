@@ -7,6 +7,7 @@ class WelcomeController < ApplicationController
   end
 
   def info
+    @transtornosNomes = Doenca.order :nome
   end
 
   def create
@@ -167,7 +168,7 @@ class WelcomeController < ApplicationController
 
 
       #
-      redirect_to '/search'
+      redirect_to '/pesquisa'
     end
   end
 

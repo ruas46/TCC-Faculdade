@@ -26,7 +26,7 @@
     <h3 class="text-center" style="padding-bottom:10px;"><b>Sobre Nós</b></h3>
     <p>Olá, me chamo Guilherme Ruas Luiz, meu e-mail para contato: guilhermeruasluiz@gmail.com, sou graduando do curso de Ciência da computação na faculdade Ulbra de Canoas, esse site faz parte do meu trabalho de conclusão de curso (2017/1), seu objetivo é o desenvolvimento de um sistema especialista para auxiliar o processo de diagnostico de profissionais que utilizam o DSM-5 e coletar os dados de suas pesquisas para geração de gráficos.</p>
     <p>
-      <a href="#" data-toggle="modal" data-target="#ModalInfo">Lista de Transtornos inicialmente cadastrados no sistema</a>
+      <a href="#" data-toggle="modal" data-target="#ModalInfo">Transtornos cadastrados no sistema</a>
     </p>
   </div>
 </div>
@@ -40,62 +40,14 @@
         <button type="button" class="close" data-dismiss="modal" aria-label="Close">
           <span aria-hidden="true">&times;</span>
         </button>
-        <h5 class="modal-title" id="ModalInfoTitle">Transtornos cadastrados inicialmente no sistema</h5>
+        <h5 class="modal-title" id="ModalInfoTitle">Transtornos cadastrados no sistema</h5>
       </div>
       <div class="modal-body">
         <div class="modal-scroll">
           <ol>
-            <li>Transtorno Bipolar Tipo 1</li>
-            <li>Transtorno Bipolar Tipo 2</li>
-            <li>Transtorno Ciclotímico</li>
-            <li>Transtornos Depressivos</li>
-            <li>Transtorno disruptivo da Desregulação do Humor</li>
-            <li>Transtorno Depressivo Maior</li>
-            <li>Distimia</li>
-            <li>Transtorno Disfórico Pré-menstrual</li>
-            <li>Transtornos de Ansiedade</li>
-            <li>Transtorno de Ansiedade de Separação</li>
-            <li>Mutismo Seletivo</li>
-            <li>Fobia Específica</li>
-            <li>Transtorno de Ansiedade Social (Fobia Social)</li>
-            <li>Transtorno de Pânico</li>
-            <li>Agorafobia</li>
-            <li>Transtorno de Ansiedade Generalizada</li>
-            <li>Transtorno Obsessivo-compulsivo e Transtornos Relacionados</li>
-            <li>Transtorno Obsessivo-compulsivo</li>
-            <li>Transtorno Dismórfico Corporal</li>
-            <li>Transtorno de Acumulação</li>
-            <li>Tricotilomania</li>
-            <li>Transtorno de Escoriação</li>
-            <li>Transtornos Relacionados a Trauma e a Estressores</li>
-            <li>Transtorno do Apego Reativo</li>
-            <li>Transtorno de Interação Social Desinibida</li>
-            <li>Transtorno de Estresse Pós-traumático</li>
-            <li>Transtorno de Estresse Agudo</li>
-            <li>Transtornos de Adaptação</li>
-            <li>Transtornos Alimentares</li>
-            <li>Pica</li>
-            <li>Transtorno de Ruminação</li>
-            <li>Transtorno Alimentar Restritivo/Evitativo</li>
-            <li>Anorexia Nervosa</li>
-            <li>Bulimia Nervosa</li>
-            <li>Transtorno de Compulsão Alimentar</li>
-            <li>Transtornos da Personalidade</li>
-            <li>Transtorno da Personalidade Paranoide</li>
-            <li>Transtorno da Personalidade Esquizóide</li>
-            <li>Transtorno de Personalidade Esquizotípica</li>
-            <li>Transtorno da Personalidade Antissocial</li>
-            <li>Transtorno da Personalidade Borderline</li>
-            <li>Transtorno da Personalidade Histriônica</li>
-            <li>Transtorno da Personalidade Narcisista</li>
-            <li>Transtorno da Personalidade Evitativa</li>
-            <li>Transtorno da Personalidade Dependente</li>
-            <li>Transtorno da Personalidade Obsessivo-compulsivo</li>
-            <li>Espectro da Esquizofrenia e Outros Transtornos Psicóticos</li>
-            <li>Transtorno Delirante</li>
-            <li>Transtorno Esquizofreniforme</li>
-            <li>Esquizofrenia</li>
-            <li>Transtorno Esquizoafetivo</li>
+            <% @transtornosNomes.each do |t| %>
+              <li><%= t.nome %></li>
+            <% end %>
           </ol>
         </div>
         <div class="col-lg-offset-9 col-md-offset-9 col-sm-offset-9 col-xs-offset-5">
