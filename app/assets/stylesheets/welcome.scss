@@ -178,7 +178,7 @@ html, body {
   padding-top: 10px;
 }
 .graphics-generate{
-  width: 30px;
+  width: 30px !important;
 }
 .graphics-generate-icon{
   width: 8px;
@@ -191,19 +191,15 @@ html, body {
 }
 .graphics-generate-color-2{
   background-color: red;
-  //margin-left: 40px;
 }
 .graphics-generate-color-3{
   background-color: green;
-  //margin-left: 80px;
 }
 .graphics-generate-color-4{
   background-color: purple;
-  //margin-left: 120px;
 }
 .graphics-generate-color-5{
   background-color: orange;
-  //margin-left: 160px;
 }
 .graphics-generate-text{
   padding-left: 14px;
@@ -212,29 +208,21 @@ html, body {
   padding-top: 5px;
   padding-right: 30px !important;
 }
-.graphics-generate-hr{
-  border-top: 1px solid black;
-  margin-top: 0px;
-  margin-bottom: 0px;
-}
+
 .graphics-generate-hr-100{
-  margin-top: -51px;
-  margin-left: 26px;
+  margin-top: 1px;
 }
 .graphics-generate-hr-50{
-  margin-top: -52px;
-  margin-left: -154px;
+  margin-top: 49px;
 }
-@media (min-width: 523px) and (max-width: 1199px) {
-  .graphics-generate-hr-50{
-    margin-left: -45%;
-    width: 95%;
-  }
-}
-
-
 
 .graphics-generate-hr-0{
-  margin-top: -27px;
-  margin-left: -4px;
+  margin-top: 48px;
+}
+.graphics-generate-hr{
+  background-color: black;
+  height: 1px;
+  width: 160px;
+  margin-bottom: 0px;
+  margin-left: 40px;
 }
