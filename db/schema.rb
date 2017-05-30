@@ -22,15 +22,6 @@ ActiveRecord::Schema.define(version: 20170523013443) do
     t.datetime "updated_at"
   end
 
-  create_table "doencas", force: :cascade do |t|
-    t.string   "nome"
-    t.integer  "min_qtd_sint"
-    t.integer  "pagina"
-    t.integer  "categorium_id"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-  end
-
   create_table "sintomas", force: :cascade do |t|
     t.string   "nome"
     t.boolean  "sintoma_obrigatorio"
@@ -38,9 +29,9 @@ ActiveRecord::Schema.define(version: 20170523013443) do
     t.datetime "updated_at"
   end
 
-  create_table "sintomas_doencas", force: :cascade do |t|
+  create_table "sintomas_transtornos", force: :cascade do |t|
     t.integer  "sintoma_id"
-    t.integer  "doenca_id"
+    t.integer  "transtorno_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -52,9 +43,18 @@ ActiveRecord::Schema.define(version: 20170523013443) do
     t.datetime "updated_at"
   end
 
-  create_table "transtorno_pesquisado_doencas", force: :cascade do |t|
+  create_table "transtorno_pesquisado_transtornos", force: :cascade do |t|
     t.integer  "transtornos_pesquisado_id"
-    t.integer  "doenca_id"
+    t.integer  "transtorno_id"
+    t.datetime "created_at"
+    t.datetime "updated_at"
+  end
+
+  create_table "transtornos", force: :cascade do |t|
+    t.string   "nome"
+    t.integer  "min_qtd_sint"
+    t.integer  "pagina"
+    t.integer  "categorium_id"
     t.datetime "created_at"
     t.datetime "updated_at"
   end

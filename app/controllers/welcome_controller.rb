@@ -7,13 +7,13 @@ class WelcomeController < ApplicationController
   end
 
   def info
-    @transtornosNomes = Doenca.order :nome
+    @transtornosNomes = Transtorno.order :nome
   end
 
   def create
     sintomasPesquisados = []
-    doencasParaDeletar = []
-    @@pesquisaDoenca = []
+    transtornosParaDeletar = []
+    @@pesquisaTranstorno = []
     @@pesquisaSintoma = []
     @@sintomasPesquisadosOrganizado = []
     #valida pesquisa nula e dureciona pra search sem anda para mostrar "nenhum transtorno encontrado"
@@ -27,71 +27,71 @@ class WelcomeController < ApplicationController
       #pesquisa relações id_sintomas
       params[:id].each do |id_parm|
         #to_a para tirar ActiveRecord::Relation
-        sintomasPesquisados << SintomasDoenca.where(sintoma_id: id_parm).to_a
+        sintomasPesquisados << SintomasTranstorno.where(sintoma_id: id_parm).to_a
       end
 
       sintomasPesquisados.each do |s|
         s.each do |f|
-          #Pesquisa doenças com esses sintomas
-          #varrendo o array para achar a doença pelo id
-          @@pesquisaDoenca << Doenca.find(f.doenca_id)
+          #Pesquisa transtornos com esses sintomas
+          #varrendo o array para achar a transtorno pelo id
+          @@pesquisaTranstorno << Transtorno.find(f.transtorno_id)
           #manipula sintomasPesquisados para deixar só o id dos sintomas em um array simples
           @@sintomasPesquisadosOrganizado << f.sintoma_id
         end
       end
 
-      #Deleta doenças iguais encontradas
-      @@pesquisaDoenca.uniq!
+      #Deleta transtornos iguais encontradas
+      @@pesquisaTranstorno.uniq!
 
-      @@pesquisaDoenca.each do |s|
+      @@pesquisaTranstorno.each do |s|
           auxArray = []
           auxArray2 = []
-          auxArray << SintomasDoenca.where(doenca_id: s.id).to_a#procura Doença
+          auxArray << SintomasTranstorno.where(transtorno_id: s.id).to_a#procura Transtorno
           auxArray.each do |j|
             j.each do |y|
-              auxArray2 << Sintoma.find(y.sintoma_id)#procura sintomas da Doença
+              auxArray2 << Sintoma.find(y.sintoma_id)#procura sintomas da Transtorno
             end
           end
           @@pesquisaSintoma << [s.id, auxArray2]#armazena [ID_DOENÇA[SINTOMAS]]
       end
 
-      #verifica se sintomas pesquisados atendem o minimo da doença
-      #deleta a doença do array se não tiver qtd minima de sintomas exigida
-      @@pesquisaDoenca.each do |pD|
+      #verifica se sintomas pesquisados atendem o minimo da transtorno
+      #deleta a transtorno do array se não tiver qtd minima de sintomas exigida
+      @@pesquisaTranstorno.each do |pD|
         contS = 0
-        #conta quantos sintomas pesquisados aquela doença tem
+        #conta quantos sintomas pesquisados aquela transtorno tem
         sintomasPesquisados.each do |x|
           x.each do |y|
-            if (pD.id == y.doenca_id)
+            if (pD.id == y.transtorno_id)
               contS+=1
             end
           end
         end
-        #se n atender ao minimo de sintomas, adiciona a doença no array para ser deletado
+        #se n atender ao minimo de sintomas, adiciona a transtorno no array para ser deletado
         if (pD.min_qtd_sint > contS)
-          doencasParaDeletar << pD
+          transtornosParaDeletar << pD
         end
       end
-      #deleta as doenças que não atende a QTD min de sintomas
-      doencasParaDeletar.each do |dPD|
-        @@pesquisaDoenca.delete_at(@@pesquisaDoenca.index(dPD))
+      #deleta as transtornos que não atende a QTD min de sintomas
+      transtornosParaDeletar.each do |dPD|
+        @@pesquisaTranstorno.delete_at(@@pesquisaTranstorno.index(dPD))
       end
 
       #validar sintomas obrigatórios
       #passa o array para um auxiliar para poder fazer o each corretamente
-      pesquisaDoencaAUX = @@pesquisaDoenca
+      pesquisaTranstornoAUX = @@pesquisaTranstorno
       @@pesquisaSintoma.each do |x, y|
-        pesquisaDoencaAUX.each do |pD|
+        pesquisaTranstornoAUX.each do |pD|
           if pD.id == x
-            #pega o array de dentro referente a doenca e faz um each nos seus sintomas
+            #pega o array de dentro referente a transtorno e faz um each nos seus sintomas
             y.each do |j|
-              if pesquisaDoencaAUX.index(pD) != nil
+              if pesquisaTranstornoAUX.index(pD) != nil
                 #se o sintoma foi obrigatorio entra no if
                 if j.sintoma_obrigatorio
-                  #se esse sintoma foi pesquisado entra no if, se não deleta a doença do array
+                  #se esse sintoma foi pesquisado entra no if, se não deleta a transtorno do array
                   if @@sintomasPesquisadosOrganizado.grep(j.id) != []
                   else
-                    @@pesquisaDoenca.delete_at(pesquisaDoencaAUX.index(pD))
+                    @@pesquisaTranstorno.delete_at(pesquisaTranstornoAUX.index(pD))
                   end
                 end
               end
@@ -103,16 +103,16 @@ class WelcomeController < ApplicationController
       ############################################################################
       #Registrar no banco informações sobre as pesquisas feitas
       #salvar cada pesquisa feita na tabela de pesquisas
-      if @@pesquisaDoenca != []#verifica se tem pesquisa feita
-        @@pesquisaDoenca.each do |pD|
+      if @@pesquisaTranstorno != []#verifica se tem pesquisa feita
+        @@pesquisaTranstorno.each do |pD|
           #TranstornosPesquisado (só dar um new sempre e associar)
           t = TranstornosPesquisado.new
           t.save
-          pD.transtorno_pesquisado_doenca.create(transtornos_pesquisado: t)
-          #TranstornoPesquisadoDoenca (tabela de união)
+          pD.transtorno_pesquisado_transtorno.create(transtornos_pesquisado: t)
+          #TranstornoPesquisadoTranstorno (tabela de união)
         end
 
-      #Se @@pesquisaDoenca n tem algo, salvar a consulta na tabela de não resolvidos
+      #Se @@pesquisaTranstorno n tem algo, salvar a consulta na tabela de não resolvidos
       else
         t = TranstornosNaoSolucionado.new
         t.save
@@ -129,18 +129,18 @@ class WelcomeController < ApplicationController
   end
 
   def search
-    #valida se @@pesquisaDoenca tem algo, se n redireciona para home(caso acessem /search direto)
-    if (defined?(@@pesquisaDoenca)).nil?
+    #valida se @@pesquisaTranstorno tem algo, se n redireciona para home(caso acessem /search direto)
+    if (defined?(@@pesquisaTranstorno)).nil?
       redirect_to '/'
     else
       @sintomasPesquisadosOrganizado = @@sintomasPesquisadosOrganizado
-      @pesquisaDoenca = @@pesquisaDoenca
+      @pesquisaTranstorno = @@pesquisaTranstorno
       @pesquisaSintoma = @@pesquisaSintoma
     end
   end
 
   def graphics
-    transtornosPD = TranstornoPesquisadoDoenca.all
+    transtornosPD = TranstornoPesquisadoTranstorno.all
     transtornos = []
     sintomas = []
     sintomasHash = Hash.new(0)
@@ -150,26 +150,26 @@ class WelcomeController < ApplicationController
 
     ############################################################################
     #TRANSTORNOS
-    #cria um array com os doenças id
+    #cria um array com os transtornos id
     transtornosPD.each do |x|
-        transtornos << x.doenca_id
+        transtornos << x.transtorno_id
     end
-    #cria um hash com [doenca_id,qtd_repetida]
+    #cria um hash com [transtorno_id,qtd_repetida]
     transtornos.each do |x|
       transtornosHash[x] += 1
     end
-    #ordena o hash pelo doenca_id que mais aparece
+    #ordena o hash pelo transtorno_id que mais aparece
     transtornosHash = transtornosHash.sort_by{|k, v| v}.reverse
-    #Cria um novo hash com [nomeDaDoença,qtd_repetida]
+    #Cria um novo hash com [nomeDaTranstorno,qtd_repetida]
     transtornosHash.each do |x, y|
-      @transtornosHashNome[Doenca.find(x).nome] = y*100/transtornosPD.count#calculo da %
+      @transtornosHashNome[Transtorno.find(x).nome] = y*100/transtornosPD.count#calculo da %
     end
 
     ############################################################################
     #SINTOMAS
-    #pesquisa na tabela que relaciona Sintomas com Doenças os sintoma_id
+    #pesquisa na tabela que relaciona Sintomas com Transtornos os sintoma_id
     transtornos.each do |t|
-      SintomasDoenca.where(doenca_id: t).to_a.each do |s|
+      SintomasTranstorno.where(transtorno_id: t).to_a.each do |s|
         sintomas << s.sintoma_id
       end
     end
