@@ -43,6 +43,7 @@ class WelcomeController < ApplicationController
       #Deleta transtornos iguais encontradas
       @@pesquisaTranstorno.uniq!
 
+      #cria array com [ID_TRANSTORNO[SINTOMAS]]
       @@pesquisaTranstorno.each do |s|
           auxArray = []
           auxArray2 = []
@@ -52,14 +53,14 @@ class WelcomeController < ApplicationController
               auxArray2 << Sintoma.find(y.sintoma_id)#procura sintomas da Transtorno
             end
           end
-          @@pesquisaSintoma << [s.id, auxArray2]#armazena [ID_DOENÇA[SINTOMAS]]
+          @@pesquisaSintoma << [s.id, auxArray2]#armazena [ID_TRANSTORNO[SINTOMAS]]
       end
 
-      #verifica se sintomas pesquisados atendem o minimo da transtorno
-      #deleta a transtorno do array se não tiver qtd minima de sintomas exigida
+      #verifica se sintomas pesquisados atendem o minimo do transtorno
+      #deleta o transtorno do array se não tiver qtd minima de sintomas exigida
       @@pesquisaTranstorno.each do |pD|
         contS = 0
-        #conta quantos sintomas pesquisados aquela transtorno tem
+        #conta quantos sintomas pesquisados aquele transtorno tem
         sintomasPesquisados.each do |x|
           x.each do |y|
             if (pD.id == y.transtorno_id)
@@ -67,7 +68,7 @@ class WelcomeController < ApplicationController
             end
           end
         end
-        #se n atender ao minimo de sintomas, adiciona a transtorno no array para ser deletado
+        #se n atender ao minimo de sintomas, adiciona o transtorno no array para ser deletado
         if (pD.min_qtd_sint > contS)
           transtornosParaDeletar << pD
         end
@@ -83,7 +84,7 @@ class WelcomeController < ApplicationController
       @@pesquisaSintoma.each do |x, y|
         pesquisaTranstornoAUX.each do |pD|
           if pD.id == x
-            #pega o array de dentro referente a transtorno e faz um each nos seus sintomas
+            #pega o array de dentro referente a o transtorno e faz um each nos seus sintomas
             y.each do |j|
               if pesquisaTranstornoAUX.index(pD) != nil
                 #se o sintoma foi obrigatorio entra no if
