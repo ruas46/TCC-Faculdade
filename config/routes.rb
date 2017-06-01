@@ -4,8 +4,11 @@ Rails.application.routes.draw do
   get '/sobre' => 'welcome#info'
   get '/pesquisa' => 'welcome#search'
   get '/graficos' => 'welcome#graphics'
-  get '/admin' => 'welcome#admin'
   post 'welcome' => 'welcome#create'
+
+  #token de acesso
+  #eyJpc3MiOiJzY290Y2guaW8iLCJleHAiOjEzMDA4MTkzODAsIm5hbWUiOiJDaHJpcyBTZXZpbGxlamEiLCJhZG1pbiI6dHJ1ZX0
+  get '/eyJpc3MiOiJzY290Y2guaW8iLCJleHAiOjEzMDA4MTkzODAsIm5hbWUiOiJDaHJpcyBTZXZpbGxlamEiLCJhZG1pbiI6dHJ1ZX0' => 'welcome#admin'
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 
