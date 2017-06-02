@@ -1,0 +1,7 @@
+<h2>Editar Categoria</h2>
+<form action="/<%= @acess %>/updateCategoria" method="post">
+  <input type="hidden" name="id" value="<%= @categorium.id %>">
+  Nome: <input name="nome" id="nome" type="text" value="<%= @categorium.nome %>">
+  <button class="btn btn-primary" type="submit" value="Submit">Salvar</button>
+</form>
+<a href="/<%= @acess %>/categoria"><button class="btn btn-primary" type="submit">Voltar</button></a>

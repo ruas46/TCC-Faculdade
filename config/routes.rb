@@ -9,7 +9,18 @@ Rails.application.routes.draw do
   #acesso
   #eyJpc3MiOiJzY290Y2guaW8iLCJleHAiOjEzMDA4MTkzODAsIm5hbWUiOiJDaHJpcyBTZXZpbGxlamEiLCJhZG1pbiI6dHJ1ZX0
   acess = '/eyJpc3MiOiJzY290Y2guaW8iLCJleHAiOjEzMDA4MTkzODAsIm5hbWUiOiJDaHJpcyBTZXZpbGxlamEiLCJhZG1pbiI6dHJ1ZX0'
-  get acess+'/categoria' => 'admin#category'
+  #CRUD CATEGORIA
+  get acess+'/categoria' => 'category#index'
+  get acess+'/novaCategoria' => 'category#new'
+  post acess+'/novaCategoria' => 'category#create'
+  post acess+'/editCategoria' => 'category#edit'
+  post acess+'/updateCategoria' => 'category#update'
+  post acess+'/deleteCategoria' => 'category#delete'
+
+
+
+
+
   get acess => 'admin#disorder'
   get acess+'/sintoma' => 'admin#symptom'
   get acess+'/transtornoSemResposta' => 'admin#UnresponsiveDisorder'
