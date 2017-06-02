@@ -17,12 +17,18 @@ Rails.application.routes.draw do
   post acess+'/updateCategoria' => 'category#update'
   post acess+'/deleteCategoria' => 'category#delete'
 
+  #CRUD SINTOMAS
+  get acess+'/sintoma' => 'symptom#index'
+  get acess+'/novoSintoma' => 'symptom#new'
+  post acess+'/novoSintoma' => 'symptom#create'
+  post acess+'/editSintoma' => 'symptom#edit'
+  post acess+'/updateSintoma' => 'symptom#update'
+  post acess+'/deleteSintoma' => 'symptom#delete'
 
 
 
 
   get acess => 'admin#disorder'
-  get acess+'/sintoma' => 'admin#symptom'
   get acess+'/transtornoSemResposta' => 'admin#UnresponsiveDisorder'
 
   # The priority is based upon order of creation: first created -> highest priority.

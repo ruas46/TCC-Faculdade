@@ -1,0 +1,12 @@
+<h2>Novo Sintoma</h2>
+<form action="/<%= @acess %>/novoSintoma" method="post">
+  Nome: <input name="nome" id="nome" type="text">
+  <br>
+  Sintoma obriatório ?
+  <select>
+    <option value="false">Não</option>
+    <option value="true">Sim</option>
+  <select>
+  <button class="btn btn-primary" type="submit" value="Submit">Criar</button>
+</form>
+<a href="/<%= @acess %>/sintoma"><button class="btn btn-primary" type="submit">Voltar</button></a>

@@ -1,0 +1,32 @@
+<h1>Sintomas</h1>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th></th>
+  </tr>
+  <% @sintoma.each do |x| %>
+    <tr>
+      <td><%= x.nome %></td>
+      <td>
+        <% if x.sintoma_obrigatorio %>
+          <%= "Obrigatório" %>
+        <% else %>
+          <%= "Opcional" %>
+        <% end %>
+      </td>
+      <td>
+        <form action="/<%= @acess %>/editSintoma" method="post">
+          <input type="hidden" name="id" value="<%= x.id %>">
+          <button class="btn btn-primary" type="submit" value="Submit">Editar</button>
+        </form>
+      </td>
+      <td>
+        <form action="/<%= @acess %>/deleteSintoma" method="post">
+          <input type="hidden" name="id" value="<%= x.id %>">
+          <button class="btn btn-primary" type="submit" value="Submit">Deletar</button>
+        </form>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<a href="/<%= @acess %>/novoSintoma">Novo Sintoma</a>

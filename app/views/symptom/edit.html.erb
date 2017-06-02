@@ -1,0 +1,16 @@
+<h2>Editar Sintomas</h2>
+<form action="/<%= @acess %>/updateSintoma" method="post">
+  <input type="hidden" name="id" value="<%= @sintoma.id %>">
+  Nome: <input name="nome" id="nome" type="text" value="<%= @sintoma.nome %>">
+  <select name="obrigatorio">
+    <% if @sintoma.sintoma_obrigatorio %>
+      <option value="true" selected>Sim</option>
+      <option value="false">Não</option>
+    <% else %>
+      <option value="true">Sim</option>
+      <option value="false" selected>Não</option>
+    <% end %>
+  <select>
+  <button class="btn btn-primary" type="submit" value="Submit">Salvar</button>
+</form>
+<a href="/<%= @acess %>/sintoma"><button class="btn btn-primary" type="submit">Voltar</button></a>
