@@ -1,0 +1,2 @@
+module UnresponsiveDisorderHelper
+end

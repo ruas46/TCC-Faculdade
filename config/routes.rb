@@ -25,11 +25,13 @@ Rails.application.routes.draw do
   post acess+'/updateSintoma' => 'symptom#update'
   post acess+'/deleteSintoma' => 'symptom#delete'
 
-
+  #CRUD TRANSTORNO NÃO SOLUCIONADO
+  get acess+'/transtornoNaoSolucionado' => 'unresponsive_disorder#index'
+  post acess+'/showTranstornoNaoSolucionado' => 'unresponsive_disorder#show'
+  post acess+'/deleteTranstornoNaoSolucionado' => 'unresponsive_disorder#delete'
 
 
   get acess => 'admin#disorder'
-  get acess+'/transtornoSemResposta' => 'admin#UnresponsiveDisorder'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

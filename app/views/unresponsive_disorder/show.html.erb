@@ -1,0 +1,17 @@
+<h1>Transtornos Não Solucionado ID: <%= @transtornosNaoSolucionado.id %> </h1>
+<table>
+  <tr>
+    <th>Nome do sintoma</th>
+    <th></th>
+  </tr>
+  <% @sintomas.each do |x| %>
+      <tr>
+        <td><%= x.nome %></td>
+      </tr>
+  <% end %>
+</table>
+<form action="/<%= @acess %>/deleteTranstornoNaoSolucionado" method="post">
+  <a href="/<%= @acess %>/transtornoNaoSolucionado"><button class="btn btn-primary" type="submit">Voltar</button></a>
+  <input type="hidden" name="id" value="<%= @transtornosNaoSolucionado.id %>">
+  <button class="btn btn-primary" type="submit" value="Submit">Deletar Transtorno</button>
+</form>
