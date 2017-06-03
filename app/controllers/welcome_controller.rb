@@ -137,7 +137,6 @@ class WelcomeController < ApplicationController
       @sintomasPesquisadosOrganizado = @@sintomasPesquisadosOrganizado
       @pesquisaTranstorno = @@pesquisaTranstorno
       @pesquisaSintoma = @@pesquisaSintoma
-      puts "@pesquisaSintoma: #{@pesquisaSintoma}"
     end
   end
 

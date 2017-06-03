@@ -48,7 +48,7 @@ class DisorderController < ApplicationController
   def delete
     @acess = @@acess
     @transtorno = Transtorno.find(params[:id])
-    @transtornoSintoma = @transtorno.sintoma_transtorno.where(transtornos_id: @transtorno.id)
+    @transtornoSintoma = @transtorno.sintomas_transtorno.where(transtorno_id: @transtorno.id)
     @transtornoSintoma.delete_all#deleta na tabela relacional de não solucionado
     @transtorno.destroy
     redirect_to '/'+@@acess
