@@ -80,7 +80,28 @@
               <br>
               <b>Transtorno: </b><%= pD.nome %><br>
               <b>Categoria: </b><%= Categorium.find(pD.categorium_id).nome %><br>
-              <b>Quantidade mínima de sintomas: </b><%= pD.min_qtd_sint %><br>
+
+              <!-- CONTA QUANTOS SINTOMAS O TRANSTORNO TEM E COLCOA COR VERMELHA CASO N SEJA O MINIMO -->
+              <%cont = 0%>
+              <% @pesquisaSintoma.each do |chave,valor| %>
+                <% if pD.id == chave%>
+                  <% valor.each do |x|%>
+                    <% if @sintomasPesquisadosOrganizado.grep(x.id) != [] %>
+                      <% cont+=1 %>
+                    <% end %>
+                  <% end %>
+                <% end %>
+              <% end %>
+              <% if pD.min_qtd_sint > cont %>
+                <span style="color:#C31717;">
+                  <b>Quantidade mínima de sintomas: </b>
+                  <%= pD.min_qtd_sint %>
+                </span>
+              <% else %>
+                <b>Quantidade mínima de sintomas: </b>
+                <%= pD.min_qtd_sint %>
+              <% end %>
+              <br>
               <b>Sintomas:</b><br>
 
               <% @pesquisaSintoma.each do |chave,valor| %>
