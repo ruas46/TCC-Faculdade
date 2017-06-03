@@ -16,6 +16,7 @@ class WelcomeController < ApplicationController
     @@pesquisaTranstorno = []
     @@pesquisaSintoma = []
     @@sintomasPesquisadosOrganizado = []
+    @@transtornoPelomenosUmSintoma = []
     #valida pesquisa nula e dureciona pra search sem anda para mostrar "nenhum transtorno encontrado"
     if params[:id].nil?
       redirect_to '/pesquisa'
@@ -75,6 +76,7 @@ class WelcomeController < ApplicationController
       end
       #deleta as transtornos que não atende a QTD min de sintomas
       transtornosParaDeletar.each do |dPD|
+        @@transtornoPelomenosUmSintoma << dPD
         @@pesquisaTranstorno.delete_at(@@pesquisaTranstorno.index(dPD))
       end
 
@@ -92,6 +94,7 @@ class WelcomeController < ApplicationController
                   #se esse sintoma foi pesquisado entra no if, se não deleta a transtorno do array
                   if @@sintomasPesquisadosOrganizado.grep(j.id) != []
                   else
+                    @@transtornoPelomenosUmSintoma << pD
                     @@pesquisaTranstorno.delete_at(pesquisaTranstornoAUX.index(pD))
                   end
                 end
@@ -137,6 +140,7 @@ class WelcomeController < ApplicationController
       @sintomasPesquisadosOrganizado = @@sintomasPesquisadosOrganizado
       @pesquisaTranstorno = @@pesquisaTranstorno
       @pesquisaSintoma = @@pesquisaSintoma
+      @transtornoPelomenosUmSintoma = @@transtornoPelomenosUmSintoma
     end
   end
 

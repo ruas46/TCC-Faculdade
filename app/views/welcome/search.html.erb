@@ -65,10 +65,62 @@
     <% else %>
     <div class="row">
       <div class="col-lg-offset-5 col-lg-2 search-style-none">
-        <b><%= "Nenhum transtorno encontrado!"%></b>
+        <b><%= "Nenhum transtorno contemplam as regras!"%></b>
       </div>
     </div>
     <% end %>
+
+    <!-- TRANSTORNOS COM PELOMENOS 1 SINTOMA RELACIONADO COM A BUSCA -->
+    <% if @transtornoPelomenosUmSintoma != [] %>
+    <h2 class="text-center">Segue abaixo os transtornos com no mínimo um sintoma dos pesquisados</h2>
+      <% @transtornoPelomenosUmSintoma.each do |pD| %>
+        <div class="row">
+          <div class="col-lg-offset-3 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 col-lg-6 search-style">
+            <div class="col-lg-10">
+              <br>
+              <b>Transtorno: </b><%= pD.nome %><br>
+              <b>Categoria: </b><%= Categorium.find(pD.categorium_id).nome %><br>
+              <b>Quantidade mínima de sintomas: </b><%= pD.min_qtd_sint %><br>
+              <b>Sintomas:</b><br>
+
+              <% @pesquisaSintoma.each do |chave,valor| %>
+                <% if pD.id == chave%>
+                  <% valor.each do |x|%>
+                    <!-- pesquina no array de id's dos sintomas pesquisados se contem o id do sintoma atual e se n é um array vazio -->
+                    <% if @sintomasPesquisadosOrganizado.grep(x.id) != [] %>
+                      <%= image_tag("find-search.png", :size => "20x20") %>
+                      <span>
+                      <% if x.sintoma_obrigatorio %>
+                        <b><%= "[Sintoma Obrigatório]" %></b>
+                      <% end %>
+                      <!-- Mostra nome do sintoma -->
+                      <%= x.nome%>
+                    <% else %>
+                      <%= image_tag("none-search.png", :size => "20x20") %>
+                      <% if x.sintoma_obrigatorio %>
+                      <span style="color:#C31717;">
+                      <b><%= "[Sintoma Obrigatório]" %></b>
+                      <% end %>
+                      <!-- Mostra nome do sintoma -->
+                      <%= x.nome%>
+                    <% end %>
+                    <br>
+                  </span><!-- span para mudar a cor do sintoma obrigatório -->
+                  <% end %>
+                <% end %>
+              <% end %>
+            </div>
+            <div class="col-lg-2 search-style-page">
+              Pagina no DSM-5<br>
+              <div class="search-style-page-num">
+                <%= pD.pagina %>
+              </div>
+            </div>
+          </div>
+        </div>
+      <% end %>
+    <% end %>
+
 
 
     <!-- MODAL ARVORE-->
