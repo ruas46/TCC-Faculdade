@@ -26,7 +26,7 @@
           for (i=0;i<inputVar;i++){
             html += '<select name="sintomas_ids[]">';
             <% @sintomas.each do |x| %>
-            html += '<option value="<%= x.id %>"><%= x.nome %></option>';
+            html += '<option value="<%= x.id %>">[<%= x.sintoma_obrigatorio ? "Obrigatório" : "Opcional" %>]<%= x.nome %></option>';
             <% end %>
             html += '</select><br>';
           }
