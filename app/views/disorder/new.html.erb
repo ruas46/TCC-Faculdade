@@ -11,6 +11,32 @@
     <option value="<%= x.id %>"><%= x.nome %></option>
     <% end %>
   </select>
+  <br>
+    Quantos sintomas deseja inserir?<input id="qtdSintomas" type="number" min="0">
+    <script>
+      $(document).ready(function() {
+        $('#qtdSintomas').click(function() {
+          var html = '';
+          var inputVar = $(this).val();
+          var container = document.getElementById("containerInputs");
+          // Limpa o container de inputs
+          while (container.hasChildNodes()) {
+              container.removeChild(container.lastChild);
+          }
+          for (i=0;i<inputVar;i++){
+            html += '<select name="sintomas_ids[]">';
+            <% @sintomas.each do |x| %>
+            html += '<option value="<%= x.id %>"><%= x.nome %></option>';
+            <% end %>
+            html += '</select><br>';
+          }
+          document.getElementById("containerInputs").innerHTML = html;
+        });
+      })
+    </script>
+    <br>
+    <div id="containerInputs"/></div>
+    <br>
+  <a href="/<%= @acess %>"><button class="btn btn-primary" type="submit">Voltar</button></a>
   <button class="btn btn-primary" type="submit" value="Submit">Criar</button>
 </form>
-<a href="/<%= @acess %>"><button class="btn btn-primary" type="submit">Voltar</button></a>

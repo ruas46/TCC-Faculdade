@@ -8,11 +8,16 @@ class DisorderController < ApplicationController
   def new
     @acess = @@acess
     @categorium = Categorium.order :nome
+    @sintomas = Sintoma.order :nome
   end
   def create
     @acess = @@acess
     @transtorno = Transtorno.new(nome: params[:nome],min_qtd_sint: params[:qtd],pagina: params[:pg],categorium_id: params[:c_id])
     @transtorno.save
+    params[:sintomas_ids].each do |params_sintomas|
+      @sintoma = Sintoma.find(params_sintomas)
+      @transtorno.sintomas_transtorno.create(sintoma: @sintoma)
+    end
     redirect_to '/'+@@acess
   end
   def show
