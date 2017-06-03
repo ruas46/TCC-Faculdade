@@ -17,11 +17,11 @@ class CategoryController < ApplicationController
 
   def edit
     @acess = @@acess
-    @categorium = Categorium.find(params[:id])
+    @categorium = Categorium.find(params[:id])#puxa do banco as infos para alimentar o edit no front
   end
   def update
     @acess = @@acess
-    categoryEdit = Categorium.find(params[:id])
+    categoryEdit = Categorium.find(params[:id])#puxa no banco a linha edita e salva
     categoryEdit.nome = params[:nome]
     categoryEdit.save
     redirect_to '/'+@@acess+'/categoria'

@@ -27,12 +27,12 @@ class DisorderController < ApplicationController
   end
   def edit
     @acess = @@acess
-    @transtorno = Transtorno.find(params[:id])
+    @transtorno = Transtorno.find(params[:id])#puxa do banco as infos para alimentar o edit no front
     @categorium = Categorium.all
   end
   def update
     @acess = @@acess
-    transtornoEdit = Transtorno.find(params[:id])
+    transtornoEdit = Transtorno.find(params[:id])#puxa no banco a linha edita e salva
     transtornoEdit.nome = params[:nome]
     transtornoEdit.min_qtd_sint = params[:qtd]
     transtornoEdit.pagina = params[:pg]

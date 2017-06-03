@@ -17,11 +17,11 @@ class SymptomController < ApplicationController
 
   def edit
     @acess = @@acess
-    @sintoma = Sintoma.find(params[:id])
+    @sintoma = Sintoma.find(params[:id])#puxa do banco as infos para alimentar o edit no front
   end
   def update
     @acess = @@acess
-    sintomaEdit = Sintoma.find(params[:id])
+    sintomaEdit = Sintoma.find(params[:id])#puxa no banco a linha edita e salva
     sintomaEdit.nome = params[:nome]
     sintomaEdit.sintoma_obrigatorio = params[:obrigatorio]
     sintomaEdit.save
