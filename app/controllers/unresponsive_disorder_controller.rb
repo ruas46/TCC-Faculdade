@@ -20,9 +20,9 @@ class UnresponsiveDisorderController < ApplicationController
   def delete
     @acess = @@acess
     @transtornosNaoSolucionado = TranstornosNaoSolucionado.find(params[:id])
-    @transtornosNaoSolucionado.destroy#deleta na tabela não solucionado
     @transtornosNaoSolucionadoSintomas = @transtornosNaoSolucionado.transtorno_nao_solucionado_sintoma.where(transtornos_nao_solucionado_id: @transtornosNaoSolucionado.id)
     @transtornosNaoSolucionadoSintomas.delete_all#deleta na tabela relacional de não solucionado
+    @transtornosNaoSolucionado.destroy#deleta na tabela não solucionado
     redirect_to '/'+@@acess+'/transtornoNaoSolucionado'
   end
 end
