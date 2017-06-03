@@ -1,0 +1,21 @@
+<h2>Editar Transtorno</h2>
+<form action="/<%= @acess %>/updateTranstorno" method="post">
+    <input type="hidden" name="id" value="<%= @transtorno.id %>">
+    Nome: <input name="nome" type="text" value="<%= @transtorno.nome %>">
+    <br>
+    Quantidade mínima de sintomas: <input name="qtd" type="number" min="0" value="<%= @transtorno.min_qtd_sint %>">
+    <br>
+    Página no DSM: <input name="pg" type="number" min="0" value="<%= @transtorno.pagina %>">
+    <br>
+    <select name="c_id">
+    <% @categorium.each do |x| %>
+      <% if x.id == @transtorno.categorium_id %>
+        <option selected value="<%= x.id %>"><%= x.nome %></option>
+      <% else %>
+        <option value="<%= x.id %>"><%= x.nome %></option>
+      <% end %>
+    <% end %>
+    </select>
+  <button class="btn btn-primary" type="submit" value="Submit">Salvar</button>
+</form>
+<a href="/<%= @acess %>"><button class="btn btn-primary" type="submit">Voltar</button></a>

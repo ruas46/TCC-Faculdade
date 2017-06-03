@@ -1,0 +1,31 @@
+<h1>Transtornos</h1>
+<table>
+  <tr>
+    <th>Nome</th>
+    <th></th>
+  </tr>
+  <% @transtorno.each do |x| %>
+    <tr>
+      <td><%= x.nome %></td>
+      <td>
+        <form action="/<%= @acess %>/showTranstorno" method="post">
+          <input type="hidden" name="id" value="<%= x.id %>">
+          <button class="btn btn-primary" type="submit" value="Submit">Mostrar</button>
+        </form>
+      </td>
+      <td>
+        <form action="/<%= @acess %>/editTranstorno" method="post">
+          <input type="hidden" name="id" value="<%= x.id %>">
+          <button class="btn btn-primary" type="submit" value="Submit">Editar</button>
+        </form>
+      </td>
+      <td>
+        <form action="/<%= @acess %>/deleteTranstorno" method="post">
+          <input type="hidden" name="id" value="<%= x.id %>">
+          <button class="btn btn-primary" type="submit" value="Submit">Deletar</button>
+        </form>
+      </td>
+    </tr>
+  <% end %>
+</table>
+<a href="/<%= @acess %>/novoTranstorno">Novo Transtorno</a>

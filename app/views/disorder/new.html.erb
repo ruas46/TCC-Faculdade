@@ -1,0 +1,16 @@
+<h2>Novo Transtorno</h2>
+<form action="/<%= @acess %>/novoTranstorno" method="post">
+  Nome: <input name="nome" type="text">
+  <br>
+  Quantidade mínima de sintomas: <input name="qtd" type="number" min="0">
+  <br>
+  Página no DSM: <input name="pg" type="number" min="0">
+  <br>
+  <select name="c_id">
+  <% @categorium.each do |x| %>
+    <option value="<%= x.id %>"><%= x.nome %></option>
+    <% end %>
+  </select>
+  <button class="btn btn-primary" type="submit" value="Submit">Criar</button>
+</form>
+<a href="/<%= @acess %>"><button class="btn btn-primary" type="submit">Voltar</button></a>
