@@ -3,7 +3,7 @@ class SymptomController < ApplicationController
   @@acess = 'eyJpc3MiOiJzY290Y2guaW8iLCJleHAiOjEzMDA4MTkzODAsIm5hbWUiOiJDaHJpcyBTZXZpbGxlamEiLCJhZG1pbiI6dHJ1ZX0'
   def index
     @acess = @@acess
-    @sintoma = Sintoma.all
+    @sintoma = Sintoma.order :nome
   end
   def new
     @acess = @@acess

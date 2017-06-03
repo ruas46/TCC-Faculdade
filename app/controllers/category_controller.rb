@@ -3,7 +3,7 @@ class CategoryController < ApplicationController
   @@acess = 'eyJpc3MiOiJzY290Y2guaW8iLCJleHAiOjEzMDA4MTkzODAsIm5hbWUiOiJDaHJpcyBTZXZpbGxlamEiLCJhZG1pbiI6dHJ1ZX0'
   def index
     @acess = @@acess
-    @categorium = Categorium.all
+    @categorium = Categorium.order :nome
   end
   def new
     @acess = @@acess
