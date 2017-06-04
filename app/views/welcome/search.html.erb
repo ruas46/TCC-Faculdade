@@ -72,11 +72,11 @@
 
     <!-- TRANSTORNOS COM PELOMENOS 1 SINTOMA RELACIONADO COM A BUSCA -->
     <% if @transtornoPelomenosUmSintoma != [] %>
-    <h2 class="text-center">Segue abaixo os transtornos com no mínimo um sintoma dos pesquisados</h2>
       <% @transtornoPelomenosUmSintoma.each do |pD| %>
         <div class="row">
           <div class="col-lg-offset-3 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 col-lg-6 search-style">
             <div class="col-lg-10">
+              <h3 style="color:#C31717;" class="text-center">Transtorno que não passou nas regras</h3>
               <br>
               <b>Transtorno: </b><%= pD.nome %><br>
               <b>Categoria: </b><%= Categorium.find(pD.categorium_id).nome %><br>
