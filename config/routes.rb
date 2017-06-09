@@ -8,36 +8,38 @@ Rails.application.routes.draw do
 
   #acesso
   #eyJpc3MiOiJzY290Y2guaW8iLCJleHAiOjEzMDA4MTkzODAsIm5hbWUiOiJDaHJpcyBTZXZpbGxlamEiLCJhZG1pbiI6dHJ1ZX0
-  acess = '/eyJpc3MiOiJzY290Y2guaW8iLCJleHAiOjEzMDA4MTkzODAsIm5hbWUiOiJDaHJpcyBTZXZpbGxlamEiLCJhZG1pbiI6dHJ1ZX0'
+
+  #acess = '/eyJpc3MiOiJzY290Y2guaW8iLCJleHAiOjEzMDA4MTkzODAsIm5hbWUiOiJDaHJpcyBTZXZpbGxlamEiLCJhZG1pbiI6dHJ1ZX0'
+
   #CRUD CATEGORIA
-  get acess+'/categoria' => 'category#index'
-  get acess+'/novaCategoria' => 'category#new'
-  post acess+'/novaCategoria' => 'category#create'
-  post acess+'/editCategoria' => 'category#edit'
-  post acess+'/updateCategoria' => 'category#update'
-  post acess+'/deleteCategoria' => 'category#delete'
+  #get acess+'/categoria' => 'category#index'
+  #get acess+'/novaCategoria' => 'category#new'
+  #post acess+'/novaCategoria' => 'category#create'
+  #post acess+'/editCategoria' => 'category#edit'
+  #post acess+'/updateCategoria' => 'category#update'
+  #post acess+'/deleteCategoria' => 'category#delete'
 
   #CRUD SINTOMAS
-  get acess+'/sintoma' => 'symptom#index'
-  get acess+'/novoSintoma' => 'symptom#new'
-  post acess+'/novoSintoma' => 'symptom#create'
-  post acess+'/editSintoma' => 'symptom#edit'
-  post acess+'/updateSintoma' => 'symptom#update'
-  post acess+'/deleteSintoma' => 'symptom#delete'
+  #get acess+'/sintoma' => 'symptom#index'
+  #get acess+'/novoSintoma' => 'symptom#new'
+  #post acess+'/novoSintoma' => 'symptom#create'
+  #post acess+'/editSintoma' => 'symptom#edit'
+  #post acess+'/updateSintoma' => 'symptom#update'
+  #post acess+'/deleteSintoma' => 'symptom#delete'
 
   #CRUD TRANSTORNO NÃO SOLUCIONADO
-  get acess+'/transtornoNaoSolucionado' => 'unresponsive_disorder#index'
-  post acess+'/showTranstornoNaoSolucionado' => 'unresponsive_disorder#show'
-  post acess+'/deleteTranstornoNaoSolucionado' => 'unresponsive_disorder#delete'
+  #get acess+'/transtornoNaoSolucionado' => 'unresponsive_disorder#index'
+  #post acess+'/showTranstornoNaoSolucionado' => 'unresponsive_disorder#show'
+  #post acess+'/deleteTranstornoNaoSolucionado' => 'unresponsive_disorder#delete'
 
   #CRUD TRANSTORNOS
-  get acess => 'disorder#index'
-  get acess+'/novoTranstorno' => 'disorder#new'
-  post acess+'/novoTranstorno' => 'disorder#create'
-  post acess+'/editTranstorno' => 'disorder#edit'
-  post acess+'/updateTranstorno' => 'disorder#update'
-  post acess+'/deleteTranstorno' => 'disorder#delete'
-  post acess+'/showTranstorno' => 'disorder#show'
+  #get acess => 'disorder#index'
+  #get acess+'/novoTranstorno' => 'disorder#new'
+  #post acess+'/novoTranstorno' => 'disorder#create'
+  #post acess+'/editTranstorno' => 'disorder#edit'
+  #post acess+'/updateTranstorno' => 'disorder#update'
+  #post acess+'/deleteTranstorno' => 'disorder#delete'
+  #post acess+'/showTranstorno' => 'disorder#show'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
