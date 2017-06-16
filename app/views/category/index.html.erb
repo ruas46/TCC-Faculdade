@@ -16,27 +16,33 @@
     </ul>
   </div>
 </nav>
-<table>
-  <tr>
-    <th>Nome</th>
-    <th></th>
-  </tr>
-  <% @categorium.each do |category| %>
-    <tr>
-      <td><%= category.nome %></td>
-      <td>
-        <form action="/<%= @acess %>/editCategoria" method="post">
-          <input type="hidden" name="id" value="<%= category.id %>">
-          <button class="btn btn-primary" type="submit" value="Submit">Editar</button>
-        </form>
-      </td>
-      <td>
-        <form action="/<%= @acess %>/deleteCategoria" method="post">
-          <input type="hidden" name="id" value="<%= category.id %>">
-          <button class="btn btn-primary" type="submit" value="Submit">Deletar</button>
-        </form>
-      </td>
-    </tr>
-  <% end %>
-</table>
-<a href="/<%= @acess %>/novaCategoria">Nova Categoria</a>
+<div class="row new-button-dashboard">
+  <a href="/<%= @acess %>/novaCategoria"><button class="btn btn-primary" type="submit" value="">Nova Categoria</button></a>
+</div>
+<div class="row list-dashboard">
+  <div class="col-lg-offset-3 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 col-lg-6">
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th></th>
+      </tr>
+      <% @categorium.each do |category| %>
+        <tr>
+          <td><%= category.nome %></td>
+          <td>
+            <form action="/<%= @acess %>/editCategoria" method="post">
+              <input type="hidden" name="id" value="<%= category.id %>">
+              <button class="btn btn-primary" type="submit" value="Submit">Editar</button>
+            </form>
+          </td>
+          <td>
+            <form action="/<%= @acess %>/deleteCategoria" method="post">
+              <input type="hidden" name="id" value="<%= category.id %>">
+              <button class="btn btn-danger" type="submit" value="Submit">Deletar</button>
+            </form>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
