@@ -16,26 +16,30 @@
     </ul>
   </div>
 </nav>
-<table>
-  <tr>
-    <th>Identificador</th>
-    <th></th>
-  </tr>
-  <% @transtornosNaoSolucionado.each do |x| %>
-    <tr>
-      <td><%= x.id %></td>
-      <td>
-        <form action="/<%= @acess %>/showTranstornoNaoSolucionado" method="post">
-          <input type="hidden" name="id" value="<%= x.id %>">
-          <button class="btn btn-primary" type="submit" value="Submit">Mostrar</button>
-        </form>
-      </td>
-      <td>
-        <form action="/<%= @acess %>/deleteTranstornoNaoSolucionado" method="post">
-          <input type="hidden" name="id" value="<%= x.id %>">
-          <button class="btn btn-primary" type="submit" value="Submit">Deletar</button>
-        </form>
-      </td>
-    </tr>
-  <% end %>
-</table>
+<div class="row list-dashboard" style="padding-top:30px;">
+  <div class="col-lg-offset-3 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 col-lg-6">
+    <table>
+      <tr>
+        <th>Identificador</th>
+        <th></th>
+      </tr>
+      <% @transtornosNaoSolucionado.each do |x| %>
+        <tr>
+          <td><%= x.id %></td>
+          <td>
+            <form action="/<%= @acess %>/showTranstornoNaoSolucionado" method="post">
+              <input type="hidden" name="id" value="<%= x.id %>">
+              <button class="btn btn-primary" type="submit" value="Submit">Mostrar</button>
+            </form>
+          </td>
+          <td>
+            <form action="/<%= @acess %>/deleteTranstornoNaoSolucionado" method="post">
+              <input type="hidden" name="id" value="<%= x.id %>">
+              <button class="btn btn-danger" type="submit" value="Submit">Deletar</button>
+            </form>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
