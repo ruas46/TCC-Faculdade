@@ -16,34 +16,40 @@
     </ul>
   </div>
 </nav>
-<table>
-  <tr>
-    <th>Nome</th>
-    <th></th>
-  </tr>
-  <% @sintoma.each do |x| %>
-    <tr>
-      <td><%= x.nome %></td>
-      <td>
-        <% if x.sintoma_obrigatorio %>
-          <%= "Obrigatório" %>
-        <% else %>
-          <%= "Opcional" %>
-        <% end %>
-      </td>
-      <td>
-        <form action="/<%= @acess %>/editSintoma" method="post">
-          <input type="hidden" name="id" value="<%= x.id %>">
-          <button class="btn btn-primary" type="submit" value="Submit">Editar</button>
-        </form>
-      </td>
-      <td>
-        <form action="/<%= @acess %>/deleteSintoma" method="post">
-          <input type="hidden" name="id" value="<%= x.id %>">
-          <button class="btn btn-primary" type="submit" value="Submit">Deletar</button>
-        </form>
-      </td>
-    </tr>
-  <% end %>
-</table>
-<a href="/<%= @acess %>/novoSintoma">Novo Sintoma</a>
+<div class="row new-button-dashboard">
+  <a href="/<%= @acess %>/novoSintoma"><button class="btn btn-primary" type="submit" value="">Novo Sintoma</button></a>
+</div>
+<div class="row list-dashboard">
+  <div class="col-lg-offset-1 col-md-offset-1 col-md-10 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 col-lg-10">
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th></th>
+      </tr>
+      <% @sintoma.each do |x| %>
+        <tr>
+          <td><%= x.nome %></td>
+          <td>
+            <% if x.sintoma_obrigatorio %>
+              <b><%= "Obrigatório" %></b>
+            <% else %>
+              <%= "Opcional" %>
+            <% end %>
+          </td>
+          <td>
+            <form action="/<%= @acess %>/editSintoma" method="post">
+              <input type="hidden" name="id" value="<%= x.id %>">
+              <button class="btn btn-primary" type="submit" value="Submit">Editar</button>
+            </form>
+          </td>
+          <td>
+            <form action="/<%= @acess %>/deleteSintoma" method="post">
+              <input type="hidden" name="id" value="<%= x.id %>">
+              <button class="btn btn-danger" type="submit" value="Submit">Deletar</button>
+            </form>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
