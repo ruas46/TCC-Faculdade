@@ -1,42 +1,65 @@
-<h2>Novo Transtorno</h2>
-<form action="/<%= @acess %>/novoTranstorno" method="post">
-  Nome: <input name="nome" type="text">
-  <br>
-  Quantidade mínima de sintomas: <input name="qtd" type="number" min="0">
-  <br>
-  Página no DSM: <input name="pg" type="number" min="0">
-  <br>
-  <select name="c_id">
-  <% @categorium.each do |x| %>
-    <option value="<%= x.id %>"><%= x.nome %></option>
-    <% end %>
-  </select>
-  <br>
-    Quantos sintomas deseja inserir?<input id="qtdSintomas" type="number" min="0">
-    <script>
-      $(document).ready(function() {
-        $('#qtdSintomas').click(function() {
-          var html = '';
-          var inputVar = $(this).val();
-          var container = document.getElementById("containerInputs");
-          // Limpa o container de inputs
-          while (container.hasChildNodes()) {
-              container.removeChild(container.lastChild);
-          }
-          for (i=0;i<inputVar;i++){
-            html += '<select name="sintomas_ids[]">';
-            <% @sintomas.each do |x| %>
-            html += '<option value="<%= x.id %>">[<%= x.sintoma_obrigatorio ? "Obrigatório" : "Opcional" %>]<%= x.nome %></option>';
-            <% end %>
-            html += '</select><br>';
-          }
-          document.getElementById("containerInputs").innerHTML = html;
-        });
-      })
-    </script>
-    <br>
-    <div id="containerInputs"/></div>
-    <br>
-  <a href="/<%= @acess %>"><button class="btn btn-primary" type="submit">Voltar</button></a>
-  <button class="btn btn-primary" type="submit" value="Submit">Criar</button>
-</form>
+<nav role="navigation" class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+      <span class="sr-only">Navegação</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div id="navbarCollapse" class="collapse navbar-collapse header-background-color header-text-prop">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="/<%= @acess %>/">Transtornos</a></li>
+      <li><a href="/<%= @acess %>/sintoma">Sintomas</a></li>
+      <li><a href="/<%= @acess %>/categoria">Categorias</a></li>
+      <li><a href="/<%= @acess %>/transtornoNaoSolucionado">Transtornos sem resposta</a></li>
+    </ul>
+  </div>
+</nav>
+<div class="row list-dashboard">
+  <div class="col-lg-offset-4 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 col-lg-4">
+    <h2>Novo Transtorno</h2>
+    <form action="/<%= @acess %>/novoTranstorno" method="post">
+      Nome: <input name="nome" type="text">
+      <br>
+      Quantidade mínima de sintomas: <input name="qtd" type="number" min="0">
+      <br>
+      Página no DSM: <input name="pg" type="number" min="0">
+      <br>
+      Categoria:
+      <select name="c_id">
+      <% @categorium.each do |x| %>
+        <option value="<%= x.id %>"><%= x.nome %></option>
+        <% end %>
+      </select>
+      <br>
+        Quantos sintomas deseja inserir?<input id="qtdSintomas" type="number" min="0">
+        <script>
+          $(document).ready(function() {
+            $('#qtdSintomas').click(function() {
+              var html = '';
+              var inputVar = $(this).val();
+              var container = document.getElementById("containerInputs");
+              // Limpa o container de inputs
+              while (container.hasChildNodes()) {
+                  container.removeChild(container.lastChild);
+              }
+              for (i=0;i<inputVar;i++){
+                html += '<select name="sintomas_ids[]">';
+                <% @sintomas.each do |x| %>
+                html += '<option value="<%= x.id %>">[<%= x.sintoma_obrigatorio ? "Obrigatório" : "Opcional" %>]<%= x.nome %></option>';
+                <% end %>
+                html += '</select><br>';
+              }
+              document.getElementById("containerInputs").innerHTML = html;
+            });
+          })
+        </script>
+        <br>
+        <div id="containerInputs"/></div>
+        <br>
+      <a href="/<%= @acess %>"><button class="btn btn-primary" type="submit">Voltar</button></a>
+      <button class="btn btn-primary" type="submit" value="Submit">Criar</button>
+    </form>
+  </div>
+</div>

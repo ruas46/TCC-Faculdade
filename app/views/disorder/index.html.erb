@@ -16,33 +16,39 @@
     </ul>
   </div>
 </nav>
-<table>
-  <tr>
-    <th>Nome</th>
-    <th></th>
-  </tr>
-  <% @transtorno.each do |x| %>
-    <tr>
-      <td><%= x.nome %></td>
-      <td>
-        <form action="/<%= @acess %>/showTranstorno" method="post">
-          <input type="hidden" name="id" value="<%= x.id %>">
-          <button class="btn btn-primary" type="submit" value="Submit">Mostrar</button>
-        </form>
-      </td>
-      <td>
-        <form action="/<%= @acess %>/editTranstorno" method="post">
-          <input type="hidden" name="id" value="<%= x.id %>">
-          <button class="btn btn-primary" type="submit" value="Submit">Editar</button>
-        </form>
-      </td>
-      <td>
-        <form action="/<%= @acess %>/deleteTranstorno" method="post">
-          <input type="hidden" name="id" value="<%= x.id %>">
-          <button class="btn btn-primary" type="submit" value="Submit">Deletar</button>
-        </form>
-      </td>
-    </tr>
-  <% end %>
-</table>
-<a href="/<%= @acess %>/novoTranstorno">Novo Transtorno</a>
+<div class="row new-button-dashboard">
+  <a href="/<%= @acess %>/novoTranstorno"><button class="btn btn-primary" type="submit" value="">Novo Transtorno</button></a>
+</div>
+<div class="row list-dashboard">
+  <div class="col-lg-offset-1 col-md-offset-1 col-md-10 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 col-lg-10">
+    <table>
+      <tr>
+        <th>Nome</th>
+        <th></th>
+      </tr>
+      <% @transtorno.each do |x| %>
+        <tr>
+          <td><%= x.nome %></td>
+          <td>
+            <form action="/<%= @acess %>/showTranstorno" method="post">
+              <input type="hidden" name="id" value="<%= x.id %>">
+              <button class="btn btn-primary" type="submit" value="Submit">Mostrar</button>
+            </form>
+          </td>
+          <td>
+            <form action="/<%= @acess %>/editTranstorno" method="post">
+              <input type="hidden" name="id" value="<%= x.id %>">
+              <button class="btn btn-primary" type="submit" value="Submit">Editar</button>
+            </form>
+          </td>
+          <td>
+            <form action="/<%= @acess %>/deleteTranstorno" method="post">
+              <input type="hidden" name="id" value="<%= x.id %>">
+              <button class="btn btn-danger" type="submit" value="Submit">Deletar</button>
+            </form>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
