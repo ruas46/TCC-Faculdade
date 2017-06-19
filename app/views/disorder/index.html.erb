@@ -20,15 +20,20 @@
   <a href="/<%= @acess %>/novoTranstorno"><button class="btn btn-primary" type="submit" value="">Novo Transtorno</button></a>
 </div>
 <div class="row list-dashboard">
-  <div class="col-lg-offset-1 col-md-offset-1 col-md-10 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 col-lg-10">
+  <div class="col-lg-offset-2 col-md-offset-2 col-md-8 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 col-lg-8">
     <table>
       <tr>
         <th>Nome</th>
-        <th></th>
+        <th>Categoria</th>
+        <th style="padding-left:5.1%;">Ação</th>
       </tr>
       <% @transtorno.each do |x| %>
         <tr>
           <td><%= x.nome %></td>
+        <td>
+          <%= Categorium.find(x.categorium_id).nome %>
+        </td>
+        <td>
           <td>
             <form action="/<%= @acess %>/showTranstorno" method="post">
               <input type="hidden" name="id" value="<%= x.id %>">
@@ -47,7 +52,8 @@
               <button class="btn btn-danger" type="submit" value="Submit">Deletar</button>
             </form>
           </td>
-        </tr>
+        </td>
+      </tr>
       <% end %>
     </table>
   </div>
