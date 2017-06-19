@@ -40,6 +40,7 @@ Rails.application.routes.draw do
   post acess+'/updateTranstorno' => 'disorder#update'
   post acess+'/deleteTranstorno' => 'disorder#delete'
   post acess+'/showTranstorno' => 'disorder#show'
+  post acess+'/removeSintoma' => 'disorder#removeSintoma'
 
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".

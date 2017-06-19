@@ -51,8 +51,15 @@ class DisorderController < ApplicationController
     @transtornoPesquisado = @transtorno.transtorno_pesquisado_transtorno.where(transtorno_id: @transtorno.id)
     @transtornoPesquisado.delete_all#deleta na tabela pesquisas, para não bugar os graficos
     @transtornoSintoma = @transtorno.sintomas_transtorno.where(transtorno_id: @transtorno.id)
-    @transtornoSintoma.delete_all#deleta na tabela relacional de não solucionado
+    @transtornoSintoma.delete_all#deleta na tabela relacional
     @transtorno.destroy
+    redirect_to '/'+@@acess
+  end
+  def removeSintoma
+    sintoma = Sintoma.find(params[:sintoma_id])
+    transtorno = Transtorno.find(params[:transtorno_id])
+    transtornoSintoma = transtorno.sintomas_transtorno.where(sintoma_id: sintoma.id)
+    transtornoSintoma.delete_all#deleta na tabela relacional
     redirect_to '/'+@@acess
   end
 end

@@ -35,9 +35,10 @@
               <% end %>
             </td>
             <td>
-              <form action="/<%= @acess %>/editSintoma" method="post">
-                <input type="hidden" name="id" value="<%= x.id %>">
-                <button class="btn btn-primary" type="submit" value="Submit">Editar Sintoma</button>
+              <form action="/<%= @acess %>/removeSintoma" method="post">
+                <input type="hidden" name="sintoma_id" value="<%= x.id %>">
+                <input type="hidden" name="transtorno_id" value="<%= @transtorno.id %>">
+                <button class="btn btn-primary" type="submit" value="Submit">Desassociar Sintoma</button>
               </form>
             </td>
           </tr>
