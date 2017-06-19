@@ -49,12 +49,7 @@ class DisorderController < ApplicationController
     @acess = @@acess
     @transtorno = Transtorno.find(params[:id])
     @transtornoPesquisado = @transtorno.transtorno_pesquisado_transtorno.where(transtorno_id: @transtorno.id)
-    puts "kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk"
-    puts @transtornoPesquisado.count
     @transtornoPesquisado.delete_all#deleta na tabela pesquisas, para não bugar os graficos
-    puts @transtornoPesquisado.count
-
-
     @transtornoSintoma = @transtorno.sintomas_transtorno.where(transtorno_id: @transtorno.id)
     @transtornoSintoma.delete_all#deleta na tabela relacional de não solucionado
     @transtorno.destroy
