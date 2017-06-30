@@ -24,6 +24,7 @@ class DisorderController < ApplicationController
     @acess = @@acess
     @transtorno = Transtorno.find(params[:id])
     @sintomas = []
+    @todosSintomas = Sintoma.order :nome
     @SintomaTranstorno = SintomasTranstorno.where(transtorno_id: params[:id])
     @SintomaTranstorno.each do |s|
       @sintomas << Sintoma.find(s.sintoma_id)
@@ -60,6 +61,15 @@ class DisorderController < ApplicationController
     transtorno = Transtorno.find(params[:transtorno_id])
     transtornoSintoma = transtorno.sintomas_transtorno.where(sintoma_id: sintoma.id)
     transtornoSintoma.delete_all#deleta na tabela relacional
+    redirect_to '/'+@@acess
+  end
+  def assSintoma
+    @acess = @@acess
+    @transtorno = Transtorno.find(params[:transtorno_id])
+    params[:sintomas_ids].each do |params_sintomas|
+      @sintoma = Sintoma.find(params_sintomas)
+      @transtorno.sintomas_transtorno.create(sintoma: @sintoma)
+    end
     redirect_to '/'+@@acess
   end
 end

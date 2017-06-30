@@ -38,12 +38,45 @@
               <form action="/<%= @acess %>/removeSintoma" method="post">
                 <input type="hidden" name="sintoma_id" value="<%= x.id %>">
                 <input type="hidden" name="transtorno_id" value="<%= @transtorno.id %>">
-                <button class="btn btn-primary" type="submit" value="Submit">Desassociar Sintoma</button>
+                <button class="btn btn-danger" type="submit" value="Submit">Desassociar Sintoma</button>
               </form>
             </td>
           </tr>
       <% end %>
     </table>
+
+    <button class="btn btn-primary" id="AssociarSintomas" type="submit">Associar sintoma</button><br>
+    <form action="/<%= @acess %>/assSintoma" method="post">
+      <input type="hidden" name="transtorno_id" value="<%= @transtorno.id %>">
+    <script>
+      $(document).ready(function() {
+        $( "#AssociarSintomasSubmit" ).hide();
+        var inputVar = 0;
+        $('#AssociarSintomas').click(function() {
+          var html = '';
+          inputVar = inputVar + 1;
+          var container = document.getElementById("containerInputs");
+          // Limpa o container de inputs
+          while (container.hasChildNodes()) {
+              container.removeChild(container.lastChild);
+          }
+          for (i=0;i<inputVar;i++){
+            html += '<select name="sintomas_ids[]">';
+            <% @todosSintomas.each do |x| %>
+            html += '<option value="<%= x.id %>">[<%= x.sintoma_obrigatorio ? "Obrigatório" : "Opcional" %>]<%= x.nome %></option>';
+            <% end %>
+            html += '</select><br>';
+          }
+          document.getElementById("containerInputs").innerHTML = html;
+          $( "#AssociarSintomasSubmit" ).show();
+        });
+      })
+    </script>
+    <br>
+    <div id="containerInputs"/></div>
+    <button class="btn btn-primary" id="AssociarSintomasSubmit" style="margin-bottom: 15px;margin-top: 5px;" type="submit" value="Submit">Enviar</button>
+  </form>
+
     <form action="/<%= @acess %>/deleteTranstorno" method="post">
       <a href="/<%= @acess %>"><button class="btn btn-primary" type="submit">Voltar</button></a>
       <input type="hidden" name="id" value="<%= @transtorno.id %>">
