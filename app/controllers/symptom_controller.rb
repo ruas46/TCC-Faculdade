@@ -30,6 +30,8 @@ class SymptomController < ApplicationController
   def delete
     @acess = @@acess
     @sintoma = Sintoma.find(params[:id])
+    @sintomaTranstorno = @sintoma.sintomas_transtorno.where(sintoma_id: @sintoma.id)
+    @sintomaTranstorno.delete_all#deleta na tabela relacional dos transtornos pra n bugar graficos/busca
     @sintoma.destroy
     redirect_to '/'+@@acess+'/sintoma'
   end
