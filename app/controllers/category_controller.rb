@@ -28,8 +28,16 @@ class CategoryController < ApplicationController
   end
   def delete
     @acess = @@acess
-    @categorium = Categorium.find(params[:id])
-    @categorium.destroy
+    if params[:id] == "1"
+    else
+      @categorium = Categorium.find(params[:id])
+      @Transtornos = Transtorno.where(categorium_id: @categorium.id)
+      @Transtornos.each do |t|
+        t.categorium_id = "1"
+        t.save
+      end
+      @categorium.destroy
+    end
     redirect_to '/'+@@acess+'/categoria'
   end
 end

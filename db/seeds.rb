@@ -8,6 +8,8 @@
 
 ################################################################################
 #SEED DE CATEGORIAS DE TRANSTORNOS
+c0 = Categorium.new(nome:"Indefinido")
+c0.save
 c1 = Categorium.new(nome:"Bipolar e relacionados")
 c1.save
 c2 = Categorium.new(nome:"Depressivos")
