@@ -47,7 +47,7 @@
             </form>
           </td>
           <td>
-            <form action="/<%= @acess %>/deleteTranstorno" method="post">
+            <form action="/<%= @acess %>/deleteTranstorno" method="post" onsubmit="return confirm('Você tem certeza que deseja deletar?');">
               <input type="hidden" name="id" value="<%= x.id %>">
               <button class="btn btn-danger" type="submit" value="Submit">Deletar</button>
             </form>

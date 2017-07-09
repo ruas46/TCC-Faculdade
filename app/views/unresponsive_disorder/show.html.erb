@@ -30,7 +30,7 @@
           </tr>
       <% end %>
     </table>
-    <form action="/<%= @acess %>/deleteTranstornoNaoSolucionado" method="post">
+    <form action="/<%= @acess %>/deleteTranstornoNaoSolucionado" method="post" onsubmit="return confirm('Você tem certeza que deseja deletar?');">
       <a href="/<%= @acess %>/transtornoNaoSolucionado"><button class="btn btn-primary" type="submit">Voltar</button></a>
       <input type="hidden" name="id" value="<%= @transtornosNaoSolucionado.id %>">
       <button class="btn btn-danger" type="submit" value="Submit">Deletar Transtorno</button>

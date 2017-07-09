@@ -35,7 +35,7 @@
               <% end %>
             </td>
             <td>
-              <form action="/<%= @acess %>/removeSintoma" method="post">
+              <form action="/<%= @acess %>/removeSintoma" method="post" onsubmit="return confirm('Você tem certeza que deseja Desassociar?');">
                 <input type="hidden" name="sintoma_id" value="<%= x.id %>">
                 <input type="hidden" name="transtorno_id" value="<%= @transtorno.id %>">
                 <button class="btn btn-danger" type="submit" value="Submit">Desassociar Sintoma</button>
@@ -77,7 +77,7 @@
     <button class="btn btn-primary" id="AssociarSintomasSubmit" style="margin-bottom: 15px;margin-top: 5px;" type="submit" value="Submit">Enviar</button>
   </form>
 
-    <form action="/<%= @acess %>/deleteTranstorno" method="post">
+    <form action="/<%= @acess %>/deleteTranstorno" method="post" onsubmit="return confirm('Você tem certeza que deseja deletar?');">
       <a href="/<%= @acess %>"><button class="btn btn-primary" type="submit">Voltar</button></a>
       <input type="hidden" name="id" value="<%= @transtorno.id %>">
       <button class="btn btn-danger" type="submit" value="Submit">Deletar Transtorno</button>
