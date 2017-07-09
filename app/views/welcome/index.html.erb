@@ -2,10 +2,10 @@
   $(document).ready(function() {
     $('#buttonSearchJs').click(function() {
       var inputVar = $('#inputValueJs').val();
-        for (i = 0; i <= <%= @SintomasCad.count %>; i++) {
+        for (i = 0; i <= <%= @SintomasQTD %>; i++) {
           $('#sintomaJs-'+i).show();
         }
-        for (i = 0; i <= <%= @SintomasCad.count %>; i++) {
+        for (i = 0; i <= <%= @SintomasQTD %>; i++) {
           var sintomaVar = $('#sintomaJs-'+i).text();
 
           if (sintomaVar.toLowerCase().includes(inputVar.toLowerCase())){
@@ -17,7 +17,7 @@
         }
     });
     $('#buttonCleanJs').click(function() {
-      for (i = 0; i <= <%= @SintomasCad.count %>; i++) {
+      for (i = 0; i <= <%= @SintomasQTD %>; i++) {
         $('#sintomaJs-'+i).show();
       }
     });

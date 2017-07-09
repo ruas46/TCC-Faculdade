@@ -4,6 +4,7 @@ class WelcomeController < ApplicationController
 
   def index
     @SintomasCad = Sintoma.order :nome
+    @SintomasQTD = Sintoma.last.id#uso o ultimo id do banco, pq se usar qtd e deletar um sintoma do meio, buga o filtro
   end
 
   def info
