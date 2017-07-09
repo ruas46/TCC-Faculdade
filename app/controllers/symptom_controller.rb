@@ -10,7 +10,7 @@ class SymptomController < ApplicationController
   end
   def create
     @acess = @@acess
-    @sintoma = Sintoma.new(nome: params[:nome])
+    @sintoma = Sintoma.new(nome: params[:nome], sintoma_obrigatorio: params[:sintomaObrigatorio])
     @sintoma.save
     redirect_to '/'+@@acess+'/sintoma'
   end
