@@ -4,6 +4,8 @@ Rails.application.routes.draw do
   get '/sobre' => 'welcome#info'
   get '/pesquisa' => 'welcome#search'
   get '/graficos' => 'welcome#graphics'
+  get '/graficos/bases_externas' => 'welcome#external_base'
+  get '/graficos/dsm' => 'welcome#dsm'
   post 'welcome' => 'welcome#create'
 
   #acesso

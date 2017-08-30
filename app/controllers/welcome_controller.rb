@@ -146,6 +146,13 @@ class WelcomeController < ApplicationController
   end
 
   def graphics
+  end
+
+  def external_base
+    #mineração AQUI
+  end
+
+  def dsm
     transtornosPD = TranstornoPesquisadoTranstorno.all
     transtornos = []
     sintomas = []
