@@ -203,7 +203,18 @@ html, body {
 }
 .graphics-generate-text{
   padding-left: 14px;
+  white-space: nowrap;
+  overflow: hidden;
+  display: block;
+  text-overflow: ellipsis;
+  cursor: pointer;
 }
+.graphics-generate-text:hover{
+  overflow: visible;
+  white-space: normal;
+  height:auto;
+}
+
 .graphics-generate-numbers{
   padding-top: 5px;
   padding-right: 30px !important;
