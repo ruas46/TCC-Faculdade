@@ -21,5 +21,36 @@
 </div>
 
 <div class="text-center" style="padding-bottom: 10px;">
-  External BASE
+  <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+    External BASE
+  </div>
+  <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic-porcentage">
+      <div>100%</div>
+      <div style="padding-top:80px;">50%</div>
+    </div>
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic">
+    <% ano = @arrayAnosGraficos1.first %>
+    <% @grafico1.each do |x| %>
+      <% if x.ano == ano %>
+        <img src="/assets/<%= @estudos[x.estudo] %>.png" width="15%" height="<%= x.porcentagem*2 %>" alt="X" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
+      <% else %>
+        <% ano = x.ano %>
+        </div>
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic">
+          <img src="/assets/<%= @estudos[x.estudo] %>.png" width="15%" height="<%= x.porcentagem*2 %>" alt="X" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
+      <% end %>
+    <% end %>
+    </div>
+  </div>
+  <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+    <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+    </div>
+    <% @arrayAnosGraficos1.each do |x| %>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1  external-base-graphic-years">
+        <%= x %>
+      </div>
+    <% end %>
+  </div>
+
 </div>
