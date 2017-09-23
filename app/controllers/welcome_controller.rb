@@ -150,6 +150,22 @@ class WelcomeController < ApplicationController
 
   def external_base
     #mineração AQUI
+    @arrayAnosGraficos = []
+    grafico1 = Grafico.where(grafico_id:1).to_a
+    grafico1.each do |x|
+      @arrayAnosGraficos << x.ano
+    end
+    @arrayAnosGraficos.uniq!#remove os iguais
+    @arrayAnosGraficos.sort!#ordena os anos 1999->2005
+
+    
+
+    #debug
+    puts "TO AQUI<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+    puts "arrayAnosGraficos: #{arrayAnosGraficos}"
+    grafico1.each do |x|
+      puts "G_ID:#{x.grafico_id},Estudo:#{x.estudo},Ano:#{x.ano},%:#{x.porcentagem},Entrevistados:#{x.qtd_entrevistados}"
+    end
   end
 
   def dsm

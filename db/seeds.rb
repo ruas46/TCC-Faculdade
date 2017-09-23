@@ -5,6 +5,37 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+################################################################################
+g1 = Grafico.new(grafico_id:1,porcentagem:30,qtd_entrevistados:"6476 individuos acida de 15 anos",ano:1997,estudo:"Comunidade")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:23,qtd_entrevistados:"1.277 individuos acida de 15 anos",ano:1999,estudo:"Comunidade")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:35,qtd_entrevistados:"621 individuos acida de 15 anos",ano:2000,estudo:"Comunidade")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:36,qtd_entrevistados:"483 individuos acida de 19 anos",ano:2005,estudo:"Comunidade")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:30,qtd_entrevistados:"1.327 individuos acida de 40 anos",ano:2009,estudo:"Comunidade")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:42,qtd_entrevistados:"250 professores",ano:2004,estudo:"Professores")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:56,qtd_entrevistados:"808 professores",ano:2005,estudo:"Professores")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:50,qtd_entrevistados:"751 professores",ano:2006,estudo:"Professores")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:21,qtd_entrevistados:"468 professores",ano:2008,estudo:"Professores")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:20,qtd_entrevistados:"925 motoristas e cobradores de ônibus",ano:1998,estudo:"Trabalhadores")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:38,qtd_entrevistados:"1.282 trabalhadores rurais",ano:1999,estudo:"Trabalhadores")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:36,qtd_entrevistados:"1.479 trabalhadores rurais",ano:2000,estudo:"Trabalhadores")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:28,qtd_entrevistados:"3.526 funcionários de uma universidade do RJ",ano:2004,estudo:"Trabalhadores")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:26,qtd_entrevistados:"80 trabalhadores de enfermagem",ano:2007,estudo:"Trabalhadores")
+g1.save
+g1 = Grafico.new(grafico_id:1,porcentagem:43,qtd_entrevistados:"141 Agentes Comunitários de Saúde",ano:2008,estudo:"Trabalhadores")
+g1.save
 
 ################################################################################
 #SEED DE CATEGORIAS DE TRANSTORNOS
