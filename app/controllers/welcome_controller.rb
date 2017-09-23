@@ -152,7 +152,7 @@ class WelcomeController < ApplicationController
     #mineração AQUI
     @arrayAnosGraficos1 = []
     auxEstudo = []
-    @estudos  = Hash.new(0)
+    @estudos1  = Hash.new(0)
     @grafico1 = Grafico.where(grafico_id:1).order("ano").to_a
     @grafico1.each do |x|
       @arrayAnosGraficos1 << x.ano
@@ -160,9 +160,9 @@ class WelcomeController < ApplicationController
     end
     @arrayAnosGraficos1.uniq!#remove os iguais
     auxEstudo.uniq!
-    @estudos[auxEstudo[0]] = "red"
-    @estudos[auxEstudo[1]] = "blue"
-    @estudos[auxEstudo[2]] = "green"
+    @estudos1[auxEstudo[0]] = "red"
+    @estudos1[auxEstudo[1]] = "blue"
+    @estudos1[auxEstudo[2]] = "green"
 
     #debug
     puts "TO AQUI<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"

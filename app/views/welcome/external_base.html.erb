@@ -20,25 +20,28 @@
 <div class="header-general">
 </div>
 
-<div class="text-center" style="padding-bottom: 10px;">
-  <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
-    External BASE
+<div style="padding-bottom: 10px;">
+  <div class="text-center col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+    <h2>Titulo</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra vel nisl ac sodales. Suspendisse scelerisque risus arcu, non ornare turpis hendrerit vehicula. Pellentesque in aliquet orci, non venenatis odio. Nulla posuere gravida mauris vel ullamcorper. Integer et massa quis mauris placerat sodales id a urna. Cras in dignissim risus. Morbi ligula eros, convallis vitae enim vitae, iaculis maximus massa. Vestibulum eleifend accumsan sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id elit ultricies, imperdiet nulla et, cursus arcu. Suspendisse potenti. Sed blandit lorem sit amet elit blandit aliquet. Mauris consequat vitae leo at rutrum. Quisque et ante tincidunt, posuere erat non, eleifend orci. Aliquam efficitur, ipsum in venenatis varius, sapien velit pulvinar leo, eget bibendum nunc sem ac odio. Integer ut lobortis tortor.<a href="#" data-toggle="modal" data-target="#ModalG1">Referências!</a>
+    </p>
   </div>
   <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic-porcentage">
       <div>100%</div>
-      <div style="padding-top:80px;">50%</div>
+      <div style="padding-top:70px;">50%</div>
     </div>
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic">
     <% ano = @arrayAnosGraficos1.first %>
     <% @grafico1.each do |x| %>
       <% if x.ano == ano %>
-        <img src="/assets/<%= @estudos[x.estudo] %>.png" width="15%" height="<%= x.porcentagem*2 %>" alt="X" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
+        <img src="/assets/<%= @estudos1[x.estudo] %>.png" width="15%" height="<%= x.porcentagem*2 %>" title="(<%= x.porcentagem %>%) <%= x.qtd_entrevistados %>" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
       <% else %>
         <% ano = x.ano %>
         </div>
         <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic">
-          <img src="/assets/<%= @estudos[x.estudo] %>.png" width="15%" height="<%= x.porcentagem*2 %>" alt="X" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
+          <img src="/assets/<%= @estudos1[x.estudo] %>.png" width="15%" height="<%= x.porcentagem*2 %>" title="(<%= x.porcentagem %>%) <%= x.qtd_entrevistados %>" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
       <% end %>
     <% end %>
     </div>
@@ -46,11 +49,51 @@
   <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
     <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
     </div>
-    <% @arrayAnosGraficos1.each do |x| %>
+    <% @arrayAnosGraficos1.each do |anosGrafico| %>
       <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1  external-base-graphic-years">
-        <%= x %>
+        <%= anosGrafico %>
       </div>
     <% end %>
   </div>
+  <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+    <% @estudos1.each do |est,cor| %>
+      <div class="row">
+        <div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4 col-sm-offset-1 col-sm-4 col-xs-offset-1 col-xs-6">
+          <img src="/assets/<%= cor %>.png" width="30" height="30" />
+          <%= est %>
+        </div>
+      </div>
+    <%end%>
+  </div>
+  <div class="text-center col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+    <h2>Titulo</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra vel nisl ac sodales. Suspendisse scelerisque risus arcu, non ornare turpis hendrerit vehicula. Pellentesque in aliquet orci, non venenatis odio. Nulla posuere gravida mauris vel ullamcorper. Integer et massa quis mauris placerat sodales id a urna. Cras in dignissim risus. Morbi ligula eros, convallis vitae enim vitae, iaculis maximus massa. Vestibulum eleifend accumsan sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id elit ultricies, imperdiet nulla et, cursus arcu. Suspendisse potenti. Sed blandit lorem sit amet elit blandit aliquet. Mauris consequat vitae leo at rutrum. Quisque et ante tincidunt, posuere erat non, eleifend orci. Aliquam efficitur, ipsum in venenatis varius, sapien velit pulvinar leo, eget bibendum nunc sem ac odio. Integer ut lobortis tortor.
+    </p>
+  </div>
+</div>
 
+
+
+
+
+<!-- MODAL GRAFICO 1 -->
+<div class="modal fade" id="ModalG1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+          <span aria-hidden="true">&times;</span>
+        </button>
+      </div>
+      <div class="modal-body">
+        <div class="modal-scroll">
+          sum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra vel nisl ac sodales. Suspendisse scelerisque risus arcu, non ornare turpis hendrerit vehicula. Pellentesque in aliquet orci, non venenatis odio. Nulla posuere gravida mauris vel ullamcorper. Integer et massa quis mauris placerat sodales id a urna. Cras in dignissim risus. Morbi ligula eros, convallis vitae enim vitae, iaculis maximus massa. Vestibulum eleifend accumsan sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id elit ultricies, imperdie
+        </div>
+        <div class="col-lg-offset-9 col-md-offset-9 col-sm-offset-9 col-xs-offset-5">
+          <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+        </div>
+      </div>
+    </div>
+  </div>
 </div>
