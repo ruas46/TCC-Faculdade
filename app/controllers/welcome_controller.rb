@@ -109,10 +109,10 @@ class WelcomeController < ApplicationController
       #Registrar no banco informações sobre as pesquisas feitas
       #salvar cada pesquisa feita na tabela de pesquisas
       if @@pesquisaTranstorno != []#verifica se tem pesquisa feita
+        #TranstornosPesquisado (só dar um new sempre e associar)
+        t = TranstornosPesquisado.new
+        t.save
         @@pesquisaTranstorno.each do |pD|
-          #TranstornosPesquisado (só dar um new sempre e associar)
-          t = TranstornosPesquisado.new
-          t.save
           pD.transtorno_pesquisado_transtorno.create(transtornos_pesquisado: t)
           #TranstornoPesquisadoTranstorno (tabela de união)
         end
@@ -165,7 +165,7 @@ class WelcomeController < ApplicationController
     @estudos1[auxEstudo[2]] = "green"
 
     #debug
-    puts "TO AQUI<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
+    puts "external_base<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
     puts "@arrayAnosGraficos1: #{@arrayAnosGraficos1}"
     @grafico1.each do |x|
       puts "G_ID:#{x.grafico_id},Estudo:#{x.estudo},Ano:#{x.ano},%:#{x.porcentagem},Entrevistados:#{x.qtd_entrevistados}"
@@ -216,6 +216,16 @@ class WelcomeController < ApplicationController
     sintomasHash.each do |x, y|
       @sintomasHashNome[Sintoma.find(x).nome] = y*100/sintomas.count#calculo da %
     end
+
+    ############################################################################
+    #ASSOCIAÇÕES
+    puts "DSM<<<<<<<<<"
+    transtornosPD.each do |x|
+      puts "#{x.transtornos_pesquisado_id}:#{x.transtorno_id}"
+    end
+
+
+
   end
 
   def admin
