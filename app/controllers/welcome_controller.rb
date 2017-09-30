@@ -219,9 +219,28 @@ class WelcomeController < ApplicationController
 
     ############################################################################
     #ASSOCIAÇÕES
+    transtornoPesquisadoTop10 = Hash.new(0)
+    transtornosAssociados = Hash.new(0)
+    c = 0
     puts "DSM<<<<<<<<<"
     transtornosPD.each do |x|
       puts "#{x.transtornos_pesquisado_id}:#{x.transtorno_id}"
+    end
+    puts "transtornosHash"
+
+
+    #Cria hash com ID transtorno pesquisado e ID transtorno das pesquisas feitas com transtornos do top 10
+    transtornosHash.first(10).each do |x,y|
+      transtornosPD.where(transtorno_id: x).each do |tpd|
+        c += 1
+        transtornoPesquisadoTop10[c] = tpd.transtornos_pesquisado_id,tpd.transtorno_id
+      end
+    end
+
+    #transtornosAssociados => [id_transtorno] = id_associado, qtd vezes apareceu
+    transtornoPesquisadoTop10.each do |ind,id_pes,id_tra|
+      puts "#{ind}:#{id_pes}:#{id_tra}"
+
     end
 
 
