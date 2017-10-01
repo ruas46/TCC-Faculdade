@@ -244,13 +244,14 @@ html, body {
 }
 .external-base-graphic{
   height: 200px;
+  background-image: url("/assets/graph.jpg");
 }
 .external-base-graphic-years{
-  border-top: 3px solid black;
+  border-top: 5px solid black;
 }
 .external-base-graphic-porcentage{
   height: 200px;
-  border-right: 3px solid black;
+  border-right: 5px solid black;
 }
 .external-base-graphic-bars{
   width: 20%;
