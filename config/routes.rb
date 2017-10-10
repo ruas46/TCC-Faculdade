@@ -4,6 +4,8 @@ Rails.application.routes.draw do
 
   devise_for :users
 
+  get acess => 'disorder#index', as: :user_root
+
   get 'welcome/index'
   root 'welcome#index'
   get '/sobre' => 'welcome#info'

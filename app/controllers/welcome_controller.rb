@@ -3,12 +3,8 @@ class WelcomeController < ApplicationController
   skip_before_filter :verify_authenticity_token
 
   def index
-    if user_signed_in?
-      redirect_to '/admin'
-    else
       @SintomasCad = Sintoma.order :nome
       @SintomasQTD = Sintoma.last.id#uso o ultimo id do banco, pq se usar qtd e deletar um sintoma do meio, buga o filtro
-    end
   end
 
   def info
