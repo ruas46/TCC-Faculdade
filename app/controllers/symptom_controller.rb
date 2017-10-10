@@ -1,38 +1,62 @@
 class SymptomController < ApplicationController
   skip_before_filter :verify_authenticity_token
-  @@acess = 'eyJpc3MiOiJzY290Y2guaW8iLCJleHAiOjEzMDA4MTkzODAsIm5hbWUiOiJDaHJpcyBTZXZpbGxlamEiLCJhZG1pbiI6dHJ1ZX0'
+  @@acess = 'admin'
   def index
-    @acess = @@acess
-    @sintoma = Sintoma.order :nome
+    if user_signed_in?
+      @acess = @@acess
+      @sintoma = Sintoma.order :nome
+    else
+      redirect_to '/users/sign_in'
+    end
   end
   def new
-    @acess = @@acess
+    if user_signed_in?
+      @acess = @@acess
+    else
+      redirect_to '/users/sign_in'
+    end
   end
   def create
-    @acess = @@acess
-    @sintoma = Sintoma.new(nome: params[:nome], sintoma_obrigatorio: params[:sintomaObrigatorio])
-    @sintoma.save
-    redirect_to '/'+@@acess+'/sintoma'
+    if user_signed_in?
+      @acess = @@acess
+      @sintoma = Sintoma.new(nome: params[:nome], sintoma_obrigatorio: params[:sintomaObrigatorio])
+      @sintoma.save
+      redirect_to '/'+@@acess+'/sintoma'
+    else
+      redirect_to '/users/sign_in'
+    end
   end
 
   def edit
-    @acess = @@acess
-    @sintoma = Sintoma.find(params[:id])#puxa do banco as infos para alimentar o edit no front
+    if user_signed_in?
+      @acess = @@acess
+      @sintoma = Sintoma.find(params[:id])#puxa do banco as infos para alimentar o edit no front
+    else
+      redirect_to '/users/sign_in'
+    end
   end
   def update
-    @acess = @@acess
-    sintomaEdit = Sintoma.find(params[:id])#puxa no banco a linha edita e salva
-    sintomaEdit.nome = params[:nome]
-    sintomaEdit.sintoma_obrigatorio = params[:obrigatorio]
-    sintomaEdit.save
-    redirect_to '/'+@@acess+'/sintoma'
+    if user_signed_in?
+      @acess = @@acess
+      sintomaEdit = Sintoma.find(params[:id])#puxa no banco a linha edita e salva
+      sintomaEdit.nome = params[:nome]
+      sintomaEdit.sintoma_obrigatorio = params[:obrigatorio]
+      sintomaEdit.save
+      redirect_to '/'+@@acess+'/sintoma'
+    else
+      redirect_to '/users/sign_in'
+    end
   end
   def delete
-    @acess = @@acess
-    @sintoma = Sintoma.find(params[:id])
-    @sintomaTranstorno = @sintoma.sintomas_transtorno.where(sintoma_id: @sintoma.id)
-    @sintomaTranstorno.delete_all#deleta na tabela relacional dos transtornos pra n bugar graficos/busca
-    @sintoma.destroy
-    redirect_to '/'+@@acess+'/sintoma'
+    if user_signed_in?
+      @acess = @@acess
+      @sintoma = Sintoma.find(params[:id])
+      @sintomaTranstorno = @sintoma.sintomas_transtorno.where(sintoma_id: @sintoma.id)
+      @sintomaTranstorno.delete_all#deleta na tabela relacional dos transtornos pra n bugar graficos/busca
+      @sintoma.destroy
+      redirect_to '/'+@@acess+'/sintoma'
+    else
+      redirect_to '/users/sign_in'
+    end
   end
 end

@@ -1,4 +1,9 @@
 Rails.application.routes.draw do
+  #acesso
+  acess = '/admin'
+
+  devise_for :users
+
   get 'welcome/index'
   root 'welcome#index'
   get '/sobre' => 'welcome#info'
@@ -8,10 +13,6 @@ Rails.application.routes.draw do
   get '/graficos/dsm' => 'welcome#dsm'
   post 'welcome' => 'welcome#create'
 
-  #acesso
-  #eyJpc3MiOiJzY290Y2guaW8iLCJleHAiOjEzMDA4MTkzODAsIm5hbWUiOiJDaHJpcyBTZXZpbGxlamEiLCJhZG1pbiI6dHJ1ZX0
-
-  acess = '/eyJpc3MiOiJzY290Y2guaW8iLCJleHAiOjEzMDA4MTkzODAsIm5hbWUiOiJDaHJpcyBTZXZpbGxlamEiLCJhZG1pbiI6dHJ1ZX0'
 
   #CRUD CATEGORIA
   get acess+'/categoria' => 'category#index'

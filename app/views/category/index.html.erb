@@ -16,6 +16,12 @@
     </ul>
   </div>
 </nav>
+<p class="navbar-text pull-right">
+        <% if user_signed_in? %>
+        Usuario: <strong><%= current_user.email %></strong>.
+        <%= link_to "Desconectar", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% end %>
+      </p>
 <div class="row new-button-dashboard">
   <a href="/<%= @acess %>/novaCategoria"><button class="btn btn-primary" type="submit" value="">Nova Categoria</button></a>
 </div>
