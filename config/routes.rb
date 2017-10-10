@@ -46,6 +46,14 @@ Rails.application.routes.draw do
   post acess+'/removeSintoma' => 'disorder#removeSintoma'
   post acess+'/assSintoma' => 'disorder#assSintoma'
 
+  #CRUD GRAFICOS
+  get acess+'/graficos' => 'external_base#index'
+  get acess+'/novoGraficos' => 'external_base#new'
+  post acess+'/novoGraficos' => 'external_base#create'
+  post acess+'/editGraficos' => 'external_base#edit'
+  post acess+'/updateGraficos' => 'external_base#update'
+  post acess+'/deleteGraficos' => 'external_base#delete'
+
   # The priority is based upon order of creation: first created -> highest priority.
   # See how all your routes lay out with "rake routes".
 

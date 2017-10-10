@@ -1,0 +1,63 @@
+<nav role="navigation" class="navbar navbar-default">
+  <div class="navbar-header">
+    <button type="button" data-target="#navbarCollapse" data-toggle="collapse" class="navbar-toggle">
+      <span class="sr-only">Navegação</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+  </div>
+  <div id="navbarCollapse" class="collapse navbar-collapse header-background-color header-text-prop">
+    <ul class="nav navbar-nav">
+      <li><a href="/<%= @acess %>/">Transtornos</a></li>
+      <li><a href="/<%= @acess %>/sintoma">Sintomas</a></li>
+      <li><a href="/<%= @acess %>/categoria">Categorias</a></li>
+      <li><a href="/<%= @acess %>/transtornoNaoSolucionado">Transtornos sem resposta</a></li>
+      <li class="active"><a href="/<%= @acess %>/graficos">Graficos</a></li>
+    </ul>
+  </div>
+</nav>
+<p class="navbar-text pull-right">
+        <% if user_signed_in? %>
+        Usuario: <strong><%= current_user.email %></strong>.
+        <%= link_to "Desconectar", destroy_user_session_path, method: :delete, :class => 'navbar-link'  %>
+        <% end %>
+      </p>
+<div class="row new-button-dashboard">
+  <a href="/<%= @acess %>/novoGraficos"><button class="btn btn-primary" type="submit" value="">Nova Informação</button></a>
+</div>
+<div class="row list-dashboard">
+  <div class="col-lg-offset-3 col-md-offset-3 col-md-6 col-sm-offset-2 col-sm-8 col-xs-offset-2 col-xs-8 col-lg-6">
+    <table>
+      <tr>
+        <th>Grafico ID</th>
+        <th>Porcentagem</th>
+        <th>Entrevistados</th>
+        <th>Ano</th>
+        <th>Estudo</th>
+        <th></th>
+      </tr>
+      <% @graficos.each do |graficos| %>
+        <tr>
+          <td><%= graficos.grafico_id %></td>
+          <td><%= graficos.porcentagem %></td>
+          <td><%= graficos.qtd_entrevistados %></td>
+          <td><%= graficos.ano %></td>
+          <td><%= graficos.estudo %></td>
+          <td>
+            <form action="/<%= @acess %>/editGraficos" method="post">
+              <input type="hidden" name="id" value="<%= graficos.id %>">
+              <button class="btn btn-primary" type="submit" value="Submit">Editar</button>
+            </form>
+          </td>
+          <td>
+            <form action="/<%= @acess %>/deleteGraficos" method="post" onsubmit="return confirm('Você tem certeza que deseja deletar?');">
+              <input type="hidden" name="id" value="<%= graficos.id %>">
+              <button class="btn btn-danger" type="submit" value="Submit">Deletar</button>
+            </form>
+          </td>
+        </tr>
+      <% end %>
+    </table>
+  </div>
+</div>
