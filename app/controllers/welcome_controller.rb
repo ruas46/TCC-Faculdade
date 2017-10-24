@@ -163,13 +163,6 @@ class WelcomeController < ApplicationController
     @estudos1[auxEstudo[0]] = "red"
     @estudos1[auxEstudo[1]] = "blue"
     @estudos1[auxEstudo[2]] = "green"
-
-    #debug
-    puts "external_base<<<<<<<<<<<<<<<<<<<<<<<<<<<<<<"
-    puts "@arrayAnosGraficos1: #{@arrayAnosGraficos1}"
-    @grafico1.each do |x|
-      puts "G_ID:#{x.grafico_id},Estudo:#{x.estudo},Ano:#{x.ano},%:#{x.porcentagem},Entrevistados:#{x.qtd_entrevistados}"
-    end
   end
 
   def dsm
@@ -216,55 +209,6 @@ class WelcomeController < ApplicationController
     sintomasHash.each do |x, y|
       @sintomasHashNome[Sintoma.find(x).nome] = y*100/sintomas.count#calculo da %
     end
-
-    ############################################################################
-    #ASSOCIAÇÕES
-    transtornoPesquisadoTop10 = Hash.new(0)
-    @transtornosAssociados = Hash.new(0)
-    transtornoPesquisadoTopArray = Array.new
-    transtornoCont = Hash.new(0)
-    puts "DSM<<<<<<<<<"
-    transtornosPD.each do |x|
-      puts "#{x.transtornos_pesquisado_id}:#{x.transtorno_id}"
-    end
-
-    #Cria hash com ID transtorno pesquisado e ID transtorno das pesquisas feitas com transtornos do top 10
-    transtornosHash.first(10).each do |x,y|
-      transtornosPD.where(transtorno_id: x).each do |tpd|
-          transtornoPesquisadoTop10[tpd.transtornos_pesquisado_id.to_s.to_sym] = []
-      end
-    end
-    transtornosHash.first(10).each do |x,y|
-      transtornosPD.where(transtorno_id: x).each do |tpd|
-          transtornoPesquisadoTop10[tpd.transtornos_pesquisado_id.to_s.to_sym] << tpd.transtorno_id
-      end
-    end
-
-    #gera um array com os id dos transtornos pesqusiados para fazer um count dps
-    transtornoPesquisadoTop10.each do |id_pes,id_trans|
-      puts "#{id_pes}:#{id_trans}"#===============================================================DEBUG
-      if id_trans.count == 2
-        transtornoPesquisadoTopArray << id_trans.to_s
-      end
-    end
-
-    #Gera transtornoCont com [ID_TRANS1,ID_TRANS2] => QTD
-    transtornoPesquisadoTopArray.each { |name| transtornoCont[name] += 1 }
-    puts "Primeiro: #{transtornoCont.keys[0]} x#{transtornoCont[transtornoCont.keys[0]]}"#=======DEBUG
-    puts "Segundo: #{transtornoCont.keys[1]} x#{transtornoCont[transtornoCont.keys[1]]}"#=======DEBUG
-    puts "Terceiro: #{transtornoCont.keys[2]} x#{transtornoCont[transtornoCont.keys[2]]}"#=======DEBUG
-
-    #transtornosAssociados
-    #[20,21] => T1: blablz, T1QTD:12, T2: blalbabla, T2QTD: 5, T2P: 33
-    transtornoCont.first(3).each do |x, y|#x:[20, 21]  y:4
-      transtorno1ID = x.gsub(/"|\[|\]/, '').gsub(/\s+/, '').split(',')[0]
-      transtorno2ID = x.gsub(/"|\[|\]/, '').gsub(/\s+/, '').split(',')[1]
-      transtornoNome1 = Transtorno.find(transtorno1ID).nome
-      transtornoNome2 = Transtorno.find(transtorno2ID).nome
-      transtorno1QTD = transtornosPD.where(transtorno_id: transtorno1ID).count
-      @transtornosAssociados[x.to_sym] = { "T1" => transtornoNome1, "T1QTD" => transtorno1QTD, "T2" => transtornoNome2, "T2QTD" => y, "T2P" => y*100/transtorno1QTD }
-    end
-    puts @transtornosAssociados#========================================++++++++++++++++++++++++_+==DEBUG
   end
 
   def admin

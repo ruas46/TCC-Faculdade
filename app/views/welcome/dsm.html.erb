@@ -24,16 +24,10 @@
   <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10" Style="padding-top:10px;">
     <h2>DSM</h2>
     <p>
-      Essa seção tem com foco em mostrar informações das pesquisas feitas no sistema de modo visual, apresentando sintomas mais e menos pesquisados, transtornos mais e menos pesquisados e os três principais transtornos que tem as maiores ocorrências de outros transtornos associados a eles no resultado das buscas efetuadas, apresentando, por exemplo: nas consultas feitas pelos usuários em que aparece o transtorno X, em 65% delas aparece associado o transtorno Y.
+      Essa seção tem com foco em mostrar informações das pesquisas feitas no sistema de modo visual, apresentando sintomas mais e menos pesquisados, transtornos mais e menos pesquisados.
     </p>
   </div>
-  <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10 text-left">
-    <ul>
-      <% @transtornosAssociados.each do |x| %>
-        <li>Das <%= x.second["T1QTD"] %> consultas que resultam <b><%= x.second["T1"] %></b>, em <%= x.second["T2QTD"] %> (%<%= x.second["T2P"] %>) aparecem tambem <b><%= x.second["T2"] %></b></li>
-      <% end %>
-    </ul>
-  </div>
+
   <div class="col-lg-12">
     <div class="col-lg-offset-2 col-lg-4 col-md-12 col-sm-12 col-xs-12">
       <h3>Transtornos mais pesquisados</h3>
