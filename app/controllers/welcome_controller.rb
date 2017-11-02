@@ -149,7 +149,7 @@ class WelcomeController < ApplicationController
   end
 
   def external_base
-    #mineração AQUI
+    ##1
     @arrayAnosGraficos1 = []
     auxEstudo = []
     @estudos1  = Hash.new(0)
@@ -163,6 +163,51 @@ class WelcomeController < ApplicationController
     @estudos1[auxEstudo[0]] = "red"
     @estudos1[auxEstudo[1]] = "blue"
     @estudos1[auxEstudo[2]] = "green"
+
+    ##2
+    @arrayAnosGraficos2 = []
+    auxEstudo = []
+    @estudos2  = Hash.new(0)
+    @grafico2 = Grafico.where(grafico_id:2).order("ano").to_a
+    @grafico2.each do |x|
+      @arrayAnosGraficos2 << x.ano
+      auxEstudo << x.estudo#pega todos os estudos
+    end
+    @arrayAnosGraficos2.uniq!#remove os iguais
+    auxEstudo.uniq!
+    @estudos2[auxEstudo[0]] = "red"
+    @estudos2[auxEstudo[1]] = "blue"
+    @estudos2[auxEstudo[2]] = "green"
+
+    ##3
+    @arrayAnosGraficos3 = []
+    auxEstudo = []
+    @estudos3  = Hash.new(0)
+    @grafico3 = Grafico.where(grafico_id:3).order("ano").to_a
+    @grafico3.each do |x|
+      @arrayAnosGraficos3 << x.ano
+      auxEstudo << x.estudo#pega todos os estudos
+    end
+    @arrayAnosGraficos3.uniq!#remove os iguais
+    auxEstudo.uniq!
+    @estudos3[auxEstudo[0]] = "red"
+    @estudos3[auxEstudo[1]] = "blue"
+    @estudos3[auxEstudo[2]] = "green"
+
+    ##4
+    @arrayAnosGraficos4 = []
+    auxEstudo = []
+    @estudos4  = Hash.new(0)
+    @grafico4 = Grafico.where(grafico_id:4).order("ano").to_a
+    @grafico4.each do |x|
+      @arrayAnosGraficos4 << x.ano
+      auxEstudo << x.estudo#pega todos os estudos
+    end
+    @arrayAnosGraficos4.uniq!#remove os iguais
+    auxEstudo.uniq!
+    @estudos4[auxEstudo[0]] = "red"
+    @estudos4[auxEstudo[1]] = "blue"
+    @estudos4[auxEstudo[2]] = "green"
   end
 
   def dsm

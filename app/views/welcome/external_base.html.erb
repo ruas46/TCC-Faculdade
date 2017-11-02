@@ -24,7 +24,8 @@
   <div class="text-center col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
     <h2>Bases Externas</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra vel nisl ac sodales. Suspendisse scelerisque risus arcu, non ornare turpis hendrerit vehicula. Pellentesque in aliquet orci, non venenatis odio. Nulla posuere gravida mauris vel ullamcorper. Integer et massa quis mauris placerat sodales id a urna. Cras in dignissim risus. Morbi ligula eros, convallis vitae enim vitae, iaculis maximus massa. Vestibulum eleifend accumsan sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id elit ultricies, imperdiet nulla et, cursus arcu. Suspendisse potenti. Sed blandit lorem sit amet elit blandit aliquet. Mauris consequat vitae leo at rutrum. Quisque et ante tincidunt, posuere erat non, eleifend orci. Aliquam efficitur, ipsum in venenatis varius, sapien velit pulvinar leo, eget bibendum nunc sem ac odio. Integer ut lobortis tortor.<a href="#" data-toggle="modal" data-target="#ModalG1">Referências!</a>
+      As informações contidas no gráfico abaixo foram retiradas do artigo <b><a href="http://www.scielo.br/pdf/jbpsiq/v59n3/a11v59n3.pdf">Prevalência dos transtornos mentais na população adulta brasileira: uma revisão sistemática de 1997 a 2009</a></b>. Uma revisão sistemática de literatura que se propõe a verificar os índices de prevalência dos transtornos mentais na população adulta brasileira. <b>Métodos:</b>  Foram pesquisadas as bases de dados Medline e Lilacs, no período de 1997 a 2009, utilizando os seguintes descritores: “transtornos mentais”, “estudos de prevalência”, “Brasil” e seus correspondentes em inglês “mental disorders”, “cross-sectional studies”, “Brazil”. Foram excluídos os artigos: sem resumo/abstract, sem descrição de estudo tipo transversal, sem descrição ou referência a estimativas que verificassem a prevalência de transtornos mentais, estudos com populações específicas, estudos com crianças, adolescentes e idosos e, ainda, os estudos escritos em outros idiomas diferentes do português, inglês e espanhol. <b>Resultados:</b> Nos estudos analisados foram encontrados altos índices de prevalência geral de transtornos mentais na população adulta. Esses índices variaram entre 20% e 56%.
+<!-- <a href="#" data-toggle="modal" data-target="#ModalG1">Referências!</a> -->
     </p>
   </div>
   <div class="container" style="min-width: 1000px !important;">
@@ -68,18 +69,150 @@
     </div>
   </div>
   <div class="text-center col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
-    <h2>Titulo</h2>
+    <h2>Titulo2</h2>
     <p>
       Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra vel nisl ac sodales. Suspendisse scelerisque risus arcu, non ornare turpis hendrerit vehicula. Pellentesque in aliquet orci, non venenatis odio. Nulla posuere gravida mauris vel ullamcorper. Integer et massa quis mauris placerat sodales id a urna. Cras in dignissim risus. Morbi ligula eros, convallis vitae enim vitae, iaculis maximus massa. Vestibulum eleifend accumsan sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id elit ultricies, imperdiet nulla et, cursus arcu. Suspendisse potenti. Sed blandit lorem sit amet elit blandit aliquet. Mauris consequat vitae leo at rutrum. Quisque et ante tincidunt, posuere erat non, eleifend orci. Aliquam efficitur, ipsum in venenatis varius, sapien velit pulvinar leo, eget bibendum nunc sem ac odio. Integer ut lobortis tortor.
     </p>
+  </div>
+  <div class="container" style="min-width: 1000px !important;">
+    <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-10 col-xs-offset-0 col-xs-10">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic-porcentage">
+        <div>100%</div>
+        <div style="padding-top:68px;">50%</div>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic">
+      <% ano = @arrayAnosGraficos2.first %>
+      <% @grafico2.each do |x| %>
+        <% if x.ano == ano %>
+          <img src="/assets/<%= @estudos2[x.estudo] %>.png" width="7" height="<%= x.porcentagem*2 %>" title="(<%= x.porcentagem %>%) <%= x.qtd_entrevistados %>" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
+        <% else %>
+          <% ano = x.ano %>
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic">
+            <img src="/assets/<%= @estudos2[x.estudo] %>.png" width="7" height="<%= x.porcentagem*2 %>" title="(<%= x.porcentagem %>%) <%= x.qtd_entrevistados %>" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
+        <% end %>
+      <% end %>
+      </div>
+    </div>
+    <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-10 col-xs-offset-0 col-xs-10">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+      </div>
+      <% @arrayAnosGraficos2.each do |anosGrafico| %>
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1  external-base-graphic-years">
+          <%= anosGrafico %>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-10 col-xs-offset-0 col-xs-10">
+      <% @estudos2.each do |est,cor| %>
+        <div class="row">
+          <div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4 col-sm-offset-0 col-sm-4 col-xs-offset-0 col-xs-6">
+            <img src="/assets/<%= cor %>.png" width="30" height="30" />
+            <%= est %>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
+  <div class="text-center col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+    <h2>Titulo3</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra vel nisl ac sodales. Suspendisse scelerisque risus arcu, non ornare turpis hendrerit vehicula. Pellentesque in aliquet orci, non venenatis odio. Nulla posuere gravida mauris vel ullamcorper. Integer et massa quis mauris placerat sodales id a urna. Cras in dignissim risus. Morbi ligula eros, convallis vitae enim vitae, iaculis maximus massa. Vestibulum eleifend accumsan sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id elit ultricies, imperdiet nulla et, cursus arcu. Suspendisse potenti. Sed blandit lorem sit amet elit blandit aliquet. Mauris consequat vitae leo at rutrum. Quisque et ante tincidunt, posuere erat non, eleifend orci. Aliquam efficitur, ipsum in venenatis varius, sapien velit pulvinar leo, eget bibendum nunc sem ac odio. Integer ut lobortis tortor.
+    </p>
+  </div>
+  <div class="container" style="min-width: 1000px !important;">
+    <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-10 col-xs-offset-0 col-xs-10">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic-porcentage">
+        <div>100%</div>
+        <div style="padding-top:68px;">50%</div>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic">
+      <% ano = @arrayAnosGraficos3.first %>
+      <% @grafico3.each do |x| %>
+        <% if x.ano == ano %>
+          <img src="/assets/<%= @estudos3[x.estudo] %>.png" width="7" height="<%= x.porcentagem*2 %>" title="(<%= x.porcentagem %>%) <%= x.qtd_entrevistados %>" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
+        <% else %>
+          <% ano = x.ano %>
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic">
+            <img src="/assets/<%= @estudos3[x.estudo] %>.png" width="7" height="<%= x.porcentagem*2 %>" title="(<%= x.porcentagem %>%) <%= x.qtd_entrevistados %>" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
+        <% end %>
+      <% end %>
+      </div>
+    </div>
+    <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-10 col-xs-offset-0 col-xs-10">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+      </div>
+      <% @arrayAnosGraficos3.each do |anosGrafico| %>
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1  external-base-graphic-years">
+          <%= anosGrafico %>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-10 col-xs-offset-0 col-xs-10">
+      <% @estudos3.each do |est,cor| %>
+        <div class="row">
+          <div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4 col-sm-offset-0 col-sm-4 col-xs-offset-0 col-xs-6">
+            <img src="/assets/<%= cor %>.png" width="30" height="30" />
+            <%= est %>
+          </div>
+        </div>
+      <%end%>
+    </div>
+  </div>
+  <div class="text-center col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
+    <h2>Titulo4</h2>
+    <p>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra vel nisl ac sodales. Suspendisse scelerisque risus arcu, non ornare turpis hendrerit vehicula. Pellentesque in aliquet orci, non venenatis odio. Nulla posuere gravida mauris vel ullamcorper. Integer et massa quis mauris placerat sodales id a urna. Cras in dignissim risus. Morbi ligula eros, convallis vitae enim vitae, iaculis maximus massa. Vestibulum eleifend accumsan sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id elit ultricies, imperdiet nulla et, cursus arcu. Suspendisse potenti. Sed blandit lorem sit amet elit blandit aliquet. Mauris consequat vitae leo at rutrum. Quisque et ante tincidunt, posuere erat non, eleifend orci. Aliquam efficitur, ipsum in venenatis varius, sapien velit pulvinar leo, eget bibendum nunc sem ac odio. Integer ut lobortis tortor.
+    </p>
+  </div>
+  <div class="container" style="min-width: 1000px !important;">
+    <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-10 col-xs-offset-0 col-xs-10">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic-porcentage">
+        <div>100%</div>
+        <div style="padding-top:68px;">50%</div>
+      </div>
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic">
+      <% ano = @arrayAnosGraficos4.first %>
+      <% @grafico4.each do |x| %>
+        <% if x.ano == ano %>
+          <img src="/assets/<%= @estudos4[x.estudo] %>.png" width="7" height="<%= x.porcentagem*2 %>" title="(<%= x.porcentagem %>%) <%= x.qtd_entrevistados %>" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
+        <% else %>
+          <% ano = x.ano %>
+          </div>
+          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic">
+            <img src="/assets/<%= @estudos4[x.estudo] %>.png" width="7" height="<%= x.porcentagem*2 %>" title="(<%= x.porcentagem %>%) <%= x.qtd_entrevistados %>" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
+        <% end %>
+      <% end %>
+      </div>
+    </div>
+    <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-10 col-xs-offset-0 col-xs-10">
+      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
+      </div>
+      <% @arrayAnosGraficos4.each do |anosGrafico| %>
+        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1  external-base-graphic-years">
+          <%= anosGrafico %>
+        </div>
+      <% end %>
+    </div>
+    <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-10 col-xs-offset-0 col-xs-10">
+      <% @estudos4.each do |est,cor| %>
+        <div class="row">
+          <div class="col-lg-offset-1 col-lg-4 col-md-offset-1 col-md-4 col-sm-offset-0 col-sm-4 col-xs-offset-0 col-xs-6">
+            <img src="/assets/<%= cor %>.png" width="30" height="30" />
+            <%= est %>
+          </div>
+        </div>
+      <%end%>
+    </div>
   </div>
 </div>
 
 
 
 
-
-<!-- MODAL GRAFICO 1 -->
+<!--
+< MODAL GRAFICO 1 >
 <div class="modal fade" id="ModalG1" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
   <div class="modal-dialog" role="document">
     <div class="modal-content">
@@ -99,3 +232,4 @@
     </div>
   </div>
 </div>
+-->

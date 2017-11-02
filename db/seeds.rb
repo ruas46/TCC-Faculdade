@@ -31,8 +31,6 @@ g1 = Grafico.new(grafico_id:1,porcentagem:38,qtd_entrevistados:"1.282 trabalhado
 g1.save
 g1 = Grafico.new(grafico_id:1,porcentagem:36,qtd_entrevistados:"1.479 trabalhadores rurais",ano:2000,estudo:"Trabalhadores")
 g1.save
-g1 = Grafico.new(grafico_id:1,porcentagem:45,qtd_entrevistados:"TESTE",ano:2005,estudo:"Trabalhadores")
-g1.save
 g1 = Grafico.new(grafico_id:1,porcentagem:28,qtd_entrevistados:"3.526 funcionários de uma universidade do RJ",ano:2004,estudo:"Trabalhadores")
 g1.save
 g1 = Grafico.new(grafico_id:1,porcentagem:26,qtd_entrevistados:"80 trabalhadores de enfermagem",ano:2007,estudo:"Trabalhadores")
