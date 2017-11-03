@@ -115,9 +115,9 @@
     </div>
   </div>
   <div class="text-center col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
-    <h2>Titulo3</h2>
+    <h2>Prevalência de estresse pós-traumático em equipes de resgate</h2>
     <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra vel nisl ac sodales. Suspendisse scelerisque risus arcu, non ornare turpis hendrerit vehicula. Pellentesque in aliquet orci, non venenatis odio. Nulla posuere gravida mauris vel ullamcorper. Integer et massa quis mauris placerat sodales id a urna. Cras in dignissim risus. Morbi ligula eros, convallis vitae enim vitae, iaculis maximus massa. Vestibulum eleifend accumsan sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id elit ultricies, imperdiet nulla et, cursus arcu. Suspendisse potenti. Sed blandit lorem sit amet elit blandit aliquet. Mauris consequat vitae leo at rutrum. Quisque et ante tincidunt, posuere erat non, eleifend orci. Aliquam efficitur, ipsum in venenatis varius, sapien velit pulvinar leo, eget bibendum nunc sem ac odio. Integer ut lobortis tortor.
+      As informações contidas no gráfico abaixo foram retiradas do artigo <b><a href="http://www.redalyc.org/pdf/362/36225171007.pdf">Prevalência de estresse pós-traumático em equipes de resgate: Uma revisão sistemática</a></b> Esta revisão objetiva identificar as prevalências de TEPT em profissionais que atuam em equipes de resgate, procurando detectar suas variáveis relacionadas. A partir dos indexadores estabelecidos, foram consultadas as bases de dados MEDLINE via Pubmed, PsycINFO, EBSCO, LILACS e SciELO, entre dezembro de 2011 e fevereiro de 2012, restringindo-se a artigos em português, inglês e espanhol, publicados no período de 2002 a 2012.
     </p>
   </div>
   <div class="container" style="min-width: 1000px !important;">
@@ -151,52 +151,6 @@
     </div>
     <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-10 col-xs-offset-0 col-xs-10">
       <% @estudos3.each do |est,cor| %>
-        <div class="row">
-          <div class="col-lg-offset-1 col-lg-6 col-md-offset-1 col-md-6 col-sm-offset-0 col-sm-6 col-xs-offset-0 col-xs-6">
-            <img src="/assets/<%= cor %>.png" width="30" height="30" />
-            <%= est %>
-          </div>
-        </div>
-      <%end%>
-    </div>
-  </div>
-  <div class="text-center col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-1 col-sm-10 col-xs-offset-1 col-xs-10">
-    <h2>Titulo4</h2>
-    <p>
-      Lorem ipsum dolor sit amet, consectetur adipiscing elit. Vestibulum viverra vel nisl ac sodales. Suspendisse scelerisque risus arcu, non ornare turpis hendrerit vehicula. Pellentesque in aliquet orci, non venenatis odio. Nulla posuere gravida mauris vel ullamcorper. Integer et massa quis mauris placerat sodales id a urna. Cras in dignissim risus. Morbi ligula eros, convallis vitae enim vitae, iaculis maximus massa. Vestibulum eleifend accumsan sem. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Duis id elit ultricies, imperdiet nulla et, cursus arcu. Suspendisse potenti. Sed blandit lorem sit amet elit blandit aliquet. Mauris consequat vitae leo at rutrum. Quisque et ante tincidunt, posuere erat non, eleifend orci. Aliquam efficitur, ipsum in venenatis varius, sapien velit pulvinar leo, eget bibendum nunc sem ac odio. Integer ut lobortis tortor.
-    </p>
-  </div>
-  <div class="container" style="min-width: 1000px !important;">
-    <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-10 col-xs-offset-0 col-xs-10">
-      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic-porcentage">
-        <div>100%</div>
-        <div style="padding-top:68px;">50%</div>
-      </div>
-      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic">
-      <% ano = @arrayAnosGraficos4.first %>
-      <% @grafico4.each do |x| %>
-        <% if x.ano == ano %>
-          <img src="/assets/<%= @estudos4[x.estudo] %>.png" width="7" height="<%= x.porcentagem*2 %>" title="(<%= x.porcentagem %>%) <%= x.qtd_entrevistados %>" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
-        <% else %>
-          <% ano = x.ano %>
-          </div>
-          <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1 external-base-graphic">
-            <img src="/assets/<%= @estudos4[x.estudo] %>.png" width="7" height="<%= x.porcentagem*2 %>" title="(<%= x.porcentagem %>%) <%= x.qtd_entrevistados %>" style="margin-top: <%= 200-x.porcentagem*2 %>px;" />
-        <% end %>
-      <% end %>
-      </div>
-    </div>
-    <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-10 col-xs-offset-0 col-xs-10">
-      <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1">
-      </div>
-      <% @arrayAnosGraficos4.each do |anosGrafico| %>
-        <div class="col-lg-1 col-md-1 col-sm-1 col-xs-1  external-base-graphic-years">
-          <%= anosGrafico %>
-        </div>
-      <% end %>
-    </div>
-    <div class="col-lg-offset-2 col-lg-8 col-md-offset-1 col-md-10 col-sm-offset-0 col-sm-10 col-xs-offset-0 col-xs-10">
-      <% @estudos4.each do |est,cor| %>
         <div class="row">
           <div class="col-lg-offset-1 col-lg-6 col-md-offset-1 col-md-6 col-sm-offset-0 col-sm-6 col-xs-offset-0 col-xs-6">
             <img src="/assets/<%= cor %>.png" width="30" height="30" />

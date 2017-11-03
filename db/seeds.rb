@@ -65,6 +65,37 @@ g2.save
 g2 = Grafico.new(grafico_id:2,porcentagem:7,qtd_entrevistados:"Entre 2 e 26 semanas pós-natais",ano:2010,estudo:"Até primeiros 6 meses pós-natais")
 g2.save
 
+g3 = Grafico.new(grafico_id:3,porcentagem:16,qtd_entrevistados:"5.656 bombeiros. Aqueles com TEPT provável eram 2,2 vezes mais propensos a relatar aumento no uso de álcool no follow-up, sugerindo que essas pessoas aumentaram o uso como uma forma de auto-medicação",ano:2010,estudo:"Bombeiros")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:12,qtd_entrevistados:"52 bombeiros. Padrões disfuncionais de autoavaliação, como baixa autoeficácia, culpa, avaliação negativa de si e do mundo como fatores ligados ao TEPT.",ano:2007,estudo:"Bombeiros")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:12,qtd_entrevistados:"8.487 bombeiros. Após 11 de setembro, 18% relatou comprometimento social ou ocupacional; 16% relataram dificuldade no funcionamento em casa, 9% relataram dificuldade funcionamento no trabalho, e ambos os fatores foram maiores no grupo exposto severamente",ano:2009,estudo:"Bombeiros")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:17,qtd_entrevistados:"8.487 bombeiros. Enquanto a amostra estudada apresentou 25,6% de estresse agudo, o grupo não exposto apresentou percentagem de apenas 2,4%. Também foram encontradas diferenças significativas de depressão aos sete meses (16,4% versus 10%) e depressão aos 13 meses (21,7% versus 12,6%).",ano:2004,estudo:"Bombeiros")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:17,qtd_entrevistados:"43 bombeiros. A hostilidade e a baixa autoeficácia foram consideradas desencadeadores de sintomas de TEPT, depressão, ansiedade, alexitimia e morbidade geral",ano:2005,estudo:"Bombeiros")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:11,qtd_entrevistados:"10.123 profissionais de resgate. Após 11 de setembro, 18% relatou compromentimento social ou ocupacional; 16% relataram dificuldade no funcionamento em casa, 9% relataram dificuldade funcionamento o trabalho, e ambos os fatores foram maiores no grupo exposto severamente",ano:2008,estudo:"Profissionais de resgate")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:13,qtd_entrevistados:"176 bombeiros. A hostilidade e a baixa autoeficácia foram consideradas desencadeadores de sintomas de TEPT, depressão, ansiedade, alexitimia e morbidade geral",ano:2002,estudo:"Bombeiros")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:14,qtd_entrevistados:"28.692 profissionais de resgate. A prevalência de depressão chegou a 38,5% em unidade SARS e 6,7% em não-SARS. Entretanto, os sintomas foram diminuindo à medida que a epidemia também diminuiu. O mesmo ocorreu com a taxa de insônia (47,1% em unidades SARS e 9,4% em não-SARS) e ansiede, estabilizando ao final da pesquisa.",ano:2007,estudo:"Profissionais de resgate")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:14,qtd_entrevistados:"1.741 enfermeiros. A prevalência de depressão chegou a 38,5% em unidade SARS e 6,7% em não-SARS. Entretanto, os sintomas foram diminuindo à medida que a epidemia também diminuiu. O mesmo ocorreu com a taxa de insônia (47,1% em unidades SARS e 9,4% em não-SARS) e ansiede, estabilizando ao final da pesquisa.",ano:2007,estudo:"Enfermeiros")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:30,qtd_entrevistados:"446 enfermeiros. Nas participantes expostas, a taxa de depressão chegou a 27,1% e ideação suicida a 8,6%.",ano:2012,estudo:"Enfermeiros")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:30,qtd_entrevistados:"100 enfermeiros. Padrões cognitivos disfuncionais de autoavaliação e avaliação negativa sobre o mundo foram fatores ligados ao TEPT. A ruminação dos pensamentos intrusivos, ou a tentativa de suprimí-los, também foram associadas com maior sintomatologia, mesmo quando a freqüência de intrusões foi controlada.",ano:2008,estudo:"Enfermeiros")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:19,qtd_entrevistados:"617 enfermeiros. Conflitos entre casa e trabalho, tensão com colegas, natureza imprevisível do trabalho e incidentes envolvendo crianças foram considerados fortes preditores de ansiedade. Juntas, essas variáveis representaram 38% da variância de ansiedade. Um conjunto semelhante de preditores corresponde a um total de 31% na variância de depressão.",ano:2005,estudo:"Enfermeiros")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:27,qtd_entrevistados:"225 bombeiros. Apoio social pode impactar TEPT, principalmente através de sua correlação própria com interações sociais negativas e medo da emoção.",ano:2011,estudo:"Bombeiros")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:15,qtd_entrevistados:"362 enfermeiros. O senso de coerência é inversamente proporcional ao risco de TEPT.",ano:2003,estudo:"Enfermeiros")
+g3.save
+g3 = Grafico.new(grafico_id:3,porcentagem:22,qtd_entrevistados:"128 bombeiros. Bombeiros com maior chance de apresentar TEPT tinham maior comprometimento da saúde e maiores sintomas de estresse. Associação entre sintomas de TEPT e baixo suporte social",ano:2008,estudo:"Bombeiros")
+g3.save
+
 ################################################################################
 #SEED DE CATEGORIAS DE TRANSTORNOS
 c0 = Categorium.new(nome:"Indefinido")
