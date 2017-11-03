@@ -38,6 +38,33 @@ g1.save
 g1 = Grafico.new(grafico_id:1,porcentagem:43,qtd_entrevistados:"141 Agentes Comunitários de Saúde",ano:2008,estudo:"Trabalhadores")
 g1.save
 
+g2 = Grafico.new(grafico_id:2,porcentagem:43,qtd_entrevistados:"Primeiros 6 meses pós-natais",ano:1998,estudo:"Até primeiros 6 meses pós-natais")
+g2.save
+g2 = Grafico.new(grafico_id:2,porcentagem:36,qtd_entrevistados:"Entre 6 e 24 semanas pós-natais",ano:1999,estudo:"Até primeiros 6 meses pós-natais")
+g2.save
+g2 = Grafico.new(grafico_id:2,porcentagem:22,qtd_entrevistados:"Entre 8 e 12 semanas pós-natais",ano:2004,estudo:"Até primeiros 3 meses pós-natais")
+g2.save
+g2 = Grafico.new(grafico_id:2,porcentagem:16,qtd_entrevistados:"Décimo dia pós-natal",ano:2004,estudo:"Até primeiro mês pós-natal")
+g2.save
+g2 = Grafico.new(grafico_id:2,porcentagem:37,qtd_entrevistados:"Entre 12 e 16 semanas pós-natais",ano:2005,estudo:"Até primeiros 6 meses pós-natais")
+g2.save
+g2 = Grafico.new(grafico_id:2,porcentagem:24,qtd_entrevistados:"Entre 6 e 12 semanas pós-natais",ano:2006,estudo:"Até primeiros 3 meses pós-natais")
+g2.save
+g2 = Grafico.new(grafico_id:2,porcentagem:18,qtd_entrevistados:"Segundo ou 3ºdia pós-natal",ano:2007,estudo:"Até primeiro mês pós-natal")
+g2.save
+g2 = Grafico.new(grafico_id:2,porcentagem:39,qtd_entrevistados:"Entre 31 e 180 dias pós-natais",ano:2007,estudo:"Até primeiros 6 meses pós-natais")
+g2.save
+g2 = Grafico.new(grafico_id:2,porcentagem:21,qtd_entrevistados:"Entre 6 e 8 semanas pós-natais",ano:2008,estudo:"Até primeiros 3 meses pós-natais")
+g2.save
+g2 = Grafico.new(grafico_id:2,porcentagem:23,qtd_entrevistados:"Até 20 dias pós-natais",ano:2008,estudo:"Até primeiro mês pós-natal")
+g2.save
+g2 = Grafico.new(grafico_id:2,porcentagem:27,qtd_entrevistados:"Entre 40 e 90 dias pós-natais",ano:2009,estudo:"Até primeiros 3 meses pós-natais")
+g2.save
+g2 = Grafico.new(grafico_id:2,porcentagem:28,qtd_entrevistados:"Entre 9 e 12 semanas pós-natais",ano:2010,estudo:"Até primeiros 3 meses pós-natais")
+g2.save
+g2 = Grafico.new(grafico_id:2,porcentagem:7,qtd_entrevistados:"Entre 2 e 26 semanas pós-natais",ano:2010,estudo:"Até primeiros 6 meses pós-natais")
+g2.save
+
 ################################################################################
 #SEED DE CATEGORIAS DE TRANSTORNOS
 c0 = Categorium.new(nome:"Indefinido")
